@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "status": "STRUCTURAL_PASS_VISUAL_PENDING",
+  "candidateFile": "C:/Users/HUAWEI/Downloads/中国地图 1∶740万 (界线版 无邻国 无河流 线划(一) (1).svg",
+  "candidateSha256": "d661148e382f91d3972d0825f70ebf2fc45de995cd99d489f865229fdc5514e0",
+  "candidateSizeBytes": 5624733,
+  "sourceFile": "assets/map/source/official-master.eps",
+  "sourceSha256": "8709AA9590ACAEF2926FAB9AD6979665C7CAF8469EC7186EA33EDEB9838368CC",
+  "conversionProvenance": {
+    "declaredTool": "Inkscape",
+    "declaredSourceDocument": "中国地图 1∶740万 (界线版 无邻国 无河流 线划(一).eps",
+    "version": null,
+    "command": null,
+    "conversionDate": "2026-08-23T16:26:59+08:00",
+    "provenanceEvidence": "SVG header identifies Inkscape; exact version and command were not embedded."
+  },
+  "svg": {
+    "version": "1.1",
+    "width": "3025.3333",
+    "height": "2137.3333",
+    "viewBox": "0 0 3025.3333 2137.3333",
+    "elementCounts": {
+      "svg": 1,
+      "g": 1,
+      "path": 3730,
+      "image": 0,
+      "text": 0,
+      "foreignObject": 0,
+      "use": 0,
+      "clipPath": 0,
+      "mask": 0,
+      "filter": 0
+    },
+    "nonEmptyPathCount": 3730,
+    "pathTransformCount": 3730,
+    "uniquePathTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+    "totalPathDataCharacters": 4853739,
+    "embeddedRaster": false,
+    "externalReferences": false
+  },
+  "coordinateCheck": {
+    "epsBoundingBoxPoints": "538 439 2807 2042",
+    "expectedAt96Dpi": "3025.3333 x 2137.3333",
+    "result": "SVG root dimensions match the EPS bounding-box dimensions at 96 dpi; this does not establish GIS coordinates."
+  },
+  "classification": {
+    "mainland": "not semantically identified in SVG; geometry retained as paths",
+    "boundaries": "not semantically identified in SVG; geometry retained as paths",
+    "coastline": "not semantically identified in SVG; geometry retained as paths",
+    "hainan": "requires rendered visual check",
+    "taiwan": "requires rendered visual check",
+    "southSeaInset": "requires rendered visual check",
+    "unknown": "all object semantics remain UNKNOWN until visual/source overlay and conservative classification"
+  },
+  "acceptance": {
+    "pathPreservation": "PASS by structural inspection",
+    "noRasterSubstitution": "PASS",
+    "noCrsInvented": "PASS",
+    "geometryScaleFrame": "PASS for root frame correspondence",
+    "renderComparison": "PENDING: browser policy blocked local SVG rendering in this environment",
+    "releaseDecision": "Do not promote to official-audit.svg until rendered comparison and conversion-tool version are recorded."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "status": "AUDIT_PASSED",
+  "derivedFile": "assets/map/svg/official-audit.svg",
+  "sourceFile": "assets/map/source/official-master.eps",
+  "sourceSha256": "8709AA9590ACAEF2926FAB9AD6979665C7CAF8469EC7186EA33EDEB9838368CC",
+  "derivedSha256": "d661148e382f91d3972d0825f70ebf2fc45de995cd99d489f865229fdc5514e0",
+  "derivedSizeBytes": 5624733,
+  "conversionDate": "2026-08-23",
+  "conversionTool": "Inkscape (declared by external conversion header)",
+  "conversionVersion": null,
+  "conversionCommand": null,
+  "viewBox": "0 0 3025.3333 2137.3333",
+  "width": "3025.3333",
+  "height": "2137.3333",
+  "objectCount": 3730,
+  "unknownObjectCount": 3730,
+  "transformations": [],
+  "classification": {
+    "CHINA_MAINLAND": "PENDING",
+    "NATIONAL_BOUNDARY": "PENDING",
+    "PROVINCIAL_BOUNDARIES": "PENDING",
+    "COASTLINE": "PENDING",
+    "HAINAN": "PENDING",
+    "TAIWAN": "PENDING",
+    "SOUTH_CHINA_SEA_INSET": "VISUALLY_ACCEPTED_BY_HUMAN_REVIEW",
+    "SOUTH_CHINA_SEA_OBJECTS": "UNKNOWN_SEMANTICS",
+    "LABELS": "PENDING",
+    "LEGEND": "PENDING",
+    "SCALE_BAR": "PENDING",
+    "REVIEW_NUMBER": "VISUALLY_ACCEPTED_BY_HUMAN_REVIEW",
+    "NOTES": "PENDING",
+    "OTHER": "PENDING_CONSERVATIVE_CLASSIFICATION"
+  },
+  "attemptedTools": [
+    "pdftoppm (available; raster output only)",
+    "Ghostscript 10.07.1 from QGIS 3.44.12 (used for source EPS render comparison)",
+    "Inkscape (not installed)",
+    "pdftocairo/rsvg-convert (not installed)"
+  ],
+  "renderCheck": {
+    "tool": "Ghostscript 10.07.1",
+    "command": "gswin64c.exe -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r96 -sDEVICE=png16m -sOutputFile=official-master-gs-preview-%d.png assets/map/source/official-master.eps",
+    "outputSize": "3025x2137",
+    "outputSha256": "1340B371FE21B82ADDF58C87CC05BA8BA43E9AA0315A1D13F7C3DDA02AA7F769",
+    "comparisonReference": "analysis/phase1a/4o28b0625501ad13015501ad2bfc2187b/preview.png",
+    "comparisonResult": "source EPS raster render matched the reference preview; human reviewer confirmed the archived SVG preserves the mainland, boundaries, islands, and South China Sea inset"
+  },
+  "visualAcceptance": {
+    "status": "PASSED",
+    "reviewer": "human reviewer",
+    "scope": ["China mainland", "national/provincial boundaries", "coastline", "islands", "South China Sea inset"],
+    "result": "No path loss reported in the external SVG versus the official EPS PNG comparison."
+  },
+  "visualReference": "analysis/phase1a/4o28b0625501ad13015501ad2bfc2187b/preview.png",
+  "nextAction": "Phase 1B-1 complete; retain official-audit.svg as an immutable audited visual asset. Do not regenerate or replace it without a new human visual comparison against the official EPS preview."
+}

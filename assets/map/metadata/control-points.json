@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "1.0",
+  "status": "HUMAN_CAPTURE_IN_PROGRESS",
+  "visualSource": "assets/map/svg/official-audit.svg",
+  "visualSourceSha256": "d661148e382f91d3972d0825f70ebf2fc45de995cd99d489f865229fdc5514e0",
+  "visualCoordinateDomain": {
+    "name": "V",
+    "viewBox": [
+      0,
+      0,
+      3025.3333,
+      2137.3333
+    ],
+    "units": "SVG user units",
+    "crs": null
+  },
+  "geographicCoordinateDomain": {
+    "name": "G",
+    "datum": "WGS84",
+    "epsg": 4326
+  },
+  "controlPoints": [
+    {
+      "id": "cp-haerbin",
+      "name": "哈尔滨",
+      "role": "interior",
+      "longitudeDeg": 126.535,
+      "latitudeDeg": 45.8028,
+      "x": 2293.3535,
+      "y": 478.5389,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:06:49.006Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-wulumuqi",
+      "name": "乌鲁木齐",
+      "role": "interior",
+      "longitudeDeg": 87.6168,
+      "latitudeDeg": 43.8256,
+      "x": 789.5632,
+      "y": 547.7053,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:09:10.843Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-lasa",
+      "name": "拉萨",
+      "role": "interior",
+      "longitudeDeg": 91.1408,
+      "latitudeDeg": 29.6456,
+      "x": 771.3615,
+      "y": 1376.7095,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:10:34.043Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-beijin",
+      "name": "北京",
+      "role": "capital",
+      "longitudeDeg": 116.4047,
+      "latitudeDeg": 39.9042,
+      "x": 1958.1115,
+      "y": 860.7744,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:12:06.121Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-xian",
+      "name": "西安",
+      "role": "interior",
+      "longitudeDeg": 108.9398,
+      "latitudeDeg": 34.3416,
+      "x": 1630.4811,
+      "y": 1202.9661,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:14:03.304Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-chengdu",
+      "name": "成都",
+      "role": "interior",
+      "longitudeDeg": 104.0665,
+      "latitudeDeg": 30.5723,
+      "x": 1404.7802,
+      "y": 1397.5587,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:15:09.814Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-wuhan",
+      "name": "武汉",
+      "role": "interior",
+      "longitudeDeg": 114.3055,
+      "latitudeDeg": 30.5928,
+      "x": 1870.7434,
+      "y": 1397.5587,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:16:36.322Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-shanghai",
+      "name": "上海",
+      "role": "coast",
+      "longitudeDeg": 121.4737,
+      "latitudeDeg": 31.2304,
+      "x": 2231.1368,
+      "y": 1342.9536,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:18:48.549Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-guangzhou",
+      "name": "广州",
+      "role": "coast",
+      "longitudeDeg": 113.2644,
+      "latitudeDeg": 23.1291,
+      "x": 1856.1821,
+      "y": 1823.4782,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:20:20.740Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-taibei",
+      "name": "台北",
+      "role": "island",
+      "longitudeDeg": 121.5654,
+      "latitudeDeg": 25.033,
+      "x": 2271.1805,
+      "y": 1683.4906,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:22:08.768Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-haikou",
+      "name": "海口",
+      "role": "island",
+      "longitudeDeg": 110.1999,
+      "latitudeDeg": 20.0442,
+      "x": 1699.6476,
+      "y": 2011.121,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:23:13.742Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-sansha",
+      "name": "三沙",
+      "role": "island",
+      "longitudeDeg": 112.3392,
+      "latitudeDeg": 16.832,
+      "x": 2777.1875,
+      "y": 1672.5696,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T09:24:55.160Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-zengmu",
+      "name": "曾母暗沙",
+      "role": "island",
+      "longitudeDeg": 112.2963,
+      "latitudeDeg": 3.8329,
+      "x": 2755.3454,
+      "y": 2043.2222,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T10:00:11.304Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-huangyan",
+      "name": "黄岩岛",
+      "role": "island",
+      "longitudeDeg": 117.76,
+      "latitudeDeg": 15.1436,
+      "x": 2922.801,
+      "y": 1719.894,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T10:01:45.281Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-mohe",
+      "name": "漠河",
+      "role": "border",
+      "longitudeDeg": 122.5376,
+      "latitudeDeg": 52.97,
+      "x": 2121.9267,
+      "y": 110.8648,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T10:04:18.503Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-fuyuan",
+      "name": "抚远",
+      "role": "border",
+      "longitudeDeg": 134.2957,
+      "latitudeDeg": 48.367,
+      "x": 2580.6092,
+      "y": 289.2414,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T10:05:32.619Z",
+      "notes": "Human-clicked V coordinate"
+    },
+    {
+      "id": "cp-kashi",
+      "name": "喀什",
+      "role": "border",
+      "longitudeDeg": 75.9897,
+      "latitudeDeg": 39.4704,
+      "x": 243.5125,
+      "y": 656.9155,
+      "visualSource": "assets/map/svg/official-audit.svg",
+      "capturedAt": "2026-08-23T10:07:19.356Z",
+      "notes": "Human-clicked V coordinate"
+    }
+  ]
+}

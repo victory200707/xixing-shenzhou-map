@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpatialBridge V 坐标拾取器</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1f2937; background: #f3f4f6; }
+    header { padding: 14px 18px; background: #111827; color: #f9fafb; }
+    header h1 { margin: 0 0 4px; font-size: 18px; font-weight: 650; }
+    header p { margin: 0; color: #cbd5e1; font-size: 12px; }
+    main { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 12px; padding: 12px; min-height: calc(100vh - 72px); }
+    .map-panel { min-width: 0; min-height: 0; background: #fff; border: 1px solid #d1d5db; }
+    .map-stage { position: relative; width: 100%; height: min(78vh, 820px); min-height: 420px; overflow: hidden; background: #fff; }
+    #mapObject, #interactionLayer { position: absolute; inset: 0; width: 100%; height: 100%; }
+    #mapObject { display: block; border: 0; }
+    #interactionLayer { display: block; cursor: crosshair; }
+    #interactionLayer .crosshair { fill: #dc2626; stroke: #fff; stroke-width: 3; vector-effect: non-scaling-stroke; }
+    #interactionLayer .crosshair-line { stroke: #dc2626; stroke-width: 1; stroke-dasharray: 5 4; vector-effect: non-scaling-stroke; }
+    .map-status { padding: 7px 10px; border-top: 1px solid #e5e7eb; color: #4b5563; font-size: 12px; }
+    aside { display: flex; flex-direction: column; gap: 12px; }
+    section { background: #fff; border: 1px solid #d1d5db; padding: 12px; }
+    section h2 { margin: 0 0 10px; font-size: 14px; }
+    label { display: block; margin: 8px 0 4px; color: #4b5563; font-size: 12px; }
+    input, select, button { width: 100%; min-height: 32px; border: 1px solid #cbd5e1; border-radius: 3px; font: inherit; }
+    input, select { padding: 5px 7px; background: #fff; }
+    button { padding: 5px 8px; background: #f8fafc; color: #111827; cursor: pointer; }
+    button:hover { background: #eef2f7; }
+    button:disabled { color: #9ca3af; cursor: not-allowed; }
+    .button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+    .readout { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .readout div { padding: 7px; background: #f8fafc; border: 1px solid #e5e7eb; }
+    .readout strong { display: block; margin-top: 2px; color: #111827; font-variant-numeric: tabular-nums; }
+    #pointList { max-height: 280px; overflow: auto; margin: 0; padding: 0; list-style: none; }
+    #pointList li { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 7px 0; border-bottom: 1px solid #e5e7eb; font-size: 12px; }
+    #pointList li:last-child { border-bottom: 0; }
+    .point-name { font-weight: 600; }
+    .point-coords { color: #4b5563; font-variant-numeric: tabular-nums; }
+    .remove { width: auto; min-height: 24px; padding: 2px 6px; }
+    .notice { margin: 0; color: #4b5563; font-size: 12px; line-height: 1.45; }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      .map-stage { height: 62vh; min-height: 320px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SpatialBridge V 坐标拾取器</h1>
+    <p>只读取 official-audit.svg；点击地图获取 SVG viewBox 内部坐标。</p>
+  </header>
+  <main>
+    <section class="map-panel" aria-label="官方 Audit SVG 地图">
+      <div class="map-stage">
+        <object id="mapObject" data="../assets/map/svg/official-audit.svg" type="image/svg+xml" aria-label="官方 Audit SVG"></object>
+        <svg id="interactionLayer" viewBox="0 0 3025.3333 2137.3333" preserveAspectRatio="xMidYMid meet" aria-label="坐标拾取层">
+          <g id="selection" hidden>
+            <line id="crosshairX" class="crosshair-line" x1="0" y1="0" x2="0" y2="2137.3333"></line>
+            <line id="crosshairY" class="crosshair-line" x1="0" y1="0" x2="3025.3333" y2="0"></line>
+            <circle id="crosshairDot" class="crosshair" r="8" cx="0" cy="0"></circle>
+          </g>
+        </svg>
+      </div>
+      <div id="mapStatus" class="map-status">正在加载 official-audit.svg…</div>
+    </section>
+    <aside>
+      <section>
+        <h2>当前点击</h2>
+        <div class="readout">
+          <div>x<strong id="currentX">—</strong></div>
+          <div>y<strong id="currentY">—</strong></div>
+        </div>
+        <p class="notice" style="margin-top:8px">坐标单位为 SVG user units，原点在 viewBox 左上角。屏幕缩放和留白不会改变记录值。</p>
+      </section>
+      <section>
+        <h2>记录控制点</h2>
+        <label for="pointId">ID</label>
+        <input id="pointId" placeholder="例如 cp-beijing" autocomplete="off">
+        <label for="pointName">名称</label>
+        <input id="pointName" placeholder="例如 北京" autocomplete="off">
+        <label for="pointRole">角色</label>
+        <input id="pointRole" placeholder="例如 capital / coast / island" autocomplete="off">
+        <label for="longitude">经度（G，度）</label>
+        <input id="longitude" type="number" step="any" placeholder="必须来自权威城市数据">
+        <label for="latitude">纬度（G，度）</label>
+        <input id="latitude" type="number" step="any" placeholder="必须来自权威城市数据">
+        <div class="button-row">
+          <button id="addPoint" type="button" disabled>加入控制点</button>
+          <button id="clearSelection" type="button">清除点击</button>
+        </div>
+      </section>
+      <section>
+        <h2>已记录 <span id="pointCount">0</span> 个</h2>
+        <ul id="pointList"></ul>
+        <div class="button-row">
+          <button id="copyJson" type="button">复制 JSON</button>
+          <button id="downloadJson" type="button">下载 JSON</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+  <script>
+    (() => {
+      const VIEWBOX = { minX: 0, minY: 0, width: 3025.3333, height: 2137.3333 };
+      const SOURCE = "assets/map/svg/official-audit.svg";
+      const SOURCE_SHA256 = "d661148e382f91d3972d0825f70ebf2fc45de995cd99d489f865229fdc5514e0";
+      const layer = document.getElementById("interactionLayer");
+      const object = document.getElementById("mapObject");
+      const selection = document.getElementById("selection");
+      const crosshairX = document.getElementById("crosshairX");
+      const crosshairY = document.getElementById("crosshairY");
+      const crosshairDot = document.getElementById("crosshairDot");
+      const currentX = document.getElementById("currentX");
+      const currentY = document.getElementById("currentY");
+      const addPoint = document.getElementById("addPoint");
+      const mapStatus = document.getElementById("mapStatus");
+      const points = [];
+      let selected = null;
+
+      const format = value => Number(value).toFixed(4);
+      const updateSelection = point => {
+        selected = point;
+        currentX.textContent = format(point.x);
+        currentY.textContent = format(point.y);
+        crosshairX.setAttribute("x1", point.x);
+        crosshairX.setAttribute("x2", point.x);
+        crosshairY.setAttribute("y1", point.y);
+        crosshairY.setAttribute("y2", point.y);
+        crosshairDot.setAttribute("cx", point.x);
+        crosshairDot.setAttribute("cy", point.y);
+        selection.hidden = false;
+        addPoint.disabled = false;
+      };
+
+      layer.addEventListener("click", event => {
+        const ctm = layer.getScreenCTM();
+        if (!ctm) return;
+        const point = new DOMPoint(event.clientX, event.clientY).matrixTransform(ctm.inverse());
+        updateSelection({ x: point.x, y: point.y });
+      });
+
+      object.addEventListener("load", () => { mapStatus.textContent = "official-audit.svg 已加载；点击地图拾取 V 坐标。"; });
+      object.addEventListener("error", () => { mapStatus.textContent = "无法加载 official-audit.svg。请确认工具文件位于项目 tools/ 目录，并保持相对路径。"; });
+
+      document.getElementById("clearSelection").addEventListener("click", () => {
+        selected = null;
+        currentX.textContent = "—";
+        currentY.textContent = "—";
+        selection.hidden = true;
+        addPoint.disabled = true;
+      });
+
+      const renderList = () => {
+        const list = document.getElementById("pointList");
+        list.replaceChildren();
+        points.forEach((point, index) => {
+          const item = document.createElement("li");
+          const text = document.createElement("div");
+          text.innerHTML = `<div class="point-name"></div><div class="point-coords"></div>`;
+          text.querySelector(".point-name").textContent = `${point.id} · ${point.name || "未命名"}`;
+          text.querySelector(".point-coords").textContent = `V (${format(point.x)}, ${format(point.y)}) · G (${point.longitudeDeg}, ${point.latitudeDeg})`;
+          const remove = document.createElement("button");
+          remove.className = "remove";
+          remove.type = "button";
+          remove.textContent = "删除";
+          remove.addEventListener("click", () => { points.splice(index, 1); renderList(); });
+          item.append(text, remove);
+          list.append(item);
+        });
+        document.getElementById("pointCount").textContent = points.length;
+      };
+
+      const exportData = () => ({
+        schemaVersion: "1.0",
+        status: "HUMAN_CAPTURE_IN_PROGRESS",
+        visualSource: SOURCE,
+        visualSourceSha256: SOURCE_SHA256,
+        visualCoordinateDomain: { name: "V", viewBox: [0, 0, VIEWBOX.width, VIEWBOX.height], units: "SVG user units", crs: null },
+        geographicCoordinateDomain: { name: "G", datum: "WGS84", epsg: 4326 },
+        controlPoints: points
+      });
+
+      addPoint.addEventListener("click", () => {
+        if (!selected) return;
+        const id = document.getElementById("pointId").value.trim();
+        const name = document.getElementById("pointName").value.trim();
+        const role = document.getElementById("pointRole").value.trim();
+        const longitudeDeg = Number(document.getElementById("longitude").value);
+        const latitudeDeg = Number(document.getElementById("latitude").value);
+        if (!id || !Number.isFinite(longitudeDeg) || !Number.isFinite(latitudeDeg)) {
+          alert("请填写 ID、经度和纬度。经纬度必须来自权威数据，不要猜测。");
+          return;
+        }
+        points.push({ id, name, role, longitudeDeg, latitudeDeg, x: Number(format(selected.x)), y: Number(format(selected.y)), visualSource: SOURCE, capturedAt: new Date().toISOString(), notes: "Human-clicked V coordinate" });
+        renderList();
+      });
+
+      document.getElementById("copyJson").addEventListener("click", async () => {
+        await navigator.clipboard.writeText(JSON.stringify(exportData(), null, 2));
+        mapStatus.textContent = "控制点 JSON 已复制到剪贴板。";
+      });
+      document.getElementById("downloadJson").addEventListener("click", () => {
+        const blob = new Blob([JSON.stringify(exportData(), null, 2)], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "control-points.json";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "role": "immutable-official-source-candidate",
+  "fileName": "official-master.eps",
+  "originalFileName": "中国地图 1∶740万 (界线版 无邻国 无河流 线划(一).eps",
+  "sha256": "8709AA9590ACAEF2926FAB9AD6979665C7CAF8469EC7186EA33EDEB9838368CC",
+  "sizeBytes": 20165997,
+  "sourcePath": "assets/map/source/official-master.eps",
+  "sourceArchive": "C:/Users/HUAWEI/Downloads/4o28b0625501ad13015501ad2bfc2187b.zip",
+  "sourceAuthority": "user-provided official-map candidate; formal product record pending",
+  "officialPublisher": null,
+  "officialProductUrl": "https://bzdt.ch.mnr.gov.cn/",
+  "claimedScale": "1:7,400,000",
+  "reviewNumber": "GS(2023)2767号",
+  "creator": "CorelDRAW X8",
+  "creationDateInEps": "2023-08-08T14:30:03",
+  "localFileTimestamp": "2023-08-15T11:32:58+08:00",
+  "downloadDate": null,
+  "license": null,
+  "derivativePermission": null,
+  "crs": null,
+  "wkt": null,
+  "notes": [
+    "The EPS is retained byte-for-byte and is not treated as GIS data.",
+    "Formal publisher, product record, license, South China Sea semantics, and CRS/control-point evidence remain unverified.",
+    "No derived map geometry is approved for public release until the Phase 1A freeze gate is satisfied."
+  ]
+}

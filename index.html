@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="曦行神州：中国日出时空节律动态地图静态视觉骨架">
+  <title>曦行神州 · 万里晨光</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-line">
+          <h1>曦行神州</h1>
+          <span class="brand-mark">晨光</span>
+        </div>
+        <p>中国日出时空节律动态地图</p>
+      </div>
+      <div class="time-status" aria-label="当前时间占位信息">
+        <div class="season-line"><span>夏至</span><span>2026.06.21</span></div>
+        <div class="clock-line">05:00 <small>BJT</small></div>
+        <div class="timezone-label">北京时间</div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="map-zone" aria-label="中国官方地图视觉主体">
+        <div class="map-axis map-axis-top" aria-label="经度刻度"><span>70°E</span><span>80°E</span><span>90°E</span><span>100°E</span><span>110°E</span><span>120°E</span><span>130°E</span><span>140°E</span></div>
+        <div class="map-axis map-axis-left" aria-label="纬度刻度"><span>50°N</span><span>40°N</span><span>30°N</span><span>20°N</span><span>10°N</span></div>
+        <div class="map-visual">
+          <img class="map-image" src="assets/map/svg/clean-map.svg" alt="官方中国地图清洗派生图">
+          <div id="cityLayer" class="city-layer" aria-label="核心城市位置"></div>
+        </div>
+        <div class="map-stage-note"><span class="status-dot"></span>官方地图视觉底座 · 静态骨架</div>
+      </section>
+
+      <aside class="side-rail" aria-label="信息面板占位区域">
+        <section class="glass-card compare-card">
+          <div class="card-heading"><span class="heading-icon">⌘</span><h2>地点对比</h2><span class="collapse-mark">⌃</span></div>
+          <div class="compare-grid">
+            <div class="city-block city-primary"><div class="city-name"><span class="city-dot"></span>北京</div><strong>04:45</strong><small>日出</small></div>
+            <div class="city-block city-secondary"><div class="city-name"><span class="city-dot"></span>乌鲁木齐</div><strong>06:27</strong><small>日出</small></div>
+          </div>
+          <div class="difference"><span>相差</span><strong>1小时41分</strong></div>
+          <div class="mini-curve"><span>早</span><div class="curve-line"><i></i></div><span>晚</span></div>
+          <div class="more-info">更多信息（北京 / 乌鲁木齐）</div>
+          <div class="detail-grid">
+            <span>当地地方时</span><b>XX:XX</b><b>XX:XX</b>
+            <span>民用晨光</span><b>XX:XX</b><b>XX:XX</b>
+            <span>太阳高度</span><b>00.0°</b><b>00.0°</b>
+            <span>经度</span><b>116.4°E</b><b>87.6°E</b>
+          </div>
+        </section>
+
+        <section class="glass-card city-tabs-card">
+          <div class="city-tabs"><button class="active" type="button">◉ 北京</button><button type="button">◉ 乌鲁木齐</button><button type="button">◉ 广州</button><button type="button">◉ 昆明</button><button type="button">◉ 哈尔滨</button><button type="button">◉ 拉萨</button><button type="button">◉ 海口</button></div>
+          <button class="custom-city" type="button">＋ 自定义</button>
+        </section>
+
+        <section class="glass-card phase-card">
+          <div class="card-heading"><span class="heading-icon">◌</span><h2>天文阶段</h2><span class="collapse-mark">⌃</span></div>
+          <div class="phase-row"><div><span class="phase-icon">◌</span><small>天文晨光</small><b>03:15</b></div><div><span class="phase-icon">◌</span><small>航海晨光</small><b>03:53</b></div><div><span class="phase-icon">◌</span><small>民用晨光</small><b>04:17</b></div><div class="selected"><span class="phase-icon">☀</span><small>日出</small><b>04:45</b></div><div><span class="phase-icon">◌</span><small>正午</small><b>11:55</b></div><div><span class="phase-icon">◌</span><small>日落</small><b>19:05</b></div></div>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="timeline-shell" aria-label="时间播放轴静态占位">
+      <div class="timeline-main glass-card">
+        <button id="playToggle" class="play-button" type="button" aria-label="播放或暂停占位动画" aria-pressed="false" title="播放/暂停">▶</button>
+        <span class="timeline-label">03:00</span>
+        <div class="timeline-track-wrap"><div class="timeline-track"><span class="track-progress"></span><i class="track-handle"></i><i class="track-mark mark-one"></i><i class="track-mark mark-two"></i><i class="track-mark mark-three"></i></div><div class="track-scale"><span>03:00</span><strong>05:00</strong><span>10:00</span></div></div>
+        <div class="timeline-actions"><button type="button">− 10分钟</button><button type="button">＋ 10分钟</button><button type="button">1小时</button></div>
+      </div>
+      <div class="summary-row glass-card"><strong>当前时刻概览</strong><span>已见晨光区域 <b>00.0%</b></span><span>日出最长差异 <b>XXhXXm</b></span><span>日出最早 <b>城市：XX　XX:XX</b></span><span>日出最晚 <b>城市：XX　XX:XX</b></span></div>
+      <div class="season-cards"><button type="button"><span>春分</span><b>03.20</b></button><button class="active" type="button"><span>夏至</span><b>06.21</b></button><button type="button"><span>秋分</span><b>09.23</b></button><button type="button"><span>冬至</span><b>12.22</b></button></div>
+    </footer>
+  </div>
+  <script src="src/js/main.js"></script>
+</body>
+</html>

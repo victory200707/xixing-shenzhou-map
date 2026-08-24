@@ -1,0 +1,58 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.parcel-cache/
+.cache/
+
+# Python caches and local tooling output
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editors and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs, temporary files, and local scratch artifacts
+*.log
+*.tmp
+*.bak
+*.orig
+*.rej
+*.cache
+$out
+
+# Unconfirmed large/private geographic inputs
+assets/map/source/*.tif
+assets/map/source/*.tiff
+assets/map/source/*.dem
+assets/terrain/derived/
+
+# Official map source and audited derivatives remain local until licensing scope is confirmed.
+assets/map/source/official-master.eps
+assets/map/svg/official-audit.svg
+assets/map/svg/clean-map.svg
+
+# Historical candidate source files are retained locally for audit, not baseline tracking.
+analysis/phase1a/**/*.eps
+analysis/phase1a/**/*.pdf
+analysis/phase1a/**/*.ps
+

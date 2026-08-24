@@ -1,0 +1,560 @@
+{
+  "schemaVersion": "1.0",
+  "status": "CALIBRATED",
+  "generatedAt": "2026-08-23T10:11:01.397809+00:00",
+  "controlPointsFile": "assets/map/metadata/control-points.json",
+  "controlPointsSha256": "4c066e2f7e5a908cc2e27885b4eaa1dda3c2d9bdb81543dfff8eff4237df48e2",
+  "visualSource": "assets/map/svg/official-audit.svg",
+  "visualSourceSha256": "d661148e382f91d3972d0825f70ebf2fc45de995cd99d489f865229fdc5514e0",
+  "dataQuality": {
+    "status": "PASS",
+    "pointCount": 17,
+    "errorCount": 0,
+    "errors": []
+  },
+  "coordinateDomains": {
+    "G": {
+      "name": "Geographic",
+      "datum": "WGS84",
+      "epsg": 4326,
+      "units": "degrees"
+    },
+    "P": {
+      "name": "China LCC display projection",
+      "proj4": "+proj=lcc +lat_1=25 +lat_2=47 +lat_0=0 +lon_0=105 +datum=WGS84 +units=m +no_defs",
+      "units": "metres"
+    },
+    "V": {
+      "name": "Official SVG visual coordinates",
+      "viewBox": [
+        0.0,
+        0.0,
+        3025.3333,
+        2137.3333
+      ],
+      "units": "SVG user units"
+    }
+  },
+  "mainMap": {
+    "pointCount": 14,
+    "pointIds": [
+      "cp-haerbin",
+      "cp-wulumuqi",
+      "cp-lasa",
+      "cp-beijin",
+      "cp-xian",
+      "cp-chengdu",
+      "cp-wuhan",
+      "cp-shanghai",
+      "cp-guangzhou",
+      "cp-taibei",
+      "cp-haikou",
+      "cp-mohe",
+      "cp-fuyuan",
+      "cp-kashi"
+    ],
+    "fitModel": "full_affine_P_to_V",
+    "affine": {
+      "matrix": [
+        [
+          0.0005049096535585887,
+          2.2454384736449136e-05,
+          1361.601054864795
+        ],
+        [
+          2.5236110567069284e-05,
+          -0.0005152163553260364,
+          3246.205083005489
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "metrics": {
+        "rmsePx": 12.194623168696797,
+        "meanPx": 10.285202877444405,
+        "maxPx": 27.679060153350544,
+        "p95Px": 20.331499420318224
+      },
+      "conditioning": {
+        "normalizationOriginP": [
+          471626.6052845725,
+          4219256.96757886
+        ],
+        "normalizationScaleP": 4566821.785907334,
+        "designMatrixRank": 3,
+        "singularValues": [
+          3.7416573867739404,
+          1.0572237083705425,
+          0.908147506570125
+        ]
+      }
+    },
+    "axisAligned": {
+      "scaleX": 0.0005057905242285658,
+      "scaleY": -0.0005138932661063665,
+      "Tx": 1455.926432072977,
+      "Ty": 3252.524650754002,
+      "metrics": {
+        "rmsePx": 42.70632307623821,
+        "meanPx": 38.09135730099887,
+        "maxPx": 70.46322175303744,
+        "p95Px": 66.93740151282341
+      }
+    },
+    "points": [
+      {
+        "id": "cp-haerbin",
+        "name": "哈尔滨",
+        "role": "interior",
+        "longitudeDeg": 126.535,
+        "latitudeDeg": 45.8028,
+        "projectedP": [
+          1653690.2507565157,
+          5430410.285654925
+        ],
+        "pickedV": [
+          2293.3535,
+          478.5389
+        ],
+        "fittedV": [
+          2318.5017482983494,
+          490.1015977171148
+        ],
+        "deltaPx": [
+          25.148248298349245,
+          11.562697717114816
+        ],
+        "errorPx": 27.679060153350544
+      },
+      {
+        "id": "cp-wulumuqi",
+        "name": "乌鲁木齐",
+        "role": "interior",
+        "longitudeDeg": 87.6168,
+        "latitudeDeg": 43.8256,
+        "projectedP": [
+          -1377670.875945898,
+          5151553.592486426
+        ],
+        "pickedV": [
+          789.5632,
+          547.7053
+        ],
+        "fittedV": [
+          781.6766965293212,
+          557.2733622674815
+        ],
+        "deltaPx": [
+          -7.886503470678804,
+          9.568062267481537
+        ],
+        "errorPx": 12.399385168121553
+      },
+      {
+        "id": "cp-lasa",
+        "name": "拉萨",
+        "role": "interior",
+        "longitudeDeg": 91.1408,
+        "latitudeDeg": 29.6456,
+        "projectedP": [
+          -1321389.6227848239,
+          3573505.0963940835
+        ],
+        "pickedV": [
+          771.3615,
+          1376.7095
+        ],
+        "fittedV": [
+          774.6595365006899,
+          1371.7300768795374
+        ],
+        "deltaPx": [
+          3.298036500689932,
+          -4.97942312046257
+        ],
+        "errorPx": 5.972578954897147
+      },
+      {
+        "id": "cp-beijin",
+        "name": "北京",
+        "role": "capital",
+        "longitudeDeg": 116.4047,
+        "latitudeDeg": 39.9042,
+        "projectedP": [
+          957112.7034754368,
+          4654256.594576486
+        ],
+        "pickedV": [
+          1958.1115,
+          860.7744
+        ],
+        "fittedV": [
+          1949.364966629878,
+          872.4097656056748
+        ],
+        "deltaPx": [
+          -8.746533370122052,
+          11.635365605674792
+        ],
+        "errorPx": 14.556221308168496
+      },
+      {
+        "id": "cp-xian",
+        "name": "西安",
+        "role": "interior",
+        "longitudeDeg": 108.9398,
+        "latitudeDeg": 34.3416,
+        "projectedP": [
+          355967.94732810033,
+          3998756.7552527683
+        ],
+        "pickedV": [
+          1630.4811,
+          1202.9661
+        ],
+        "fittedV": [
+          1631.1223304781088,
+          1194.9634482058952
+        ],
+        "deltaPx": [
+          0.6412304781088096,
+          -8.00265179410485
+        ],
+        "errorPx": 8.028300708353246
+      },
+      {
+        "id": "cp-chengdu",
+        "name": "成都",
+        "role": "interior",
+        "longitudeDeg": 104.0665,
+        "latitudeDeg": 30.5723,
+        "projectedP": [
+          -88329.16351393932,
+          3580647.9781512874
+        ],
+        "pickedV": [
+          1404.7802,
+          1397.5587
+        ],
+        "fittedV": [
+          1397.4040548230498,
+          1399.1675974601071
+        ],
+        "deltaPx": [
+          -7.376145176950104,
+          1.6088974601070731
+        ],
+        "errorPx": 7.549574074647077
+      },
+      {
+        "id": "cp-wuhan",
+        "name": "武汉",
+        "role": "interior",
+        "longitudeDeg": 114.3055,
+        "latitudeDeg": 30.5928,
+        "projectedP": [
+          878945.042668129,
+          3624717.270293301
+        ],
+        "pickedV": [
+          1870.7434,
+          1397.5587
+        ],
+        "fittedV": [
+          1886.7796880034164,
+          1400.8726161967854
+        ],
+        "deltaPx": [
+          16.036288003416303,
+          3.313916196785385
+        ],
+        "errorPx": 16.37512056407006
+      },
+      {
+        "id": "cp-shanghai",
+        "name": "上海",
+        "role": "coast",
+        "longitudeDeg": 121.4737,
+        "latitudeDeg": 31.2304,
+        "projectedP": [
+          1539111.1276588254,
+          3783353.8268167004
+        ],
+        "pickedV": [
+          2231.1368,
+          1342.9536
+        ],
+        "fittedV": [
+          2223.6660035406408,
+          1335.8004920367812
+        ],
+        "deltaPx": [
+          -7.4707964593594625,
+          -7.153107963218872
+        ],
+        "errorPx": 10.343101723885496
+      },
+      {
+        "id": "cp-guangzhou",
+        "name": "广州",
+        "role": "coast",
+        "longitudeDeg": 113.2644,
+        "latitudeDeg": 23.1291,
+        "projectedP": [
+          850995.5296635133,
+          2795819.6861179126
+        ],
+        "pickedV": [
+          1856.1821,
+          1823.4782
+        ],
+        "fittedV": [
+          1854.0553238129373,
+          1827.228871453705
+        ],
+        "deltaPx": [
+          -2.12677618706266,
+          3.750671453705081
+        ],
+        "errorPx": 4.311694945551572
+      },
+      {
+        "id": "cp-taibei",
+        "name": "台北",
+        "role": "island",
+        "longitudeDeg": 121.5654,
+        "latitudeDeg": 25.033,
+        "projectedP": [
+          1663516.3389666888,
+          3113627.512313454
+        ],
+        "pickedV": [
+          2271.1805,
+          1683.4906
+        ],
+        "fittedV": [
+          2271.441103348997,
+          1683.9939465287675
+        ],
+        "deltaPx": [
+          0.2606033489969377,
+          0.5033465287674517
+        ],
+        "errorPx": 0.5668084628255499
+      },
+      {
+        "id": "cp-haikou",
+        "name": "海口",
+        "role": "island",
+        "longitudeDeg": 110.1999,
+        "latitudeDeg": 20.0442,
+        "projectedP": [
+          554396.7921815782,
+          2428415.835101109
+        ],
+        "pickedV": [
+          1699.6476,
+          2011.121
+        ],
+        "fittedV": [
+          1696.0499306006343,
+          2009.0363459741855
+        ],
+        "deltaPx": [
+          -3.5976693993657136,
+          -2.0846540258146433
+        ],
+        "errorPx": 4.158005232617878
+      },
+      {
+        "id": "cp-mohe",
+        "name": "漠河",
+        "role": "border",
+        "longitudeDeg": 122.5376,
+        "latitudeDeg": 52.97,
+        "projectedP": [
+          1205426.9977877755,
+          6160759.818714749
+        ],
+        "pickedV": [
+          2121.9267,
+          110.8648
+        ],
+        "fittedV": [
+          2108.568853946268,
+          102.50115216488621
+        ],
+        "deltaPx": [
+          -13.357846053731919,
+          -8.363647835113795
+        ],
+        "errorPx": 15.760160414951526
+      },
+      {
+        "id": "cp-fuyuan",
+        "name": "抚远",
+        "role": "border",
+        "longitudeDeg": 134.2957,
+        "latitudeDeg": 48.367,
+        "projectedP": [
+          2148910.5958247236,
+          5858474.245016293
+        ],
+        "pickedV": [
+          2580.6092,
+          289.2414
+        ],
+        "fittedV": [
+          2578.1551939972105,
+          282.05348011172157
+        ],
+        "deltaPx": [
+          -2.454006002789356,
+          -7.187919888278429
+        ],
+        "errorPx": 7.595283917144558
+      },
+      {
+        "id": "cp-kashi",
+        "name": "喀什",
+        "role": "border",
+        "longitudeDeg": 75.9897,
+        "latitudeDeg": 39.4704,
+        "projectedP": [
+          -2417911.1900826106,
+          4915299.049214534
+        ],
+        "pickedV": [
+          243.5125,
+          656.9155
+        ],
+        "fittedV": [
+          251.14436949051515,
+          652.7439473973659
+        ],
+        "deltaPx": [
+          7.631869490515157,
+          -4.171552602634051
+        ],
+        "errorPx": 8.697544655636959
+      }
+    ]
+  },
+  "southSeaInset": {
+    "status": "FITTED",
+    "count": 3,
+    "pointIds": [
+      "cp-sansha",
+      "cp-zengmu",
+      "cp-huangyan"
+    ],
+    "affine": {
+      "matrix": [
+        [
+          0.00024115344325795665,
+          3.153119951966262e-05,
+          2516.360621657824
+        ],
+        [
+          2.630676528298599e-05,
+          -0.00023684427486191057,
+          2143.6313054650846
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "metrics": {
+        "rmsePx": 1.3159548161842868e-11,
+        "meanPx": 1.1570524124940974e-11,
+        "maxPx": 1.7547591943707393e-11,
+        "p95Px": 1.7218050414011256e-11
+      }
+    },
+    "points": [
+      {
+        "id": "cp-sansha",
+        "name": "三沙",
+        "role": "island",
+        "longitudeDeg": 112.3392,
+        "latitudeDeg": 16.832,
+        "projectedP": [
+          809767.405982232,
+          2078851.4598257907
+        ],
+        "pickedV": [
+          2777.1875,
+          1672.5696
+        ],
+        "fittedV": [
+          2777.187500000012,
+          1672.569600000008
+        ],
+        "deltaPx": [
+          1.1823431123048067e-11,
+          7.958078640513122e-12
+        ],
+        "errorPx": 1.4252176646746029e-11
+      },
+      {
+        "id": "cp-zengmu",
+        "name": "曾母暗沙",
+        "role": "island",
+        "longitudeDeg": 112.2963,
+        "latitudeDeg": 3.8329,
+        "projectedP": [
+          922182.8247845656,
+          526374.3557127949
+        ],
+        "pickedV": [
+          2755.3454,
+          2043.2222
+        ],
+        "fittedV": [
+          2755.345399999985,
+          2043.2221999999908
+        ],
+        "deltaPx": [
+          -1.5006662579253316e-11,
+          -9.094947017729282e-12
+        ],
+        "errorPx": 1.7547591943707393e-11
+      },
+      {
+        "id": "cp-huangyan",
+        "name": "黄岩岛",
+        "role": "island",
+        "longitudeDeg": 117.76,
+        "latitudeDeg": 15.1436,
+        "projectedP": [
+          1430696.475917224,
+          1948006.9852532074
+        ],
+        "pickedV": [
+          2922.801,
+          1719.894
+        ],
+        "fittedV": [
+          2922.801000000002,
+          1719.8940000000018
+        ],
+        "deltaPx": [
+          2.2737367544323206e-12,
+          1.8189894035458565e-12
+        ],
+        "errorPx": 2.9118037843694986e-12
+      }
+    ]
+  },
+  "policy": {
+    "officialSvgUnmodified": true,
+    "controlPointsNotDropped": true,
+    "crsNotAssignedToEps": true,
+    "dynamicLayersMustUseBridge": true
+  }
+}
