@@ -40,19 +40,9 @@ Thumbs.db
 *.cache
 $out
 
-# Unconfirmed large/private geographic inputs
+# Future real terrain inputs require separate source and licence metadata.
+# They are not yet present in this repository.
 assets/map/source/*.tif
 assets/map/source/*.tiff
 assets/map/source/*.dem
 assets/terrain/derived/
-
-# Official map source and audited derivatives remain local until licensing scope is confirmed.
-assets/map/source/official-master.eps
-assets/map/svg/official-audit.svg
-assets/map/svg/clean-map.svg
-
-# Historical candidate source files are retained locally for audit, not baseline tracking.
-analysis/phase1a/**/*.eps
-analysis/phase1a/**/*.pdf
-analysis/phase1a/**/*.ps
-
