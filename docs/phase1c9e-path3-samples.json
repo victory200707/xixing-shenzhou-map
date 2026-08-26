@@ -1,0 +1,96 @@
+{
+  "status": "BLOCKED_PATH3_IS_OUTLINE_ONLY",
+  "sourcePathId": "path3",
+  "renderDimensions": {
+    "width": 3025,
+    "height": 2137
+  },
+  "maskFile": "docs/screenshots/phase1c9e-path3-mask-bw.png",
+  "maskSha256": "F4AB5BC43154B3B0F3D945A4CDAD7E6AEE221F8A14C058683595A0E0FD73BE66",
+  "interiorSampleResults": {
+    "beijing": {
+      "v": [
+        1958.1115,
+        860.7744
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "urumqi": {
+      "v": [
+        789.5632,
+        547.7053
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "guangzhou": {
+      "v": [
+        1856.1821,
+        1823.4782
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "haikou_hainan": {
+      "v": [
+        1699.6476,
+        2011.121
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "taiwan_taipei": {
+      "v": [
+        2271.1805,
+        1683.4906
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "western_mainland_lhasa": {
+      "v": [
+        771.3615,
+        1376.7095
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "northeastern_mainland_harbin": {
+      "v": [
+        2293.3535,
+        478.5389
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "ocean_east": {
+      "v": [
+        2600.0,
+        1200.0
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "ocean_south": {
+      "v": [
+        2200.0,
+        2000.0
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    },
+    "south_sea_inset": {
+      "v": [
+        2777.1875,
+        1672.5696
+      ],
+      "alpha": 0.0,
+      "window": "5x5 mean"
+    }
+  },
+  "interiorAlphaMean": 0.0,
+  "oceanAlphaMean": 0.0,
+  "southSeaIncluded": false,
+  "method": "exact path3 render; threshold only; no flood fill, dilation, closure, or hand drawing"
+}

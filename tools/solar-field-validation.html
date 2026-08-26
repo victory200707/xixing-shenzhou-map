@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8"><title>Solar field validation</title><pre id="out">running</pre>
+<script type="module">
+import { solarAltitude } from '../src/astronomy/solar-field.js';
+const cities = { 漠河:[122.5376,52.97], 抚远:[134.2957,48.367], 北京:[116.4047,39.9042], 乌鲁木齐:[87.6168,43.8256], 喀什:[75.9897,39.4704], 广州:[113.2644,23.1291], 海口:[110.1999,20.0442] };
+const schedules = [{season:'summer-solstice',date:'2026-06-21',hours:[5,6,8,12,18]},{season:'spring-equinox',date:'2026-03-20',hours:[6,12]},{season:'winter-solstice',date:'2026-12-22',hours:[6,12]}];
+const classify = a => a < -6 ? 'NIGHT_OR_ASTRONOMICAL_TWILIGHT' : a < -0.833 ? 'CIVIL_TWILIGHT' : 'DAYLIGHT';
+const rows=[];
+for(const s of schedules) for(const hour of s.hours){ const [y,m,d]=s.date.split('-').map(Number); const date=new Date(Date.UTC(y,m-1,d,hour-8)); const values={}; for(const [name,[lon,lat]] of Object.entries(cities)){const altitude=solarAltitude(date,lon,lat);values[name]={altitudeDeg:Number(altitude.toFixed(3)),state:classify(altitude)}} rows.push({season:s.season,bjt:`${String(hour).padStart(2,'0')}:00`,utc:date.toISOString(),values}); }
+document.getElementById('out').textContent=JSON.stringify({thresholds:{astronomical:-6,civil:-0.833,geometric:0},rows},null,2);
+</script>

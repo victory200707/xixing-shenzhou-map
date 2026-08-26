@@ -9,12 +9,9 @@ const BRIDGE = {
   c: 0.000025236110567069284, d: -0.0005152163553260364, ty: 3246.205083005489,
 };
 const LIGHT = {
-  nightOpacity: 0.105,
-  twilightOpacity: 0.105,
-  daylightOpacity: 0.105,
-  warmBandOpacity: 0.115,
-  terminatorGlow: 0.34,
-  boundaryPreservation: 0.86,
+  // Until a valid land-fill mask exists, the canvas may render only the
+  // computed terminator references. It must not tint its rectangular extent.
+  terminatorOpacity: 0.06,
 };
 
 function lccConstants() {
@@ -66,36 +63,6 @@ function solarAltitude(date, lon, lat) {
   const minutes = date.getUTCHours() * 60 + date.getUTCMinutes() + date.getUTCSeconds() / 60;
   const hourAngle = ((minutes + eqTime + 4 * lon) / 4 - 180) * RAD;
   return Math.asin(Math.sin(lat * RAD) * Math.sin(decl) + Math.cos(lat * RAD) * Math.cos(decl) * Math.cos(hourAngle)) / RAD;
-}
-
-function smoothstep(edge0, edge1, value) {
-  const t = Math.max(0, Math.min(1, (value - edge0) / (edge1 - edge0)));
-  return t * t * (3 - 2 * t);
-}
-
-function canvasEdgeFade(x, y, width, height) {
-  // PREVIEW_MAP_EXTENT_ONLY: fade the actual displayed rectangle, never a
-  // projected longitude/latitude bounding box that could look trapezoidal.
-  const edgeDistance = Math.min(x, y, width - x, height - y);
-  return smoothstep(0, Math.min(width, height) * 0.12, edgeDistance);
-}
-
-function sampleColor(altitude) {
-  if (altitude < -18) return { r: 6, g: 25, b: 55, a: LIGHT.nightOpacity };
-  if (altitude < -12) {
-    const t = (altitude + 18) / 6;
-    return { r: 11 + 12 * t, g: 36 + 30 * t, b: 71 + 35 * t, a: LIGHT.twilightOpacity * (0.54 + 0.46 * t) };
-  }
-  if (altitude < -6) {
-    const t = (altitude + 12) / 6;
-    return { r: 23 + 47 * t, g: 65 + 43 * t, b: 105 + 28 * t, a: LIGHT.twilightOpacity * (0.72 + 0.28 * t) };
-  }
-  if (altitude < -0.833) {
-    const t = (altitude + 6) / 5.167;
-    return { r: 70 + 130 * t, g: 108 + 55 * t, b: 132 - 22 * t, a: LIGHT.warmBandOpacity * (0.45 + 0.55 * t) };
-  }
-  const t = Math.min(1, Math.max(0, (altitude + 0.833) / 45));
-  return { r: 202 + 32 * t, g: 161 + 43 * t, b: 91 + 47 * t, a: LIGHT.daylightOpacity * (0.36 + 0.64 * t) };
 }
 
 function screenMapper(imageRect) {
@@ -167,42 +134,11 @@ export function renderSolarField(canvas, imageRect, date = new Date('2026-06-20T
   ctx.clearRect(0, 0, imageRect.width, imageRect.height);
 
   const mapper = screenMapper(imageRect);
-  // Dense offscreen sampling removes visible cell edges. This is a technical
-  // geographic extent, not a claimed land polygon or a real DEM.
-  const sampleWidth = Math.max(180, Math.min(320, Math.round(imageRect.width / 3)));
-  const sampleHeight = Math.max(120, Math.min(220, Math.round(imageRect.height / 3)));
-  const field = document.createElement('canvas');
-  field.width = sampleWidth;
-  field.height = sampleHeight;
-  const fieldCtx = field.getContext('2d', { alpha: true });
-  const pixels = fieldCtx.createImageData(sampleWidth, sampleHeight);
-  for (let y = 0; y < sampleHeight; y += 1) {
-    for (let x = 0; x < sampleWidth; x += 1) {
-      const geo = mapper.toGeo((x + 0.5) * imageRect.width / sampleWidth, (y + 0.5) * imageRect.height / sampleHeight);
-      if (!geo) continue;
-      const fade = canvasEdgeFade((x + 0.5) * imageRect.width / sampleWidth, (y + 0.5) * imageRect.height / sampleHeight, imageRect.width, imageRect.height);
-      const color = sampleColor(solarAltitude(date, geo.longitude, geo.latitude));
-      const index = (y * sampleWidth + x) * 4;
-      pixels.data[index] = color.r;
-      pixels.data[index + 1] = color.g;
-      pixels.data[index + 2] = color.b;
-      pixels.data[index + 3] = Math.round(color.a * fade * 255);
-    }
-  }
-  fieldCtx.putImageData(pixels, 0, 0);
-  ctx.imageSmoothingEnabled = true;
-  ctx.globalCompositeOperation = 'source-over';
-  ctx.drawImage(field, 0, 0, imageRect.width, imageRect.height);
+  // 0° and -0.833° remain computed in WGS84/LCC/V space. No rectangular
+  // colour field is drawn without a separately validated land alpha source.
+  drawTerminator(ctx, mapper, date, 0, { color: 'rgba(174, 205, 229, 1)', alpha: LIGHT.terminatorOpacity * .6, width: 0.7, dash: [2, 7] });
+  drawTerminator(ctx, mapper, date, -0.833, { color: 'rgba(227, 187, 112, 1)', alpha: LIGHT.terminatorOpacity, width: 0.75, dash: [5, 7] });
 
-  const edge = ctx.createRadialGradient(imageRect.width * .5, imageRect.height * .5, Math.min(imageRect.width, imageRect.height) * .18, imageRect.width * .5, imageRect.height * .5, Math.max(imageRect.width, imageRect.height) * .75);
-  edge.addColorStop(0, 'rgba(0, 14, 34, 0)');
-  edge.addColorStop(1, 'rgba(0, 11, 28, .12)');
-  ctx.fillStyle = edge;
-  ctx.fillRect(0, 0, imageRect.width, imageRect.height);
-
-  // 0° is the geometric day/night boundary; -0.833° is the sunrise boundary.
-  drawTerminator(ctx, mapper, date, 0, { color: 'rgba(181, 210, 231, 1)', alpha: LIGHT.terminatorGlow * .55, width: 1.05, dash: [2, 5] });
-  drawTerminator(ctx, mapper, date, -0.833, { color: 'rgba(233, 188, 102, 1)', alpha: LIGHT.terminatorGlow, width: 1.25, dash: [6, 4] });
 }
 
 export { solarAltitude, toV, fromV, LIGHT };

@@ -1,0 +1,324 @@
+{
+  "thresholds": {
+    "astronomical": -6,
+    "civil": -0.833,
+    "geometric": 0
+  },
+  "rows": [
+    {
+      "season": "summer-solstice",
+      "bjt": "05:00",
+      "utc": "2026-06-20T21:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 11.26,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 16.637,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": 1.541,
+          "state": "DAYLIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": -12.365,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": -20.872,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "广州": {
+          "altitudeDeg": -9.254,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "海口": {
+          "altitudeDeg": -13.285,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        }
+      }
+    },
+    {
+      "season": "summer-solstice",
+      "bjt": "06:00",
+      "utc": "2026-06-20T22:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 19.805,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 26.382,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": 11.941,
+          "state": "DAYLIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": -4.719,
+          "state": "CIVIL_TWILIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": -14.012,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "广州": {
+          "altitudeDeg": 2.996,
+          "state": "DAYLIGHT"
+        },
+        "海口": {
+          "altitudeDeg": -0.886,
+          "state": "CIVIL_TWILIGHT"
+        }
+      }
+    },
+    {
+      "season": "summer-solstice",
+      "bjt": "08:00",
+      "utc": "2026-06-21T00:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 37.759,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 46.115,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": 34.394,
+          "state": "DAYLIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": 14.152,
+          "state": "DAYLIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": 4.464,
+          "state": "DAYLIGHT"
+        },
+        "广州": {
+          "altitudeDeg": 29.039,
+          "state": "DAYLIGHT"
+        },
+        "海口": {
+          "altitudeDeg": 25.447,
+          "state": "DAYLIGHT"
+        }
+      }
+    },
+    {
+      "season": "summer-solstice",
+      "bjt": "12:00",
+      "utc": "2026-06-21T04:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 60.433,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 62.734,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": 73.217,
+          "state": "DAYLIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": 56.356,
+          "state": "DAYLIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": 49.423,
+          "state": "DAYLIGHT"
+        },
+        "广州": {
+          "altitudeDeg": 83.509,
+          "state": "DAYLIGHT"
+        },
+        "海口": {
+          "altitudeDeg": 80.003,
+          "state": "DAYLIGHT"
+        }
+      }
+    },
+    {
+      "season": "summer-solstice",
+      "bjt": "18:00",
+      "utc": "2026-06-21T10:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 17.257,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 8.662,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": 17.683,
+          "state": "DAYLIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": 39.308,
+          "state": "DAYLIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": 48.43,
+          "state": "DAYLIGHT"
+        },
+        "广州": {
+          "altitudeDeg": 15.094,
+          "state": "DAYLIGHT"
+        },
+        "海口": {
+          "altitudeDeg": 16.756,
+          "state": "DAYLIGHT"
+        }
+      }
+    },
+    {
+      "season": "spring-equinox",
+      "bjt": "06:00",
+      "utc": "2026-03-19T22:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 0.051,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 7.875,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": -4.513,
+          "state": "CIVIL_TWILIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": -24.303,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": -33.999,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "广州": {
+          "altitudeDeg": -8.173,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "海口": {
+          "altitudeDeg": -11.205,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        }
+      }
+    },
+    {
+      "season": "spring-equinox",
+      "bjt": "12:00",
+      "utc": "2026-03-20T04:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 36.502,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 39.967,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": 49.241,
+          "state": "DAYLIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": 36.059,
+          "state": "DAYLIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": 31.989,
+          "state": "DAYLIGHT"
+        },
+        "广州": {
+          "altitudeDeg": 64.846,
+          "state": "DAYLIGHT"
+        },
+        "海口": {
+          "altitudeDeg": 66.377,
+          "state": "DAYLIGHT"
+        }
+      }
+    },
+    {
+      "season": "winter-solstice",
+      "bjt": "06:00",
+      "utc": "2026-12-21T22:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": -16.809,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": -8.2,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "北京": {
+          "altitudeDeg": -17.123,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": -38.76,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": -47.851,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "广州": {
+          "altitudeDeg": -14.446,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        },
+        "海口": {
+          "altitudeDeg": -16.095,
+          "state": "NIGHT_OR_ASTRONOMICAL_TWILIGHT"
+        }
+      }
+    },
+    {
+      "season": "winter-solstice",
+      "bjt": "12:00",
+      "utc": "2026-12-22T04:00:00.000Z",
+      "values": {
+        "漠河": {
+          "altitudeDeg": 13.56,
+          "state": "DAYLIGHT"
+        },
+        "抚远": {
+          "altitudeDeg": 17.001,
+          "state": "DAYLIGHT"
+        },
+        "北京": {
+          "altitudeDeg": 26.602,
+          "state": "DAYLIGHT"
+        },
+        "乌鲁木齐": {
+          "altitudeDeg": 16.648,
+          "state": "DAYLIGHT"
+        },
+        "喀什": {
+          "altitudeDeg": 15.102,
+          "state": "DAYLIGHT"
+        },
+        "广州": {
+          "altitudeDeg": 43.046,
+          "state": "DAYLIGHT"
+        },
+        "海口": {
+          "altitudeDeg": 45.584,
+          "state": "DAYLIGHT"
+        }
+      }
+    }
+  ]
+}

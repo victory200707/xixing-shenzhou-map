@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROXIMATE_VISUAL_MASK",
+  "purpose": "Visual clipping for terrain and solar Canvas layers only; not a geographic source.",
+  "sourceFile": "assets/map/source/terrain-reference-gs2016-1609.jpg",
+  "sourceSha256": "4DE0617DC3A1D457C09E4BA24480331E85CE3F1615FBE0EA61340F5FE996A1AC",
+  "officialDisplaySource": "assets/map/svg/presentation-map.svg",
+  "officialDisplaySourceSha256": "6B3D0A8DD100D809D5682B945C9553432A6BB289A4AF6B4A7FB35C0F003F420F",
+  "displayPathId": "path3",
+  "displayPathSourceCopy": "assets/map/svg/approx-land-mask-source.svg",
+  "sourceDimensions": {
+    "width": 4961,
+    "height": 3508
+  },
+  "registrationFile": "assets/map/metadata/terrain-registration.json",
+  "registrationSha256": "067C057335FC39874E0DD22481B856A2801C2C5B4B27E3E83D667BCFA37973CE",
+  "registrationModel": "affine_source_pixel_to_V",
+  "sourcePixelToV": [
+    [
+      0.687248494689088,
+      0.0018707966441676854,
+      -216.61160308243075
+    ],
+    [
+      0.005211536863072089,
+      0.6759221306973856,
+      -107.09952548309211
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "inverseVToSourcePixel": [
+    1.4551083002642433,
+    -0.004027404343494771,
+    314.76200848467187,
+    -0.011219266542974586,
+    1.4794914140988735,
+    156.02260509501548
+  ],
+  "outputFile": "tools/test-terrain-mask.png",
+  "outputSha256": "ED3488AD14F23FDB15615939F812CF11A0B56A3C9FDFEAFC36F33E95592A5ACD",
+  "outputDimensions": {
+    "width": 3025,
+    "height": 2137
+  },
+  "viewBox": "0 0 3025.3333 2137.3333",
+  "southSeaInset": {
+    "included": false,
+    "sourceRegionSuppressed": "x=3900..4700, y=2180..3260"
+  },
+  "processing": [
+    "terrain JPG only; no webpage screenshot",
+    "presentation-map path3 copied to an independent visual-only fill source with fill-rule=evenodd",
+    "cyan-water color segmentation at low resolution",
+    "majority closing and low-pass resampling",
+    "1.35px alpha feather",
+    "source legend and source South Sea inset suppressed",
+    "no hand-drawn Chinese outline"
+  ],
+  "maskMethod": "terrain JPG cyan-water segmentation with seeded connected components",
+  "approximation": {
+    "maximumAlpha": 230,
+    "edgeError": "Not an authoritative coastline comparison; official SVG has no reliable solid land fill.",
+    "knownErrors": [
+      "neighboring land in the terrain reference can be conservatively included",
+      "small islands may be softened by low-resolution segmentation",
+      "this mask must not be used for borders, cities, coordinates, or map facts"
+    ]
+  },
+  "generatedAt": "2026-08-26T09:34:08.173830+00:00"
+}

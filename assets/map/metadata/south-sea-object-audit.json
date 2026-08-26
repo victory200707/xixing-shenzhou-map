@@ -1,0 +1,3791 @@
+{
+  "generatedAt": "2026-08-26T07:36:41.034Z",
+  "source": {
+    "file": "assets/map/svg/presentation-map.svg",
+    "pathCount": 859
+  },
+  "inset": {
+    "file": "assets/map/svg/official-south-sea.svg",
+    "pathCount": 594
+  },
+  "records": [
+    {
+      "sourceId": "path3365",
+      "main": {
+        "dSha256": "b6705b7fdfa47a4948c9b2eb18d14f58354893faae30303c53a1649402762739",
+        "dLength": 4760,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2659.857937911279,
+          "y": 1484.2271921721776,
+          "width": 248.79842617335134,
+          "height": 100.89142204957602,
+          "local": {
+            "x": 19951.52734375,
+            "y": 4139.75634765625,
+            "width": 1866.279296875,
+            "height": 756.8037109375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "b6705b7fdfa47a4948c9b2eb18d14f58354893faae30303c53a1649402762739",
+        "dLength": 4760,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2659.857937911279,
+          "y": 1484.2271921721776,
+          "width": 248.79842617335134,
+          "height": 100.89142204957602,
+          "local": {
+            "x": 19951.52734375,
+            "y": 4139.75634765625,
+            "width": 1866.279296875,
+            "height": 756.8037109375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 73,
+        "rgbaDiffRate": 0.0015754488950276244,
+        "alphaDiffPixels": 73,
+        "alphaDiffRate": 0.0015754488950276244,
+        "nonZeroUnionPixels": 73
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3366",
+      "main": {
+        "dSha256": "25c265da13e4919b624b83374cb9c3798b6e826e152c55a192b914f5abb4349e",
+        "dLength": 713,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2707.9936577401363,
+          "y": 1484.2045394560791,
+          "width": 53.19144153555408,
+          "height": 62.11426829389802,
+          "local": {
+            "x": 20312.6015625,
+            "y": 4430.80029296875,
+            "width": 398.998046875,
+            "height": 465.9296875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "25c265da13e4919b624b83374cb9c3798b6e826e152c55a192b914f5abb4349e",
+        "dLength": 713,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2707.9936577401363,
+          "y": 1484.2045394560791,
+          "width": 53.19144153555408,
+          "height": 62.11426829389802,
+          "local": {
+            "x": 20312.6015625,
+            "y": 4430.80029296875,
+            "width": 398.998046875,
+            "height": 465.9296875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 22,
+        "rgbaDiffRate": 0.000474792817679558,
+        "alphaDiffPixels": 19,
+        "alphaDiffRate": 0.00041004834254143645,
+        "nonZeroUnionPixels": 22
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3367",
+      "main": {
+        "dSha256": "aaeaec0538e743100bd3729751097b424c9a27dcb2659da1deaeff61a80c6b5a",
+        "dLength": 501,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2597.1174652240857,
+          "y": 1500.3260478828304,
+          "width": 63.00319211872511,
+          "height": 49.93609000658603,
+          "local": {
+            "x": 19480.900390625,
+            "y": 4401.220703125,
+            "width": 472.59765625,
+            "height": 374.5791015625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "aaeaec0538e743100bd3729751097b424c9a27dcb2659da1deaeff61a80c6b5a",
+        "dLength": 501,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2597.1174652240857,
+          "y": 1500.3260478828304,
+          "width": 63.00319211872511,
+          "height": 49.93609000658603,
+          "local": {
+            "x": 19480.900390625,
+            "y": 4401.220703125,
+            "width": 472.59765625,
+            "height": 374.5791015625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 20,
+        "rgbaDiffRate": 0.00043162983425414363,
+        "alphaDiffPixels": 20,
+        "alphaDiffRate": 0.00043162983425414363,
+        "nonZeroUnionPixels": 20
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3368",
+      "main": {
+        "dSha256": "feaed2813b38b36fa38f7fb299917aa428f57e951262a80959a5241a98d8ee31",
+        "dLength": 48,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2699.7014617678874,
+          "y": 1709.21875287132,
+          "width": 7.012187324665774,
+          "height": 19.121007942429515,
+          "local": {
+            "x": 20250.400390625,
+            "y": 3065.43017578125,
+            "width": 52.599609375,
+            "height": 143.429931640625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "feaed2813b38b36fa38f7fb299917aa428f57e951262a80959a5241a98d8ee31",
+        "dLength": 48,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2699.7014617678874,
+          "y": 1709.21875287132,
+          "width": 7.012187324665774,
+          "height": 19.121007942429515,
+          "local": {
+            "x": 20250.400390625,
+            "y": 3065.43017578125,
+            "width": 52.599609375,
+            "height": 143.429931640625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 7,
+        "rgbaDiffRate": 0.00015107044198895027,
+        "alphaDiffPixels": 7,
+        "alphaDiffRate": 0.00015107044198895027,
+        "nonZeroUnionPixels": 7
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3369",
+      "main": {
+        "dSha256": "74419fefdf10460571e681bff8df7b9613423b4267ce9962b1248cba658558a0",
+        "dLength": 54,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2713.4326529881755,
+          "y": 1816.0261139932254,
+          "width": 6.345624644069176,
+          "height": 19.715576646000727,
+          "local": {
+            "x": 20353.400390625,
+            "y": 2259.7900390625,
+            "width": 47.599609375,
+            "height": 147.889892578125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "74419fefdf10460571e681bff8df7b9613423b4267ce9962b1248cba658558a0",
+        "dLength": 54,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2713.4326529881755,
+          "y": 1816.0261139932254,
+          "width": 6.345624644069176,
+          "height": 19.715576646000727,
+          "local": {
+            "x": 20353.400390625,
+            "y": 2259.7900390625,
+            "width": 47.599609375,
+            "height": 147.889892578125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3370",
+      "main": {
+        "dSha256": "c6bf2e34096c0f61f226c3da23a7089d92f35418e9bbc857dd8ccde66840ca0c",
+        "dLength": 48,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2661.3668171042696,
+          "y": 1954.6271480053367,
+          "width": 1.1672658191851042,
+          "height": 20.558120987436496,
+          "local": {
+            "x": 19962.845703125,
+            "y": 1213.800048828125,
+            "width": 8.755859375,
+            "height": 154.2099609375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "c6bf2e34096c0f61f226c3da23a7089d92f35418e9bbc857dd8ccde66840ca0c",
+        "dLength": 48,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2661.3668171042696,
+          "y": 1954.6271480053367,
+          "width": 1.1672658191851042,
+          "height": 20.558120987436496,
+          "local": {
+            "x": 19962.845703125,
+            "y": 1213.800048828125,
+            "width": 8.755859375,
+            "height": 154.2099609375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3371",
+      "main": {
+        "dSha256": "5266411d1f9fd5fd34c39836f38eb21850f8331ccaa7ac164f5bef9792647a41",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2767.8640052600576,
+          "y": 2048.2893348847283,
+          "width": 19.050413486657362,
+          "height": 7.022903426354787,
+          "local": {
+            "x": 20761.69921875,
+            "y": 612.7540283203125,
+            "width": 142.900390625,
+            "height": 52.67999267578125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "5266411d1f9fd5fd34c39836f38eb21850f8331ccaa7ac164f5bef9792647a41",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2767.8640052600576,
+          "y": 2048.2893348847283,
+          "width": 19.050413486657362,
+          "height": 7.022903426354787,
+          "local": {
+            "x": 20761.69921875,
+            "y": 612.7540283203125,
+            "width": 142.900390625,
+            "height": 52.67999267578125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 9,
+        "rgbaDiffRate": 0.00019423342541436463,
+        "alphaDiffPixels": 9,
+        "alphaDiffRate": 0.00019423342541436463,
+        "nonZeroUnionPixels": 10
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3372",
+      "main": {
+        "dSha256": "0e4bef6455f352642d31c16e609270a5e0ebcdf97085d92abf6332f069c28490",
+        "dLength": 27,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2869.0482201746067,
+          "y": 1930.8402012987317,
+          "width": 13.664534952228223,
+          "height": 15.122966286091923,
+          "local": {
+            "x": 21520.69921875,
+            "y": 1433,
+            "width": 102.5,
+            "height": 113.43994140625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "0e4bef6455f352642d31c16e609270a5e0ebcdf97085d92abf6332f069c28490",
+        "dLength": 27,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2869.0482201746067,
+          "y": 1930.8402012987317,
+          "width": 13.664534952228223,
+          "height": 15.122966286091923,
+          "local": {
+            "x": 21520.69921875,
+            "y": 1433,
+            "width": 102.5,
+            "height": 113.43994140625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 8,
+        "rgbaDiffRate": 0.00017265193370165745,
+        "alphaDiffPixels": 8,
+        "alphaDiffRate": 0.00017265193370165745,
+        "nonZeroUnionPixels": 8
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3373",
+      "main": {
+        "dSha256": "70806ba16aaefaf1932df02983514fe3dbd1bb765864d0f74684c45f7d9b50e9",
+        "dLength": 45,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2947.796091485906,
+          "y": 1818.2097577122968,
+          "width": 8.145343881679764,
+          "height": 19.531620968718926,
+          "local": {
+            "x": 22111.400390625,
+            "y": 2244.7900390625,
+            "width": 61.099609375,
+            "height": 146.510009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "70806ba16aaefaf1932df02983514fe3dbd1bb765864d0f74684c45f7d9b50e9",
+        "dLength": 45,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2947.796091485906,
+          "y": 1818.2097577122968,
+          "width": 8.145343881679764,
+          "height": 19.531620968718926,
+          "local": {
+            "x": 22111.400390625,
+            "y": 2244.7900390625,
+            "width": 61.099609375,
+            "height": 146.510009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 8,
+        "rgbaDiffRate": 0.00017265193370165745,
+        "alphaDiffPixels": 8,
+        "alphaDiffRate": 0.00017265193370165745,
+        "nonZeroUnionPixels": 8
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3374",
+      "main": {
+        "dSha256": "e3405b0e931e881d188f87b42b8c09511f42e5a433cae0009e9014ea4acedf60",
+        "dLength": 44,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2954.461718291871,
+          "y": 1703.6822793406448,
+          "width": 0.43586950285907733,
+          "height": 20.300836905887763,
+          "local": {
+            "x": 22161.400390625,
+            "y": 3098.110107421875,
+            "width": 3.26953125,
+            "height": 152.280029296875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "e3405b0e931e881d188f87b42b8c09511f42e5a433cae0009e9014ea4acedf60",
+        "dLength": 44,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2954.461718291871,
+          "y": 1703.6822793406448,
+          "width": 0.43586950285907733,
+          "height": 20.300836905887763,
+          "local": {
+            "x": 22161.400390625,
+            "y": 3098.110107421875,
+            "width": 3.26953125,
+            "height": 152.280029296875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 8,
+        "rgbaDiffRate": 0.00017265193370165745,
+        "alphaDiffPixels": 8,
+        "alphaDiffRate": 0.00017265193370165745,
+        "nonZeroUnionPixels": 8
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3375",
+      "main": {
+        "dSha256": "037e2a29cb448b13e146ee276b5893eedb647d12a5ed1c7114164bfbc552bf75",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2965.926596398131,
+          "y": 1623.4507853129242,
+          "width": 7.625372915605112,
+          "height": 18.814415146959846,
+          "local": {
+            "x": 22247.400390625,
+            "y": 3711.090087890625,
+            "width": 57.19921875,
+            "height": 141.130126953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "037e2a29cb448b13e146ee276b5893eedb647d12a5ed1c7114164bfbc552bf75",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2965.926596398131,
+          "y": 1623.4507853129242,
+          "width": 7.625372915605112,
+          "height": 18.814415146959846,
+          "local": {
+            "x": 22247.400390625,
+            "y": 3711.090087890625,
+            "width": 57.19921875,
+            "height": 141.130126953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 7,
+        "rgbaDiffRate": 0.00015107044198895027,
+        "alphaDiffPixels": 7,
+        "alphaDiffRate": 0.00015107044198895027,
+        "nonZeroUnionPixels": 7
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3376",
+      "main": {
+        "dSha256": "33d43aca7e1c1693f9eff35e28577e8298983982b1ee3be1bd6f8c5fdeff9565",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 3002.8408897247746,
+          "y": 1546.3481651492887,
+          "width": 12.557936752019486,
+          "height": 16.096186856170107,
+          "local": {
+            "x": 22524.30078125,
+            "y": 4309.83984375,
+            "width": 94.19921875,
+            "height": 120.740234375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "33d43aca7e1c1693f9eff35e28577e8298983982b1ee3be1bd6f8c5fdeff9565",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 3002.8408897247746,
+          "y": 1546.3481651492887,
+          "width": 12.557936752019486,
+          "height": 16.096186856170107,
+          "local": {
+            "x": 22524.30078125,
+            "y": 4309.83984375,
+            "width": 94.19921875,
+            "height": 120.740234375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 8,
+        "rgbaDiffRate": 0.00017265193370165745,
+        "alphaDiffPixels": 7,
+        "alphaDiffRate": 0.00015107044198895027,
+        "nonZeroUnionPixels": 8
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3377",
+      "main": {
+        "dSha256": "d2acacf13c97274158058acadf38e6ad71f0f801931e64ba22ff267f5ac10257",
+        "dLength": 50,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2895.5375773271403,
+          "y": 1483.733974844943,
+          "width": 14.611262259512841,
+          "height": 15.317662475317093,
+          "local": {
+            "x": 21719.400390625,
+            "y": 4785.359375,
+            "width": 109.6015625,
+            "height": 114.900390625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "d2acacf13c97274158058acadf38e6ad71f0f801931e64ba22ff267f5ac10257",
+        "dLength": 50,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2895.5375773271403,
+          "y": 1483.733974844943,
+          "width": 14.611262259512841,
+          "height": 15.317662475317093,
+          "local": {
+            "x": 21719.400390625,
+            "y": 4785.359375,
+            "width": 109.6015625,
+            "height": 114.900390625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 7,
+        "rgbaDiffRate": 0.00015107044198895027,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 7
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3378",
+      "main": {
+        "dSha256": "71eceeb21ec9fe20d97f6836e75a798ac39555332756cb932a23013cb9d9820f",
+        "dLength": 507,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2812.3036871002173,
+          "y": 1520.531814984518,
+          "width": 18.49971814702394,
+          "height": 11.81898953032669,
+          "local": {
+            "x": 21095.048828125,
+            "y": 4535.57666015625,
+            "width": 138.76953125,
+            "height": 88.65625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "71eceeb21ec9fe20d97f6836e75a798ac39555332756cb932a23013cb9d9820f",
+        "dLength": 507,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2812.3036871002173,
+          "y": 1520.531814984518,
+          "width": 18.49971814702394,
+          "height": 11.81898953032669,
+          "local": {
+            "x": 21095.048828125,
+            "y": 4535.57666015625,
+            "width": 138.76953125,
+            "height": 88.65625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 10,
+        "rgbaDiffRate": 0.00021581491712707181,
+        "alphaDiffPixels": 10,
+        "alphaDiffRate": 0.00021581491712707181,
+        "nonZeroUnionPixels": 10
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3379",
+      "main": {
+        "dSha256": "5889fb24b664f2c41ed652a4b34de2de874c79e9165ca613bff53eba90f0b4dc",
+        "dLength": 35,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2709.6332457087756,
+          "y": 1584.26093552258,
+          "width": 18.037290287360065,
+          "height": 4.5832693692186695,
+          "local": {
+            "x": 20324.900390625,
+            "y": 4111.81005859375,
+            "width": 135.30078125,
+            "height": 34.3798828125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "5889fb24b664f2c41ed652a4b34de2de874c79e9165ca613bff53eba90f0b4dc",
+        "dLength": 35,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2709.6332457087756,
+          "y": 1584.26093552258,
+          "width": 18.037290287360065,
+          "height": 4.5832693692186695,
+          "local": {
+            "x": 20324.900390625,
+            "y": 4111.81005859375,
+            "width": 135.30078125,
+            "height": 34.3798828125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3380",
+      "main": {
+        "dSha256": "a4dc2dd95f683d90d668b11f7fe0cfa3baa59a0f7f67d23f925d511da7a7c6a3",
+        "dLength": 1545,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2677.772330704404,
+          "y": 1588.2601163241236,
+          "width": 62.64100903719782,
+          "height": 55.093390918660134,
+          "local": {
+            "x": 20085.90625,
+            "y": 3702.926513671875,
+            "width": 469.880859375,
+            "height": 413.264892578125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "a4dc2dd95f683d90d668b11f7fe0cfa3baa59a0f7f67d23f925d511da7a7c6a3",
+        "dLength": 1545,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2677.772330704404,
+          "y": 1588.2601163241236,
+          "width": 62.64100903719782,
+          "height": 55.093390918660134,
+          "local": {
+            "x": 20085.90625,
+            "y": 3702.926513671875,
+            "width": 469.880859375,
+            "height": 413.264892578125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 36,
+        "rgbaDiffRate": 0.0007769337016574585,
+        "alphaDiffPixels": 36,
+        "alphaDiffRate": 0.0007769337016574585,
+        "nonZeroUnionPixels": 36
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3381",
+      "main": {
+        "dSha256": "ef7caf4f5a862d56d1832f9eaabcfed9883af3e140ffc5d57337d4e893940b3b",
+        "dLength": 562,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2974.9290982268903,
+          "y": 1483.9219012569433,
+          "width": 39.18945922627336,
+          "height": 50.6800494671852,
+          "local": {
+            "x": 22314.9296875,
+            "y": 4518.6904296875,
+            "width": 293.966796875,
+            "height": 380.15966796875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "ef7caf4f5a862d56d1832f9eaabcfed9883af3e140ffc5d57337d4e893940b3b",
+        "dLength": 562,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2974.9290982268903,
+          "y": 1483.9219012569433,
+          "width": 39.18945922627336,
+          "height": 50.6800494671852,
+          "local": {
+            "x": 22314.9296875,
+            "y": 4518.6904296875,
+            "width": 293.966796875,
+            "height": 380.15966796875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 23,
+        "rgbaDiffRate": 0.0004963743093922652,
+        "alphaDiffPixels": 23,
+        "alphaDiffRate": 0.0004963743093922652,
+        "nonZeroUnionPixels": 23
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3382",
+      "main": {
+        "dSha256": "1d2cd855d459adb77574ed2a1cca3c6fc845c2e7ac0cee80b416ca8bb679748c",
+        "dLength": 138,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 3013.4301231846102,
+          "y": 1528.8132704448235,
+          "width": 3.147425657441545,
+          "height": 3.211217788983049,
+          "local": {
+            "x": 22603.732421875,
+            "y": 4538.0244140625,
+            "width": 23.609375,
+            "height": 24.087890625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "1d2cd855d459adb77574ed2a1cca3c6fc845c2e7ac0cee80b416ca8bb679748c",
+        "dLength": 138,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 3013.4301231846102,
+          "y": 1528.8132704448235,
+          "width": 3.147425657441545,
+          "height": 3.211217788983049,
+          "local": {
+            "x": 22603.732421875,
+            "y": 4538.0244140625,
+            "width": 23.609375,
+            "height": 24.087890625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3383",
+      "main": {
+        "dSha256": "7037992475cc75fd1494d10ff9bbc14a365197fd83df886cbb82ab3f0058e112",
+        "dLength": 97,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 3012.339407923275,
+          "y": 1512.7803549681007,
+          "width": 1.4984641511064183,
+          "height": 1.5382365923023826,
+          "local": {
+            "x": 22595.55078125,
+            "y": 4670.83935546875,
+            "width": 11.240234375,
+            "height": 11.53857421875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "7037992475cc75fd1494d10ff9bbc14a365197fd83df886cbb82ab3f0058e112",
+        "dLength": 97,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 3012.339407923275,
+          "y": 1512.7803549681007,
+          "width": 1.4984641511064183,
+          "height": 1.5382365923023826,
+          "local": {
+            "x": 22595.55078125,
+            "y": 4670.83935546875,
+            "width": 11.240234375,
+            "height": 11.53857421875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3384",
+      "main": {
+        "dSha256": "698b69c0c9918fb120681939f3c2f8169055a525f3f223adc145ca8e69688499",
+        "dLength": 110,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2958.87795642687,
+          "y": 1487.73107263811,
+          "width": 1.7361874821162928,
+          "height": 2.420130263857345,
+          "local": {
+            "x": 22194.52734375,
+            "y": 4852.123046875,
+            "width": 13.0234375,
+            "height": 18.15380859375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "698b69c0c9918fb120681939f3c2f8169055a525f3f223adc145ca8e69688499",
+        "dLength": 110,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2958.87795642687,
+          "y": 1487.73107263811,
+          "width": 1.7361874821162928,
+          "height": 2.420130263857345,
+          "local": {
+            "x": 22194.52734375,
+            "y": 4852.123046875,
+            "width": 13.0234375,
+            "height": 18.15380859375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3385",
+      "main": {
+        "dSha256": "bdb9db38eb26152975074f4fef8a0d959447117c97ca1662eaf1067fc63f12b8",
+        "dLength": 169,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2961.356996771385,
+          "y": 1486.4690950317893,
+          "width": 3.089882551030769,
+          "height": 4.911213000551243,
+          "local": {
+            "x": 22213.123046875,
+            "y": 4842.9033203125,
+            "width": 23.177734375,
+            "height": 36.83984375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "bdb9db38eb26152975074f4fef8a0d959447117c97ca1662eaf1067fc63f12b8",
+        "dLength": 169,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2961.356996771385,
+          "y": 1486.4690950317893,
+          "width": 3.089882551030769,
+          "height": 4.911213000551243,
+          "local": {
+            "x": 22213.123046875,
+            "y": 4842.9033203125,
+            "width": 23.177734375,
+            "height": 36.83984375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 5,
+        "rgbaDiffRate": 0.00010790745856353591,
+        "alphaDiffPixels": 5,
+        "alphaDiffRate": 0.00010790745856353591,
+        "nonZeroUnionPixels": 5
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3386",
+      "main": {
+        "dSha256": "39c337d79721e7a18d82498005d5373ad5fc241ff6a2a62a18e1b7e34832dd27",
+        "dLength": 206,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2813.1772487382646,
+          "y": 1527.2109813449324,
+          "width": 5.543926795023708,
+          "height": 4.011809039828449,
+          "local": {
+            "x": 21101.6015625,
+            "y": 4544.0380859375,
+            "width": 41.5859375,
+            "height": 30.09326171875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "39c337d79721e7a18d82498005d5373ad5fc241ff6a2a62a18e1b7e34832dd27",
+        "dLength": 206,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2813.1772487382646,
+          "y": 1527.2109813449324,
+          "width": 5.543926795023708,
+          "height": 4.011809039828449,
+          "local": {
+            "x": 21101.6015625,
+            "y": 4544.0380859375,
+            "width": 41.5859375,
+            "height": 30.09326171875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3387",
+      "main": {
+        "dSha256": "014d483b4f025f144e52f3ea6caf9af35b0a7c18b67ca3975bdf2f24fd12bd7c",
+        "dLength": 115,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2796.79516898237,
+          "y": 1535.5525185781082,
+          "width": 2.1452382521229083,
+          "height": 1.944683601838051,
+          "local": {
+            "x": 20978.716796875,
+            "y": 4496.97265625,
+            "width": 16.091796875,
+            "height": 14.58740234375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "014d483b4f025f144e52f3ea6caf9af35b0a7c18b67ca3975bdf2f24fd12bd7c",
+        "dLength": 115,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2796.79516898237,
+          "y": 1535.5525185781082,
+          "width": 2.1452382521229083,
+          "height": 1.944683601838051,
+          "local": {
+            "x": 20978.716796875,
+            "y": 4496.97265625,
+            "width": 16.091796875,
+            "height": 14.58740234375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 5,
+        "rgbaDiffRate": 0.00010790745856353591,
+        "alphaDiffPixels": 5,
+        "alphaDiffRate": 0.00010790745856353591,
+        "nonZeroUnionPixels": 5
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3388",
+      "main": {
+        "dSha256": "50baca9a066e47af23e9e5fe96203f3cd39fe118f6ef5bc8e276c8500b661870",
+        "dLength": 106,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2798.9385846021632,
+          "y": 1537.9703054575414,
+          "width": 1.8057078866936536,
+          "height": 2.021950193817247,
+          "local": {
+            "x": 20994.794921875,
+            "y": 4478.2568359375,
+            "width": 13.544921875,
+            "height": 15.1669921875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "50baca9a066e47af23e9e5fe96203f3cd39fe118f6ef5bc8e276c8500b661870",
+        "dLength": 106,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2798.9385846021632,
+          "y": 1537.9703054575414,
+          "width": 1.8057078866936536,
+          "height": 2.021950193817247,
+          "local": {
+            "x": 20994.794921875,
+            "y": 4478.2568359375,
+            "width": 13.544921875,
+            "height": 15.1669921875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3389",
+      "main": {
+        "dSha256": "b105faedd8df2fbce9d7263f2eeabc957f09538e53834ce87ea3e6c80fbf4f3b",
+        "dLength": 181,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2785.337060653335,
+          "y": 1542.1607975596976,
+          "width": 3.243504418824614,
+          "height": 6.379733906240517,
+          "local": {
+            "x": 20892.767578125,
+            "y": 4414.134765625,
+            "width": 24.330078125,
+            "height": 47.85546875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "b105faedd8df2fbce9d7263f2eeabc957f09538e53834ce87ea3e6c80fbf4f3b",
+        "dLength": 181,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2785.337060653335,
+          "y": 1542.1607975596976,
+          "width": 3.243504418824614,
+          "height": 6.379733906240517,
+          "local": {
+            "x": 20892.767578125,
+            "y": 4414.134765625,
+            "width": 24.330078125,
+            "height": 47.85546875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3390",
+      "main": {
+        "dSha256": "d38db6b683a3247344bce95499ae4dd8403d2b8d5a3324284025b2504cf1630f",
+        "dLength": 21,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2822.7221138731497,
+          "y": 1536.001797447393,
+          "width": 0,
+          "height": 0,
+          "local": {
+            "x": 21173.19921875,
+            "y": 4508.18994140625,
+            "width": 0,
+            "height": 0
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "d38db6b683a3247344bce95499ae4dd8403d2b8d5a3324284025b2504cf1630f",
+        "dLength": 21,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2822.7221138731497,
+          "y": 1536.001797447393,
+          "width": 0,
+          "height": 0,
+          "local": {
+            "x": 21173.19921875,
+            "y": 4508.18994140625,
+            "width": 0,
+            "height": 0
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3391",
+      "main": {
+        "dSha256": "93aa028110fef40592e94b2c16d79c7a54ca907198994089dab60e214e6487f2",
+        "dLength": 111,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2804.8025135590824,
+          "y": 1533.3324873064535,
+          "width": 2.336614646747421,
+          "height": 1.1004793631020675,
+          "local": {
+            "x": 21038.78125,
+            "y": 4519.9580078125,
+            "width": 17.52734375,
+            "height": 8.2548828125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "93aa028110fef40592e94b2c16d79c7a54ca907198994089dab60e214e6487f2",
+        "dLength": 111,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2804.8025135590824,
+          "y": 1533.3324873064535,
+          "width": 2.336614646747421,
+          "height": 1.1004793631020675,
+          "local": {
+            "x": 21038.78125,
+            "y": 4519.9580078125,
+            "width": 17.52734375,
+            "height": 8.2548828125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 5,
+        "rgbaDiffRate": 0.00010790745856353591,
+        "alphaDiffPixels": 5,
+        "alphaDiffRate": 0.00010790745856353591,
+        "nonZeroUnionPixels": 5
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3392",
+      "main": {
+        "dSha256": "5d29c27f34162fae029f09bf7c669963394df472c942393a1b13260526309137",
+        "dLength": 103,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2800.263898681943,
+          "y": 1533.8220593690285,
+          "width": 2.630839579979238,
+          "height": 2.1023412983618073,
+          "local": {
+            "x": 21004.736328125,
+            "y": 4508.7705078125,
+            "width": 19.734375,
+            "height": 15.77001953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "5d29c27f34162fae029f09bf7c669963394df472c942393a1b13260526309137",
+        "dLength": 103,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2800.263898681943,
+          "y": 1533.8220593690285,
+          "width": 2.630839579979238,
+          "height": 2.1023412983618073,
+          "local": {
+            "x": 21004.736328125,
+            "y": 4508.7705078125,
+            "width": 19.734375,
+            "height": 15.77001953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3393",
+      "main": {
+        "dSha256": "2546717e6e226d4c57be55e1e3d33903929fd80a4758631223c3e9ce349956ae",
+        "dLength": 168,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2779.419754606758,
+          "y": 1543.753908403928,
+          "width": 4.452690781594356,
+          "height": 3.56545940107344,
+          "local": {
+            "x": 20848.380859375,
+            "y": 4423.294921875,
+            "width": 33.400390625,
+            "height": 26.7451171875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "2546717e6e226d4c57be55e1e3d33903929fd80a4758631223c3e9ce349956ae",
+        "dLength": 168,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2779.419754606758,
+          "y": 1543.753908403928,
+          "width": 4.452690781594356,
+          "height": 3.56545940107344,
+          "local": {
+            "x": 20848.380859375,
+            "y": 4423.294921875,
+            "width": 33.400390625,
+            "height": 26.7451171875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 5,
+        "rgbaDiffRate": 0.00010790745856353591,
+        "alphaDiffPixels": 5,
+        "alphaDiffRate": 0.00010790745856353591,
+        "nonZeroUnionPixels": 5
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3394",
+      "main": {
+        "dSha256": "b6ed8c6aa47db3e90086b05a41ed13b67ad290a8d1e034dc2f61a82e5090cc72",
+        "dLength": 109,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2726.219981037697,
+          "y": 1557.8109602471718,
+          "width": 2.920117368316369,
+          "height": 1.653192617100558,
+          "local": {
+            "x": 20449.3203125,
+            "y": 4332.19482421875,
+            "width": 21.904296875,
+            "height": 12.40087890625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "b6ed8c6aa47db3e90086b05a41ed13b67ad290a8d1e034dc2f61a82e5090cc72",
+        "dLength": 109,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2726.219981037697,
+          "y": 1557.8109602471718,
+          "width": 2.920117368316369,
+          "height": 1.653192617100558,
+          "local": {
+            "x": 20449.3203125,
+            "y": 4332.19482421875,
+            "width": 21.904296875,
+            "height": 12.40087890625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3395",
+      "main": {
+        "dSha256": "6c958463348140be7a156d23f606e09005082654a6e8b8dc3b391eb136993347",
+        "dLength": 111,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2728.47145271704,
+          "y": 1565.0123107700615,
+          "width": 1.9674014119482308,
+          "height": 2.074936719403695,
+          "local": {
+            "x": 20466.208984375,
+            "y": 4275.0126953125,
+            "width": 14.7578125,
+            "height": 15.564453125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "6c958463348140be7a156d23f606e09005082654a6e8b8dc3b391eb136993347",
+        "dLength": 111,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2728.47145271704,
+          "y": 1565.0123107700615,
+          "width": 1.9674014119482308,
+          "height": 2.074936719403695,
+          "local": {
+            "x": 20466.208984375,
+            "y": 4275.0126953125,
+            "width": 14.7578125,
+            "height": 15.564453125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3396",
+      "main": {
+        "dSha256": "8b512a9ba616513c08a8e232d09afd68702e346421c4efde037c27247d8a3d1a",
+        "dLength": 106,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2894.0508300981533,
+          "y": 1491.6374293788597,
+          "width": 2.012706844145214,
+          "height": 1.456869077581132,
+          "local": {
+            "x": 21708.248046875,
+            "y": 4830.04638671875,
+            "width": 15.09765625,
+            "height": 10.92822265625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "8b512a9ba616513c08a8e232d09afd68702e346421c4efde037c27247d8a3d1a",
+        "dLength": 106,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2894.0508300981533,
+          "y": 1491.6374293788597,
+          "width": 2.012706844145214,
+          "height": 1.456869077581132,
+          "local": {
+            "x": 21708.248046875,
+            "y": 4830.04638671875,
+            "width": 15.09765625,
+            "height": 10.92822265625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3397",
+      "main": {
+        "dSha256": "f68d5bcfb237ba41e59817c76539116dfb84473510440238faa442883de32fc5",
+        "dLength": 116,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2896.124725313369,
+          "y": 1493.9894713063982,
+          "width": 3.6582834618675406,
+          "height": 2.3543853119622327,
+          "local": {
+            "x": 21723.8046875,
+            "y": 4805.6708984375,
+            "width": 27.44140625,
+            "height": 17.66064453125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "f68d5bcfb237ba41e59817c76539116dfb84473510440238faa442883de32fc5",
+        "dLength": 116,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2896.124725313369,
+          "y": 1493.9894713063982,
+          "width": 3.6582834618675406,
+          "height": 2.3543853119622327,
+          "local": {
+            "x": 21723.8046875,
+            "y": 4805.6708984375,
+            "width": 27.44140625,
+            "height": 17.66064453125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3474",
+      "main": {
+        "dSha256": "6a13c8117c98574e0d5f71000401d5e6789b51090c349eff338deda8af32fddb",
+        "dLength": 144,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2665.559912966897,
+          "y": 1542.5460890154059,
+          "width": 4.919284658011293,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 19994.298828125,
+            "y": 4422.25,
+            "width": 36.900390625,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "6a13c8117c98574e0d5f71000401d5e6789b51090c349eff338deda8af32fddb",
+        "dLength": 144,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2665.559912966897,
+          "y": 1542.5460890154059,
+          "width": 4.919284658011293,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 19994.298828125,
+            "y": 4422.25,
+            "width": 36.900390625,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3476",
+      "main": {
+        "dSha256": "d4a9a350196ba2b2b78c355ee11d562682a5ef71c211c50bbc9f80f3976629c7",
+        "dLength": 145,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2719.5249317384087,
+          "y": 1552.0925815005858,
+          "width": 4.906005479609121,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 20399.099609375,
+            "y": 4350.64013671875,
+            "width": 36.80078125,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "d4a9a350196ba2b2b78c355ee11d562682a5ef71c211c50bbc9f80f3976629c7",
+        "dLength": 145,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2719.5249317384087,
+          "y": 1552.0925815005858,
+          "width": 4.906005479609121,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 20399.099609375,
+            "y": 4350.64013671875,
+            "width": 36.80078125,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 5,
+        "rgbaDiffRate": 0.00010790745856353591,
+        "alphaDiffPixels": 5,
+        "alphaDiffRate": 0.00010790745856353591,
+        "nonZeroUnionPixels": 5
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3490",
+      "main": {
+        "dSha256": "c2045ca6789ce073072757fadfc3829553b0db22287b08c91655ae6ae5b27e63",
+        "dLength": 143,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2698.3948947634995,
+          "y": 1635.316968001789,
+          "width": 4.9192846580117475,
+          "height": 4.912547427792788,
+          "local": {
+            "x": 20240.599609375,
+            "y": 3726.360107421875,
+            "width": 36.900390625,
+            "height": 36.849853515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "c2045ca6789ce073072757fadfc3829553b0db22287b08c91655ae6ae5b27e63",
+        "dLength": 143,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2698.3948947634995,
+          "y": 1635.316968001789,
+          "width": 4.9192846580117475,
+          "height": 4.912547427792788,
+          "local": {
+            "x": 20240.599609375,
+            "y": 3726.360107421875,
+            "width": 36.900390625,
+            "height": 36.849853515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3495",
+      "main": {
+        "dSha256": "3e7134cfe9e0fd34971ef59c8c6f191896ed116bbed9fbaa4b8a29a56344e5e0",
+        "dLength": 145,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2884.165913845745,
+          "y": 1493.82836362725,
+          "width": 4.9192846580117475,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 21634.099609375,
+            "y": 4787.68994140625,
+            "width": 36.900390625,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "3e7134cfe9e0fd34971ef59c8c6f191896ed116bbed9fbaa4b8a29a56344e5e0",
+        "dLength": 145,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2884.165913845745,
+          "y": 1493.82836362725,
+          "width": 4.9192846580117475,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 21634.099609375,
+            "y": 4787.68994140625,
+            "width": 36.900390625,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3503",
+      "main": {
+        "dSha256": "c3445c54432583d432be15f5b758174f052d682eef4084293e50fc6535ca245c",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2659.9876051827387,
+          "y": 1550.0236334302654,
+          "width": 0.1333125361193197,
+          "height": 0.23863464717442184,
+          "local": {
+            "x": 19952.5,
+            "y": 4401.2197265625,
+            "width": 1,
+            "height": 1.7900390625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "c3445c54432583d432be15f5b758174f052d682eef4084293e50fc6535ca245c",
+        "dLength": 47,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2659.9876051827387,
+          "y": 1550.0236334302654,
+          "width": 0.1333125361193197,
+          "height": 0.23863464717442184,
+          "local": {
+            "x": 19952.5,
+            "y": 4401.2197265625,
+            "width": 1,
+            "height": 1.7900390625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3505",
+      "main": {
+        "dSha256": "be15682a2b0a52a31b2fa7461e95bddec4e136dc744d1fd6ad6522372f8ef866",
+        "dLength": 45,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2923.9196079661015,
+          "y": 2089.6366199176523,
+          "width": 98.37137247764167,
+          "height": 43.512450189401534,
+          "local": {
+            "x": 21932.298828125,
+            "y": 28.88671875,
+            "width": 737.900390625,
+            "height": 326.394287109375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "be15682a2b0a52a31b2fa7461e95bddec4e136dc744d1fd6ad6522372f8ef866",
+        "dLength": 45,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2923.9196079661015,
+          "y": 2089.6366199176523,
+          "width": 98.37137247764167,
+          "height": 43.512450189401534,
+          "local": {
+            "x": 21932.298828125,
+            "y": 28.88671875,
+            "width": 737.900390625,
+            "height": 326.394287109375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 25,
+        "rgbaDiffRate": 0.0005395372928176796,
+        "alphaDiffPixels": 25,
+        "alphaDiffRate": 0.0005395372928176796,
+        "nonZeroUnionPixels": 26
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3508",
+      "main": {
+        "dSha256": "12dd8ac0a51ae611ce65b6344019fe2ccc12261ec336cc57f9dffa0b07fa42f5",
+        "dLength": 146,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2668.7062971201503,
+          "y": 1508.0448307053355,
+          "width": 6.812218520486567,
+          "height": 6.801543102555343,
+          "local": {
+            "x": 20017.900390625,
+            "y": 4666.88037109375,
+            "width": 51.099609375,
+            "height": 51.01953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "12dd8ac0a51ae611ce65b6344019fe2ccc12261ec336cc57f9dffa0b07fa42f5",
+        "dLength": 146,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2668.7062971201503,
+          "y": 1508.0448307053355,
+          "width": 6.812218520486567,
+          "height": 6.801543102555343,
+          "local": {
+            "x": 20017.900390625,
+            "y": 4666.88037109375,
+            "width": 51.099609375,
+            "height": 51.01953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3511",
+      "main": {
+        "dSha256": "df7c270e734a9dc35841f1bbb28006a193f280a93465a0efd8fe693e8dd98e69",
+        "dLength": 147,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2718.045214662694,
+          "y": 1589.3081299137334,
+          "width": 6.812218520486567,
+          "height": 6.801608196567031,
+          "local": {
+            "x": 20388,
+            "y": 4057.31005859375,
+            "width": 51.099609375,
+            "height": 51.02001953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "df7c270e734a9dc35841f1bbb28006a193f280a93465a0efd8fe693e8dd98e69",
+        "dLength": 147,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2718.045214662694,
+          "y": 1589.3081299137334,
+          "width": 6.812218520486567,
+          "height": 6.801608196567031,
+          "local": {
+            "x": 20388,
+            "y": 4057.31005859375,
+            "width": 51.099609375,
+            "height": 51.02001953125
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3514",
+      "main": {
+        "dSha256": "e009d7edbbe446650feaf175c94e928d3e18c166a96f98d967e6606cdcbba867",
+        "dLength": 149,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2800.978891307301,
+          "y": 1526.5272989392388,
+          "width": 6.798939342084395,
+          "height": 6.802910076802618,
+          "local": {
+            "x": 21010.099609375,
+            "y": 4528.22998046875,
+            "width": 51,
+            "height": 51.02978515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "e009d7edbbe446650feaf175c94e928d3e18c166a96f98d967e6606cdcbba867",
+        "dLength": 149,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2800.978891307301,
+          "y": 1526.5272989392388,
+          "width": 6.798939342084395,
+          "height": 6.802910076802618,
+          "local": {
+            "x": 21010.099609375,
+            "y": 4528.22998046875,
+            "width": 51,
+            "height": 51.02978515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 7,
+        "rgbaDiffRate": 0.00015107044198895027,
+        "alphaDiffPixels": 7,
+        "alphaDiffRate": 0.00015107044198895027,
+        "nonZeroUnionPixels": 7
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3517",
+      "main": {
+        "dSha256": "8d3924ff32e22bd0278d2ec9542730b9bcdb0cf0ef292f250e38ada6150cbffa",
+        "dLength": 149,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2819.2695274884977,
+          "y": 1524.9341880950083,
+          "width": 6.812218520487022,
+          "height": 6.802910076802618,
+          "local": {
+            "x": 21147.30078125,
+            "y": 4540.18017578125,
+            "width": 51.099609375,
+            "height": 51.02978515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "8d3924ff32e22bd0278d2ec9542730b9bcdb0cf0ef292f250e38ada6150cbffa",
+        "dLength": 149,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2819.2695274884977,
+          "y": 1524.9341880950083,
+          "width": 6.812218520487022,
+          "height": 6.802910076802618,
+          "local": {
+            "x": 21147.30078125,
+            "y": 4540.18017578125,
+            "width": 51.099609375,
+            "height": 51.02978515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3520",
+      "main": {
+        "dSha256": "f1d302ccd6215a01bf1f39eead8dffc515bdacfa00ddb5b3d06b45713fc4c83c",
+        "dLength": 149,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2796.8329235092006,
+          "y": 1500.7139430990096,
+          "width": 6.798939342084395,
+          "height": 6.802910076802618,
+          "local": {
+            "x": 20979,
+            "y": 4721.8603515625,
+            "width": 51,
+            "height": 51.02978515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "f1d302ccd6215a01bf1f39eead8dffc515bdacfa00ddb5b3d06b45713fc4c83c",
+        "dLength": 149,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2796.8329235092006,
+          "y": 1500.7139430990096,
+          "width": 6.798939342084395,
+          "height": 6.802910076802618,
+          "local": {
+            "x": 20979,
+            "y": 4721.8603515625,
+            "width": 51,
+            "height": 51.02978515625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 6,
+        "alphaDiffRate": 0.0001294889502762431,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3537",
+      "main": {
+        "dSha256": "17d58ebb75af80d4e8921bba33fecb6f422706da6088dd80f603d99e2094e145",
+        "dLength": 142,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2982.4839092337293,
+          "y": 1512.1242073293884,
+          "width": 4.9192846580117475,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 22371.599609375,
+            "y": 4650.44970703125,
+            "width": 36.900390625,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "17d58ebb75af80d4e8921bba33fecb6f422706da6088dd80f603d99e2094e145",
+        "dLength": 142,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2982.4839092337293,
+          "y": 1512.1242073293884,
+          "width": 4.9192846580117475,
+          "height": 4.912579974798518,
+          "local": {
+            "x": 22371.599609375,
+            "y": 4650.44970703125,
+            "width": 36.900390625,
+            "height": 36.85009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 5,
+        "rgbaDiffRate": 0.00010790745856353591,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 5
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3605",
+      "main": {
+        "dSha256": "3135d7a33db122401dd2f9e784ec87c5d0cbb724de22d0d1d4c3d3a5a9d4a939",
+        "dLength": 145,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2773.249883794487,
+          "y": 1679.616730263634,
+          "width": 4.906005479609121,
+          "height": 4.911213000551243,
+          "local": {
+            "x": 20802.099609375,
+            "y": 3394.070068359375,
+            "width": 36.80078125,
+            "height": 36.83984375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "3135d7a33db122401dd2f9e784ec87c5d0cbb724de22d0d1d4c3d3a5a9d4a939",
+        "dLength": 145,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2773.249883794487,
+          "y": 1679.616730263634,
+          "width": 4.906005479609121,
+          "height": 4.911213000551243,
+          "local": {
+            "x": 20802.099609375,
+            "y": 3394.070068359375,
+            "width": 36.80078125,
+            "height": 36.83984375
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 6,
+        "rgbaDiffRate": 0.0001294889502762431,
+        "alphaDiffPixels": 5,
+        "alphaDiffRate": 0.00010790745856353591,
+        "nonZeroUnionPixels": 6
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3618",
+      "main": {
+        "dSha256": "843a5903d3db9cbae2ed384990fd99fbd315ea0684bc54d14b63a20d2d4b93b7",
+        "dLength": 159,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2687.949388881668,
+          "y": 1562.5705692942943,
+          "width": 1.6182371327759029,
+          "height": 1.6823547343765313,
+          "local": {
+            "x": 20162.24609375,
+            "y": 4296.2734375,
+            "width": 12.138671875,
+            "height": 12.61962890625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "843a5903d3db9cbae2ed384990fd99fbd315ea0684bc54d14b63a20d2d4b93b7",
+        "dLength": 159,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2687.949388881668,
+          "y": 1562.5705692942943,
+          "width": 1.6182371327759029,
+          "height": 1.6823547343765313,
+          "local": {
+            "x": 20162.24609375,
+            "y": 4296.2734375,
+            "width": 12.138671875,
+            "height": 12.61962890625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3620",
+      "main": {
+        "dSha256": "ad4934568ed77fea1d8c863132ade09cdd94b11eb93ab900895ceec4d9a5230c",
+        "dLength": 132,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2691.2327308356994,
+          "y": 1566.7111993834294,
+          "width": 0.39473008741606463,
+          "height": 0.4596939111690972,
+          "local": {
+            "x": 20186.875,
+            "y": 4274.38525390625,
+            "width": 2.9609375,
+            "height": 3.4482421875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "ad4934568ed77fea1d8c863132ade09cdd94b11eb93ab900895ceec4d9a5230c",
+        "dLength": 132,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2691.2327308356994,
+          "y": 1566.7111993834294,
+          "width": 0.39473008741606463,
+          "height": 0.4596939111690972,
+          "local": {
+            "x": 20186.875,
+            "y": 4274.38525390625,
+            "width": 2.9609375,
+            "height": 3.4482421875
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 4,
+        "rgbaDiffRate": 8.632596685082873E-05,
+        "alphaDiffPixels": 4,
+        "alphaDiffRate": 8.632596685082873E-05,
+        "nonZeroUnionPixels": 4
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    },
+    {
+      "sourceId": "path3622",
+      "main": {
+        "dSha256": "95200ced74aa5ee1bda06c5f64f13b2c80b727192b851df5fb7689d0ece96e4f",
+        "dLength": 89,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2596.8641193302497,
+          "y": 1483.9085595272638,
+          "width": 425.8668966331056,
+          "height": 649.498806161256,
+          "local": {
+            "x": 19479,
+            "y": 26.949199676513672,
+            "width": 3194.5,
+            "height": 4872.0009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "inset": {
+        "dSha256": "95200ced74aa5ee1bda06c5f64f13b2c80b727192b851df5fb7689d0ece96e4f",
+        "dLength": 89,
+        "selfTransform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+        "parentTransforms": [],
+        "bboxV": {
+          "x": 2596.8641193302497,
+          "y": 1483.9085595272638,
+          "width": 425.8668966331056,
+          "height": 649.498806161256,
+          "local": {
+            "x": 19479,
+            "y": 26.949199676513672,
+            "width": 3194.5,
+            "height": 4872.0009765625
+          },
+          "ctm": [
+            0.1333125361193006,
+            0,
+            0,
+            -0.1333125361193006,
+            0.06922826239299196,
+            2137.0000318437815
+          ]
+        }
+      },
+      "geometry": {
+        "dExact": true,
+        "selfTransformExact": true,
+        "parentTransformExact": true
+      },
+      "pixelComparison": {
+        "status": "OK",
+        "canvas": {
+          "width": 256,
+          "height": 181
+        },
+        "rgbaDiffPixels": 270,
+        "rgbaDiffRate": 0.005827002762430939,
+        "alphaDiffPixels": 270,
+        "alphaDiffRate": 0.005827002762430939,
+        "nonZeroUnionPixels": 270
+      },
+      "classification": "EXACT_DUPLICATE",
+      "semantic": "UNKNOWN",
+      "notes": "Object semantics are not established by an official legend, source note, or review material."
+    }
+  ],
+  "classificationSummary": {
+    "EXACT_DUPLICATE": 49,
+    "DIFFERENT_GEOMETRY": 0,
+    "UNKNOWN": 0
+  },
+  "semanticAudit": {
+    "status": "UNKNOWN",
+    "basis": "official-south-sea.svg contains path-converted artwork without an authoritative legend or source note",
+    "categories": {
+      "backdropRect": {
+        "count": 1,
+        "ids": [
+          "presentation-backdrop"
+        ],
+        "classification": "UNKNOWN",
+        "evidence": "One rect element is observable; its semantic role is not certified"
+      },
+      "outerFrame": {
+        "candidateIds": [
+          "path3622"
+        ],
+        "classification": "UNKNOWN",
+        "evidence": "Closed rectangular path geometry is observable; outer-frame meaning is not certified"
+      },
+      "innerFrame": {
+        "candidateIds": [
+          "path3621"
+        ],
+        "classification": "UNKNOWN",
+        "evidence": "Long open/closed frame-like path geometry is observable; inner-frame meaning is not certified"
+      },
+      "scaleBar": {
+        "candidateIds": [
+          "path3504",
+          "path3505"
+        ],
+        "classification": "UNKNOWN",
+        "evidence": "Short rectangular/segment paths are observable; scale-bar meaning is not certified"
+      },
+      "convertedText": {
+        "detectedTextElements": 0,
+        "classification": "UNKNOWN",
+        "evidence": "No text elements; any converted glyphs cannot be separated reliably"
+      },
+      "islandGroupSymbols": {
+        "candidateCount": "UNKNOWN",
+        "classification": "UNKNOWN",
+        "evidence": "Path artwork may include symbols, but no legend supports semantic labeling"
+      },
+      "shortLineObjects": {
+        "candidateIds": [
+          "path3368",
+          "path3369",
+          "path3370",
+          "path3371",
+          "path3372",
+          "path3373",
+          "path3374",
+          "path3375",
+          "path3376",
+          "path3377",
+          "path3379",
+          "path3382",
+          "path3383",
+          "path3384",
+          "path3387",
+          "path3388",
+          "path3390",
+          "path3391",
+          "path3392",
+          "path3394",
+          "path3395",
+          "path3396",
+          "path3397",
+          "path3503",
+          "path3505",
+          "path3620",
+          "path3622"
+        ],
+        "classification": "UNKNOWN",
+        "evidence": "Candidates selected only by short path data length; semantic identity is not inferred",
+        "candidateCountInOfficialSouthSea": 86,
+        "candidateSelection": "path d attribute length <= 140 characters (observable heuristic only)",
+        "candidateIdsScope": "IDs listed are only the hidden 49-object overlap; full official candidate IDs are intentionally not semantically labeled"
+      }
+    }
+  },
+  "renderAudit": {
+    "technicalRendering": "PASS",
+    "canvasComparison": "49/49 rendered in browser at 256x181; alpha and RGBA differences recorded per object",
+    "geometryTraceability": "PASS",
+    "semanticsConfirmed": false,
+    "formalMapComplianceCertified": false,
+    "pixelComparisonMethod": "Browser Image + Canvas rasterization of corresponding path with source style",
+    "pixelDifferenceInterpretation": "Non-zero RGBA differences are expected when presentation and official styles differ; geometry equality is established separately"
+  },
+  "assetIntegrity": {
+    "officialMasterEps": "8709AA9590ACAEF2926FAB9AD6979665C7CAF8469EC7186EA33EDEB9838368CC",
+    "officialAuditSvg": "D661148E382F91D3972D0825F70EBF2FC45DE995CD99D489F865229FDC5514E0",
+    "cleanMapSvg": "51D3EB706ECAB3E0C07878ECC203BDD81DF52A4A9474766BF3B05515043C9D72",
+    "presentationMapSvg": "6B3D0A8DD100D809D5682B945C9553432A6BB289A4AF6B4A7FB35C0F003F420F",
+    "officialSouthSeaSvg": "2D7EA15DD23DBBB65DD696AF4342D375E5F8A8CC88E9B7C21FB5C1F67194328D"
+  }
+}

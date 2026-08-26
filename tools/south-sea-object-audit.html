@@ -1,0 +1,84 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>South Sea object audit</title>
+<pre id="out">running</pre>
+<script>
+(async () => {
+  const out = document.getElementById('out');
+  const meta = await (await fetch('/assets/map/metadata/presentation-coastline.json')).json();
+  const mainText = await (await fetch('/assets/map/svg/presentation-map.svg')).text();
+  const insetText = await (await fetch('/assets/map/svg/official-south-sea.svg')).text();
+  const parse = text => new DOMParser().parseFromString(text, 'image/svg+xml');
+  const mainDoc = parse(mainText), insetDoc = parse(insetText);
+  const hash = async value => {
+    const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+    return [...new Uint8Array(bytes)].map(v => v.toString(16).padStart(2, '0')).join('');
+  };
+  const parentTransforms = element => {
+    const result = [];
+    let parent = element && element.parentElement;
+    while (parent && parent.tagName.toLowerCase() !== 'svg') {
+      if (parent.hasAttribute('transform')) result.push(parent.getAttribute('transform'));
+      parent = parent.parentElement;
+    }
+    return result.reverse();
+  };
+  const bboxV = (doc, id) => {
+    const source = doc.getElementById(id);
+    if (!source) return { error: 'MISSING' };
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 3025.3333 2137.3333');
+    svg.setAttribute('width', '3025.3333');
+    svg.setAttribute('height', '2137.3333');
+    svg.style.cssText = 'position:absolute;left:-10000px;top:-10000px;width:3025px;height:2137px;visibility:hidden';
+    const clone = document.importNode(source, true);
+    svg.appendChild(clone); document.body.appendChild(svg);
+    let local;
+    try { local = clone.getBBox(); } catch (error) { document.body.removeChild(svg); return { error: String(error) }; }
+    const ctm = clone.getCTM();
+    const matrix = ctm ? [ctm.a, ctm.b, ctm.c, ctm.d, ctm.e, ctm.f] : [1, 0, 0, 1, 0, 0];
+    const apply = (x, y) => [matrix[0] * x + matrix[2] * y + matrix[4], matrix[1] * x + matrix[3] * y + matrix[5]];
+    const points = [[local.x, local.y], [local.x + local.width, local.y], [local.x, local.y + local.height], [local.x + local.width, local.y + local.height]].map(([x, y]) => apply(x, y));
+    document.body.removeChild(svg);
+    const xs = points.map(point => point[0]), ys = points.map(point => point[1]);
+    return { x: Math.min(...xs), y: Math.min(...ys), width: Math.max(...xs) - Math.min(...xs), height: Math.max(...ys) - Math.min(...ys), local: { x: local.x, y: local.y, width: local.width, height: local.height }, ctm: matrix };
+  };
+  const render = async element => {
+    if (!element) return { status: 'MISSING' };
+    const esc = value => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="256" height="181" viewBox="0 0 3025.3333 2137.3333"><path d="${esc(element.getAttribute('d') || '')}" transform="${esc(element.getAttribute('transform') || '')}" style="${esc(element.getAttribute('style') || '')}"/></svg>`;
+    const url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
+    try {
+      const image = new Image();
+      await new Promise((resolve, reject) => { image.onload = resolve; image.onerror = reject; image.src = url; });
+      const canvas = document.createElement('canvas'); canvas.width = 256; canvas.height = 181;
+      const context = canvas.getContext('2d', { willReadFrequently: true }); context.drawImage(image, 0, 0);
+      return { status: 'OK', pixels: [...context.getImageData(0, 0, canvas.width, canvas.height).data] };
+    } catch (error) { return { status: 'ERROR', error: String(error) }; }
+    finally { URL.revokeObjectURL(url); }
+  };
+  const records = [];
+  for (const id of meta.hiddenInsetDuplicatePathIds) {
+    const main = mainDoc.getElementById(id), inset = insetDoc.getElementById(id);
+    const mainD = main?.getAttribute('d') || '', insetD = inset?.getAttribute('d') || '';
+    const mainTransform = main?.getAttribute('transform') || '', insetTransform = inset?.getAttribute('transform') || '';
+    const mainParents = parentTransforms(main), insetParents = parentTransforms(inset);
+    const mainPixels = await render(main), insetPixels = await render(inset);
+    let pixelComparison = { status: 'UNAVAILABLE' };
+    if (mainPixels.status === 'OK' && insetPixels.status === 'OK') {
+      let rgbaDiffPixels = 0, alphaDiffPixels = 0, nonZeroUnionPixels = 0;
+      for (let i = 0; i < mainPixels.pixels.length; i += 4) {
+        if (mainPixels.pixels[i + 3] || insetPixels.pixels[i + 3]) nonZeroUnionPixels++;
+        if (mainPixels.pixels[i + 3] !== insetPixels.pixels[i + 3]) alphaDiffPixels++;
+        if (mainPixels.pixels[i] !== insetPixels.pixels[i] || mainPixels.pixels[i + 1] !== insetPixels.pixels[i + 1] || mainPixels.pixels[i + 2] !== insetPixels.pixels[i + 2] || mainPixels.pixels[i + 3] !== insetPixels.pixels[i + 3]) rgbaDiffPixels++;
+      }
+      pixelComparison = { status: 'OK', canvas: { width: 256, height: 181 }, rgbaDiffPixels, rgbaDiffRate: rgbaDiffPixels / (256 * 181), alphaDiffPixels, alphaDiffRate: alphaDiffPixels / (256 * 181), nonZeroUnionPixels };
+    } else pixelComparison = { status: 'ERROR', main: mainPixels.status, inset: insetPixels.status };
+    const dExact = !!mainD && mainD === insetD;
+    const selfTransformExact = mainTransform === insetTransform;
+    const parentTransformExact = JSON.stringify(mainParents) === JSON.stringify(insetParents);
+    records.push({ sourceId: id, main: { dSha256: await hash(mainD), dLength: mainD.length, selfTransform: mainTransform, parentTransforms: mainParents, bboxV: bboxV(mainDoc, id) }, inset: { dSha256: await hash(insetD), dLength: insetD.length, selfTransform: insetTransform, parentTransforms: insetParents, bboxV: bboxV(insetDoc, id) }, geometry: { dExact, selfTransformExact, parentTransformExact }, pixelComparison, classification: dExact && selfTransformExact && parentTransformExact ? 'EXACT_DUPLICATE' : 'DIFFERENT_GEOMETRY', semantic: 'UNKNOWN', notes: 'Object semantics are not established by an official legend, source note, or review material.' });
+  }
+  out.textContent = JSON.stringify({ generatedAt: new Date().toISOString(), source: { file: 'assets/map/svg/presentation-map.svg', pathCount: mainDoc.querySelectorAll('path').length }, inset: { file: 'assets/map/svg/official-south-sea.svg', pathCount: insetDoc.querySelectorAll('path').length }, records });
+})();
+</script>
