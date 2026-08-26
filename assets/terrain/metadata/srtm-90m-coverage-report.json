@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "status": "INCOMPLETE",
+  "product": "SRTMDEM 90M 分辨率原始高程数据",
+  "source": "Geospatial Data Cloud user download",
+  "archiveDirectory": "assets/terrain/source/srtm-90m",
+  "archiveCount": 82,
+  "tileGrid": {
+    "interpretation": "The two numeric fields are 5-degree Geospatial Data Cloud grid indices, not longitude/latitude degrees. Example verified from portal: srtm_51_02 has centre 72.5E, 52.5N.",
+    "requiredLatitudeStrips": [52, 53, 54, 55, 56, 57, 58, 59],
+    "requiredLongitudeColumns": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "targetInterpretation": "Rows 52-59 span approximately 55N to 15N; columns 2-15 span approximately 70E to 140E. This is the conservative 5-degree grid envelope for China, Hainan and Taiwan."
+  },
+  "missingByLatitudeStrip": {
+    "srtm_52": [4, 10, 11, 12, 13, 14, 15],
+    "srtm_53": [2, 5, 6, 10, 11, 12, 13, 14, 15],
+    "srtm_54": [3, 5, 7, 10, 11, 12, 13, 14, 15],
+    "srtm_55": [3, 5, 6, 9, 10, 11, 12, 13, 14, 15],
+    "srtm_56": [7, 10, 11, 12, 13, 14, 15],
+    "srtm_57": [8, 10, 11, 12, 13, 14, 15],
+    "srtm_58": [2, 3, 5, 6, 7, 10, 11, 12, 13, 14, 15],
+    "srtm_59": [2, 3, 8, 10, 11, 12, 13, 14, 15]
+  },
+  "coverageAssessment": {
+    "targetEnvelope": [74, 18, 136.2957, 54.97],
+    "targetTileGrid": "latitude strips 52-59 and longitude columns 02-15",
+    "targetTileCount": 112,
+    "receivedTilesIntersectingTarget": 43,
+    "missingTileCount": 69,
+    "usableFor": "A deliberately labelled western/partial terrain pipeline test only.",
+    "notUsableFor": "A complete official-map terrain layer: the data ends effectively at 110E and contains internal holes. It lacks much of eastern China, coastal China, Hainan and Taiwan."
+  },
+  "archiveIntegrity": {
+    "checkedAt": "2026-08-25",
+    "structurallyReadableZipArchives": 82,
+    "structuralFailures": 0,
+    "note": "Structural ZIP validation only; CRS and raster-value validation wait until the input grid is complete and a GeoTIFF/GDAL-capable environment is available."
+  },
+  "processingPolicy": {
+    "asterGdemV3": "ARCHIVED_NOT_USED",
+    "srtm90m": "PRIMARY_CANDIDATE_PENDING_COMPLETE_COVERAGE_AND_METADATA",
+    "southSeaInset": "NO_DEM"
+  }
+}

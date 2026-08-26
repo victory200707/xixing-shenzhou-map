@@ -1,0 +1,16 @@
+{
+  "name": "xixing-shenzhou-map",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:solar": "node --test test/solar.test.mjs"
+  },
+  "dependencies": {
+    "astronomy-engine": "2.1.19",
+    "sunrise-sunset-js": "3.3.1"
+  },
+  "devDependencies": {
+    "suncalc": "2.0.1"
+  }
+}

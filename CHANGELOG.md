@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0] - 2026-08-26
+
+### Added
+
+- Added the Phase 1C-4B continuous solar light-field preview.
+- Added geographic 0° and -0.833° terminator rendering through SpatialBridge.
+- Added Morning China research, render review, and validation records.
+
+### Notes
+
+- Formal official-land clipping remains blocked pending an audited land mask.
+- The dense field is a low-order visual preview; SPA remains authoritative for event readouts.
+- Published to the confirmed GitHub repository after this baseline commit.
+
 ## [Unreleased]
 
 ### Added
@@ -8,7 +22,7 @@
 
 ### Notes
 
-- No remote repository has been configured or pushed. The approved private visibility must be applied when a confirmed remote is supplied.
+- Further changes should be recorded in a new version entry before release.
 
 ## [0.1.0] - 2026-08-24
 

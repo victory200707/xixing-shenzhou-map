@@ -1,0 +1,23 @@
+{
+  "package": "sunrise-sunset-js",
+  "version": "3.3.1",
+  "repository": "https://github.com/udivankin/sunrise-sunset-js",
+  "sourceArchive": "vendor/sunrise-sunset-js-3.3.1.tgz",
+  "sourceArchiveSha256": "eadc0e5ff4054c8c98ea8a94a75a78ff6f84b208214bfbe0148b71196fb6c57d",
+  "browserBundle": "vendor/sunrise-sunset-js/dist/index.js",
+  "browserBundleSha256": "b9752c41903a9bb864d096720a21da0a151f124f5fc70e27ff6a5365797072ba",
+  "algorithm": "NREL Solar Position Algorithm (SPA)",
+  "reference": "Reda & Andreas (2004), NREL TP-560-34302",
+  "usedFor": ["solar position", "sunrise", "sunset", "solar noon", "civil dawn", "nautical dawn", "astronomical dawn"],
+  "licenseReview": {
+    "readmeClaim": "MIT",
+    "packageJsonField": "ISC",
+    "status": "REQUIRES_PUBLISHED_LICENSE_CONFIRMATION"
+  },
+  "integration": {
+    "adapter": "src/astronomy/solar-spa.js",
+    "officialMapGeometryChanged": false,
+    "timezoneDisplay": "Asia/Shanghai",
+    "inputCoordinates": "WGS84 longitude/latitude"
+  }
+}

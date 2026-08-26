@@ -1,0 +1,82 @@
+{
+  "name": "sunrise-sunset-js",
+  "version": "3.3.1",
+  "description": "High-precision sunrise and sunset time calculation using NREL's Solar Position Algorithm",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./temporal": {
+      "types": "./dist/temporal.d.ts",
+      "import": "./dist/temporal.js",
+      "require": "./dist/temporal.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly && rolldown -c",
+    "test": "vitest run && npm run test:build",
+    "test:build": "node --test tests/build/*",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "tag": "node scripts/tag.js",
+    "prepublishOnly": "npm run tag && npm run type-check && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.2",
+    "@vitest/coverage-v8": "4.1.8",
+    "rolldown": "1.0.3",
+    "typescript": "5.9.3",
+    "vitest": "4.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udivankin/sunrise-sunset-js.git"
+  },
+  "keywords": [
+    "sunrise",
+    "sunset",
+    "sun",
+    "suncalc",
+    "solar",
+    "solar-position",
+    "position",
+    "spa",
+    "nrel",
+    "twilight",
+    "dawn",
+    "dusk",
+    "astronomy",
+    "coordinates",
+    "geolocation",
+    "golden-hour",
+    "blue-hour",
+    "javascript",
+    "typescript",
+    "temporal",
+    "sunrise-time",
+    "sunset-time"
+  ],
+  "author": {
+    "name": "Aleksei Udivankin",
+    "email": "allx@mail.ru",
+    "url": "https://github.com/udivankin"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udivankin/sunrise-sunset-js/issues"
+  },
+  "homepage": "https://github.com/udivankin/sunrise-sunset-js#readme"
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "status": "REJECTED_FOR_RENDER_WITHOUT_OFFICIAL_LAND_MASK",
+  "purpose": "Registered, low-contrast visual texture below the unchanged official SVG; not a DEM or geographic-fact source.",
+  "sourceImage": "assets/map/source/terrain-reference-gs2016-1609.jpg",
+  "sourceImageSha256": "4DE0617DC3A1D457C09E4BA24480331E85CE3F1615FBE0EA61340F5FE996A1AC",
+  "registration": "assets/map/metadata/terrain-registration.json",
+  "registrationSha256": "067C057335FC39874E0DD22481B856A2801C2C5B4B27E3E83D667BCFA37973CE",
+  "controlPointCount": 8,
+  "controlPointRmsePx": 4.686,
+  "sourcePixelToVMatrix": [
+    [
+      0.687248494689088,
+      0.0018707966441676854,
+      -216.61160308243075
+    ],
+    [
+      0.005211536863072089,
+      0.6759221306973856,
+      -107.09952548309211
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "outputFile": "assets/map/raster/terrain-texture-registered-v.png",
+  "outputSha256": "2F0CB72D8B736F314C207F0FA10F1C24A21463381F3CBFC23369F8BA25FFE92E",
+  "outputDimensions": {
+    "width": 3025,
+    "height": 2137
+  },
+  "outputViewBox": "0 0 3025.3333 2137.3333",
+  "processing": [
+    "main-map affine registration using human-captured graticule control points",
+    "source legend and source South China Sea inset suppressed before transform",
+    "five-times low-pass resampling to suppress labels, graticule, rivers, and linework",
+    "cold low-contrast navy remap",
+    "not loaded by index.html",
+    "rejected for webpage rendering: source-page furniture remains visible outside a verified official land mask",
+    "no official SVG geometry changed"
+  ],
+  "knownLimitations": [
+    "The raster is a visual texture, not measured elevation.",
+    "The source JPG has no embedded CRS or elevation values.",
+    "A human must verify visual agreement with the official SVG before page use."
+  ],
+  "generatedAt": "2026-08-25T16:17:33.3863553Z"
+}

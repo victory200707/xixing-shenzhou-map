@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "status": "PRESENTATION_DERIVED",
+  "sourceFile": "assets/map/svg/clean-map.svg",
+  "sourceSha256": "51d3eb706ecab3e0c07878ecc203bdd81df52a4a9474766bf3b05515043c9d72",
+  "derivedFile": "assets/map/svg/presentation-map.svg",
+  "derivedSha256": "6b3d0a8dd100d809d5682b945c9553432a6bb289a4af6b4a7fb35c0f003f420f",
+  "generatedAt": "2026-08-26",
+  "generator": "tools/create_presentation_map.ps1",
+  "viewBox": "0 0 3025.3333 2137.3333",
+  "pathCount": 859,
+  "geometryFingerprint": {
+    "algorithm": "SHA-256",
+    "fields": ["id", "d", "transform"],
+    "source": "0e954d47738601eaa32b063db765d72d712cf8dbba0e454dcbfa980a3a9e8ace",
+    "derived": "0e954d47738601eaa32b063db765d72d712cf8dbba0e454dcbfa980a3a9e8ace",
+    "equal": true
+  },
+  "styleGroups": {
+    "primaryLinework": { "count": 650, "stroke": "#c4b38e", "strokeWidth": 1.10, "opacity": 0.72, "semantic": "UNKNOWN" },
+    "secondaryLinework": { "count": 207, "stroke": "#647f95", "strokeWidth": 0.72, "opacity": 0.40, "semantic": "UNKNOWN" },
+    "accentLinework": { "count": 1, "stroke": "#a99570", "strokeWidth": 0.82, "opacity": 0.52, "semantic": "UNKNOWN" },
+    "bodyFillCandidate": { "count": 1, "fill": "#091b2c", "fillOpacity": 0.8, "semantic": "UNKNOWN" }
+  },
+  "mask": {
+    "used": false,
+    "source": null,
+    "reason": "map-mask.json is BLOCKED_INSUFFICIENT_IDENTIFIABLE_LAND_GEOMETRY"
+  },
+  "geometryPolicy": {
+    "pathDataChanged": false,
+    "transformChanged": false,
+    "viewBoxChanged": false,
+    "pathOrderChanged": false,
+    "officialAuditSvgChanged": false,
+    "officialMasterEpsChanged": false
+  }
+}

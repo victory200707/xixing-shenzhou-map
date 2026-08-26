@@ -1,0 +1,34 @@
+{
+  "asset": "terrain-texture-v",
+  "status": "DRAFT_NOT_APPROVED_FOR_RENDER",
+  "sourceFile": "C:\\Users\\HUAWEI\\Documents\\ChatGPT\\mask\\assets\\map\\source\\terrain-reference-gs2016-1609.jpg",
+  "sourceSha256": "4DE0617DC3A1D457C09E4BA24480331E85CE3F1615FBE0EA61340F5FE996A1AC",
+  "sourceDimensions": {
+    "width": 4961,
+    "height": 3508
+  },
+  "cropPixels": {
+    "x": 300,
+    "y": 220,
+    "width": 4350,
+    "height": 3040
+  },
+  "outputFile": "C:\\Users\\HUAWEI\\Documents\\ChatGPT\\mask\\assets\\map\\raster\\terrain-texture-v.png",
+  "outputSha256": "1D8F8B60802B77C7AB99A15D727205E0A57FC7AA03E04AB5B9DCE36E626B2F10",
+  "outputDimensions": {
+    "width": 3025,
+    "height": 2137
+  },
+  "outputViewBox": "0 0 3025.3333 2137.3333",
+  "processing": [
+    "high-quality crop and resample",
+    "luminance extraction",
+    "cool navy remap with reduced contrast and print-furniture suppression",
+    "no geographic geometry or CRS assigned",
+    "not spatially registered to V; do not load into the website"
+  ],
+  "sourceMapApproval": "GS(2016)1609",
+  "landMaskApplied": false,
+  "insetIncluded": false,
+  "generatedAt": "2026-08-25T15:43:52.4982090Z"
+}

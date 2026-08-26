@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terrain JPG Registration Picker</title>
+  <style>
+    :root { color-scheme: dark; font-family: Arial, sans-serif; background: #071322; color: #dbe9f5; }
+    body { margin: 0; min-width: 1050px; }
+    header { padding: 14px 20px; border-bottom: 1px solid #25415a; background: #0a1a2d; }
+    h1 { margin: 0 0 5px; font-size: 17px; font-weight: 600; }
+    p { color: #a7bacb; font-size: 13px; line-height: 1.45; margin: 0; max-width: 940px; }
+    main { display: grid; grid-template-columns: minmax(680px, 1fr) 340px; gap: 16px; padding: 16px; }
+    .stage { background: #0a1727; border: 1px solid #25415a; overflow: auto; min-height: calc(100vh - 108px); }
+    #imageWrap { position: relative; width: fit-content; line-height: 0; margin: 12px; cursor: crosshair; }
+    #sourceImage { display: block; max-width: none; width: 1240px; height: auto; user-select: none; }
+    #markerLayer { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+    .marker { position: absolute; width: 12px; height: 12px; border: 2px solid #ffd778; border-radius: 50%; box-sizing: border-box; transform: translate(-50%, -50%); box-shadow: 0 0 7px #d59c32; }
+    .marker span { position: absolute; left: 8px; top: -7px; padding: 2px 4px; white-space: nowrap; background: rgba(6, 17, 30, .86); color: #ffe5a1; font: 11px Arial; line-height: 1.1; }
+    aside { align-self: start; background: #0a1727; border: 1px solid #25415a; padding: 14px; }
+    label { display: block; margin-top: 11px; color: #9cb5ca; font-size: 12px; }
+    input { box-sizing: border-box; width: 100%; margin-top: 4px; padding: 8px; border: 1px solid #34536e; background: #081221; color: #f2f7fb; border-radius: 3px; }
+    button { margin-top: 12px; padding: 8px 10px; background: #164568; color: #eff8ff; border: 1px solid #3c729b; border-radius: 3px; cursor: pointer; }
+    button:hover { background: #1a567f; }
+    button.secondary { background: #12263a; border-color: #34536e; }
+    #picked { min-height: 48px; margin-top: 13px; padding: 9px; border: 1px solid #284760; background: #07111e; color: #b8d4e8; font: 12px/1.45 Consolas, monospace; white-space: pre-wrap; }
+    #pointList { margin: 13px 0 0; padding: 0; max-height: 270px; overflow: auto; list-style: none; }
+    #pointList li { display: flex; gap: 6px; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid #1e354a; color: #c5d8e6; font-size: 12px; }
+    #pointList button { margin: 0; padding: 3px 6px; font-size: 11px; background: #3c1e2a; border-color: #744052; }
+    .warning { margin-top: 12px; padding: 9px; background: #2c2512; border-left: 3px solid #caa53b; color: #f0db9d; font-size: 12px; line-height: 1.45; }
+    .valid { color: #9fe0bb; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Terrain JPG registration control-point picker</h1>
+    <p>Select only labelled graticule intersections in the terrain map's main frame. This records source-image pixels paired with WGS84 coordinates and expected V coordinates. It does not alter the JPG, official SVG, or any geographic geometry.</p>
+  </header>
+  <main>
+    <section class="stage" aria-label="Terrain source image">
+      <div id="imageWrap">
+        <img id="sourceImage" src="../assets/map/source/terrain-reference-gs2016-1609.jpg" alt="Terrain reference map">
+        <div id="markerLayer"></div>
+      </div>
+    </section>
+    <aside>
+      <strong>1. Click a grid intersection</strong>
+      <div id="picked">No source pixel selected.</div>
+      <label>Longitude, degrees east<input id="longitude" type="number" step="0.0001" min="70" max="140" placeholder="e.g. 110"></label>
+      <label>Latitude, degrees north<input id="latitude" type="number" step="0.0001" min="15" max="56" placeholder="e.g. 40"></label>
+      <label>Optional point name<input id="pointName" type="text" placeholder="e.g. graticule-110E-40N"></label>
+      <button id="addPoint" type="button">Record control point</button>
+      <button id="download" class="secondary" type="button">Download capture JSON</button>
+      <button id="clearAll" class="secondary" type="button">Clear captured points</button>
+      <div id="gate" class="warning">Capture at least six well-spread points before fitting. Keep the South China Sea inset out of this main-map dataset.</div>
+      <ul id="pointList" aria-live="polite"></ul>
+    </aside>
+  </main>
+  <script>
+    (() => {
+      'use strict';
+      const IMAGE = { width: 4961, height: 3508, sha256: '4DE0617DC3A1D457C09E4BA24480331E85CE3F1615FBE0EA61340F5FE996A1AC' };
+      const BRIDGE = {
+        sha256: 'D9D6735A9ABC0457B48B374FC16F6949163BBEC2A934F6C4901114ECB02F532B',
+        lcc: { lat1: 25, lat2: 47, lat0: 0, lon0: 105 },
+        affine: [[0.0005049096535585887, 0.000022454384736449136, 1361.601054864795], [0.000025236110567069284, -0.0005152163553260364, 3246.205083005489]]
+      };
+      const sourceImage = document.querySelector('#sourceImage');
+      const imageWrap = document.querySelector('#imageWrap');
+      const markerLayer = document.querySelector('#markerLayer');
+      const picked = document.querySelector('#picked');
+      const longitude = document.querySelector('#longitude');
+      const latitude = document.querySelector('#latitude');
+      const pointName = document.querySelector('#pointName');
+      const addPoint = document.querySelector('#addPoint');
+      const list = document.querySelector('#pointList');
+      const gate = document.querySelector('#gate');
+      let selectedPixel = null;
+      const points = [];
+
+      function radians(value) { return value * Math.PI / 180; }
+      function projectToV(lon, lat) {
+        const a = 6378137;
+        const f = 1 / 298.257223563;
+        const e = Math.sqrt(2 * f - f * f);
+        const phi = radians(lat);
+        const phi1 = radians(BRIDGE.lcc.lat1);
+        const phi2 = radians(BRIDGE.lcc.lat2);
+        const phi0 = radians(BRIDGE.lcc.lat0);
+        const lambda = radians(lon);
+        const lambda0 = radians(BRIDGE.lcc.lon0);
+        const m = p => Math.cos(p) / Math.sqrt(1 - e * e * Math.sin(p) ** 2);
+        const t = p => Math.tan(Math.PI / 4 - p / 2) / (((1 - e * Math.sin(p)) / (1 + e * Math.sin(p))) ** (e / 2));
+        const n = Math.log(m(phi1) / m(phi2)) / Math.log(t(phi1) / t(phi2));
+        const F = m(phi1) / (n * (t(phi1) ** n));
+        const rho = a * F * (t(phi) ** n);
+        const rho0 = a * F * (t(phi0) ** n);
+        const theta = n * (lambda - lambda0);
+        const pX = rho * Math.sin(theta);
+        const pY = rho0 - rho * Math.cos(theta);
+        const [xRow, yRow] = BRIDGE.affine;
+        return [xRow[0] * pX + xRow[1] * pY + xRow[2], yRow[0] * pX + yRow[1] * pY + yRow[2]];
+      }
+      function render() {
+        markerLayer.replaceChildren();
+        list.replaceChildren();
+        for (const [index, point] of points.entries()) {
+          const marker = document.createElement('div');
+          marker.className = 'marker';
+          marker.style.left = `${(point.sourcePixel[0] / IMAGE.width) * 100}%`;
+          marker.style.top = `${(point.sourcePixel[1] / IMAGE.height) * 100}%`;
+          const text = document.createElement('span');
+          text.textContent = `${index + 1}: ${point.longitudeDeg}E ${point.latitudeDeg}N`;
+          marker.append(text);
+          markerLayer.append(marker);
+          const row = document.createElement('li');
+          const desc = document.createElement('span');
+          desc.textContent = `${point.name} (${point.sourcePixel[0].toFixed(1)}, ${point.sourcePixel[1].toFixed(1)})`;
+          const remove = document.createElement('button');
+          remove.textContent = 'Remove';
+          remove.onclick = () => { points.splice(index, 1); render(); };
+          row.append(desc, remove); list.append(row);
+        }
+        const enough = points.length >= 6;
+        gate.className = enough ? 'warning valid' : 'warning';
+        gate.textContent = enough ? `${points.length} points recorded. You may download the file for affine fitting; review spatial coverage first.` : `Capture at least six well-spread points before fitting. ${points.length}/6 recorded.`;
+      }
+      sourceImage.addEventListener('click', event => {
+        const rect = sourceImage.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * IMAGE.width;
+        const y = ((event.clientY - rect.top) / rect.height) * IMAGE.height;
+        selectedPixel = [Number(x.toFixed(3)), Number(y.toFixed(3))];
+        picked.textContent = `Selected source pixel\nx = ${selectedPixel[0]}\ny = ${selectedPixel[1]}`;
+      });
+      addPoint.addEventListener('click', () => {
+        const lon = Number(longitude.value);
+        const lat = Number(latitude.value);
+        if (!selectedPixel) { alert('Click a labelled graticule intersection in the image first.'); return; }
+        if (!Number.isFinite(lon) || !Number.isFinite(lat) || lon < 70 || lon > 140 || lat < 15 || lat > 56) { alert('Enter the printed longitude and latitude for this intersection.'); return; }
+        const targetV = projectToV(lon, lat);
+        points.push({
+          id: `terrain-gcp-${String(points.length + 1).padStart(2, '0')}`,
+          name: pointName.value.trim() || `graticule-${lon}E-${lat}N`,
+          longitudeDeg: lon,
+          latitudeDeg: lat,
+          sourcePixel: selectedPixel,
+          expectedV: targetV.map(v => Number(v.toFixed(4))),
+          notes: 'Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg'
+        });
+        selectedPixel = null; pointName.value = ''; render();
+      });
+      document.querySelector('#clearAll').addEventListener('click', () => { if (confirm('Remove all locally captured points?')) { points.length = 0; render(); } });
+      document.querySelector('#download').addEventListener('click', () => {
+        const payload = {
+          schemaVersion: '1.0', status: points.length >= 6 ? 'READY_FOR_FIT' : 'INSUFFICIENT_POINTS',
+          purpose: 'Registration control points for terrain JPG visual texture; not a geographic fact source.',
+          sourceImage: 'assets/map/source/terrain-reference-gs2016-1609.jpg', sourceImageSha256: IMAGE.sha256,
+          sourceImagePixels: { width: IMAGE.width, height: IMAGE.height },
+          spatialBridge: 'assets/map/metadata/spatial_bridge.json', spatialBridgeSha256: BRIDGE.sha256,
+          requiredMinimumPointCount: 6, controlPoints: points
+        };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'terrain-registration-control-points.json'; link.click(); URL.revokeObjectURL(link.href);
+      });
+      sourceImage.addEventListener('load', () => { imageWrap.style.width = `${sourceImage.clientWidth}px`; });
+      render();
+    })();
+  </script>
+</body>
+</html>

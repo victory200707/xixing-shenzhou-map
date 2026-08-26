@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0",
+  "status": "READY_FOR_FIT",
+  "purpose": "Registration control points for terrain JPG visual texture; not a geographic fact source.",
+  "sourceImage": "assets/map/source/terrain-reference-gs2016-1609.jpg",
+  "sourceImageSha256": "4DE0617DC3A1D457C09E4BA24480331E85CE3F1615FBE0EA61340F5FE996A1AC",
+  "sourceImagePixels": {
+    "width": 4961,
+    "height": 3508
+  },
+  "spatialBridge": "assets/map/metadata/spatial_bridge.json",
+  "spatialBridgeSha256": "D9D6735A9ABC0457B48B374FC16F6949163BBEC2A934F6C4901114ECB02F532B",
+  "requiredMinimumPointCount": 6,
+  "controlPoints": [
+    {
+      "id": "terrain-gcp-01",
+      "name": "graticule-95E-45N",
+      "longitudeDeg": 95,
+      "latitudeDeg": 45,
+      "sourcePixel": [
+        1893.182,
+        955.204
+      ],
+      "expectedV": [
+        1083.4455,
+        548.6509
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    },
+    {
+      "id": "terrain-gcp-02",
+      "name": "graticule-95E-35N",
+      "longitudeDeg": 95,
+      "latitudeDeg": 35,
+      "sourcePixel": [
+        1769.157,
+        1783.381
+      ],
+      "expectedV": [
+        1002.0987,
+        1106.3563
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    },
+    {
+      "id": "terrain-gcp-03",
+      "name": "graticule-95E-30N",
+      "longitudeDeg": 95,
+      "latitudeDeg": 30,
+      "sourcePixel": [
+        1701.143,
+        2199.47
+      ],
+      "expectedV": [
+        961.52,
+        1384.5597
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    },
+    {
+      "id": "terrain-gcp-04",
+      "name": "graticule-105E-35N",
+      "longitudeDeg": 105,
+      "latitudeDeg": 35,
+      "sourcePixel": [
+        2429.29,
+        1831.392
+      ],
+      "expectedV": [
+        1452.8387,
+        1152.7551
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    },
+    {
+      "id": "terrain-gcp-05",
+      "name": "graticule-115E-40N",
+      "longitudeDeg": 115,
+      "latitudeDeg": 40,
+      "sourcePixel": [
+        3057.416,
+        1423.304
+      ],
+      "expectedV": [
+        1889.4663,
+        870.7692
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    },
+    {
+      "id": "terrain-gcp-06",
+      "name": "graticule-115E-30N",
+      "longitudeDeg": 115,
+      "latitudeDeg": 30,
+      "sourcePixel": [
+        3109.427,
+        2255.482
+      ],
+      "expectedV": [
+        1921.8603,
+        1432.5589
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    },
+    {
+      "id": "terrain-gcp-07",
+      "name": "graticule-110E-25N",
+      "longitudeDeg": 110,
+      "latitudeDeg": 25,
+      "sourcePixel": [
+        2757.356,
+        2687.575
+      ],
+      "expectedV": [
+        1683.2643,
+        1723.387
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    },
+    {
+      "id": "terrain-gcp-09",
+      "name": "graticule-120E-45N",
+      "longitudeDeg": 120,
+      "latitudeDeg": 45,
+      "sourcePixel": [
+        3321.47,
+        983.21
+      ],
+      "expectedV": [
+        2070.4156,
+        571.9545
+      ],
+      "notes": "Human-clicked labelled graticule intersection in terrain-reference-gs2016-1609.jpg"
+    }
+  ]
+}

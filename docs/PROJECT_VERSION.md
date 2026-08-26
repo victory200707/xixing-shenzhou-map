@@ -1,16 +1,19 @@
 # Project Version
 
-- Current version: `v0.1.0`
-- Current phase: Phase 1C-1 static frontend skeleton
-- Last stable version: `v0.1.0`
+- Current version: `v0.2.0`
+- Current phase: Phase 1C-4B continuous solar light-field preview
+- Last stable version: `v0.2.0`
 - Map source status: official source retained in local Git under the approved private-repository policy
 - Audit SVG status: immutable, visually verified, retained in local Git under the approved private-repository policy
 - Clean map status: derived presentation asset retained in local Git under the approved private-repository policy
 - SpatialBridge status: fitted; precision improvement required before real DEM alignment
 - Terrain status: Mock pipeline verified; real DEM blocked pending source data
-- Solar system status: not started
+- Solar system status: SPA event readouts integrated; dense field uses a documented low-order preview formula
 
 ## Baseline Scope
+
+The `v0.2.0` commit records the Phase 1C frontend, SpatialBridge integration,
+continuous solar preview, and associated audit documentation.
 
 The `v0.1.0` baseline commit contains code, documentation, metadata, processing
 scripts, lightweight reproducible assets, Mock output, and visual verification
@@ -43,6 +46,6 @@ future publication or redistribution review.
 
 ## Remote Policy
 
-No remote repository or GitHub repository URL has been configured. The approved
-remote policy is private visibility with the current official map assets included.
-Remote setup and push require the user to provide or confirm the target URL.
+The confirmed remote is `https://github.com/victory200707/xixing-shenzhou-map`.
+The repository is public by user instruction. This visibility does not replace
+the separate legal review required for official map redistribution.

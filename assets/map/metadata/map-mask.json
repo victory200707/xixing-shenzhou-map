@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "status": "BLOCKED_INSUFFICIENT_IDENTIFIABLE_LAND_GEOMETRY",
+  "purpose": "Provenance and decision record for a future texture clipping mask; not a geographic fact source.",
+  "source": {
+    "path": "assets/map/svg/clean-map.svg",
+    "sha256": "51d3eb706ecab3e0c07878ecc203bdd81df52a4a9474766bf3b05515043c9d72",
+    "viewBox": [0, 0, 3025.3333, 2137.3333]
+  },
+  "audit": {
+    "date": "2026-08-25",
+    "tool": "tools/generate_map_mask.py",
+    "toolVersion": "1.0.1",
+    "visiblePathCount": 859,
+    "filledCandidateCount": 1,
+    "filledCandidate": {
+      "id": "path3",
+      "style": "fill:#091b2c;fill-opacity:0.72;fill-rule:evenodd;stroke:none",
+      "transform": "matrix(0.13333333,0,0,-0.13333333,0,2137.3333)",
+      "bboxV": [125.92171768529023, 58.103351980744286, 2631.3399342164994, 1941.1546382377967],
+      "sampledCoverageRatio": 0.021240713597883803
+    },
+    "semanticUnknownObjects": {
+      "count": 859,
+      "policy": "The clean SVG has no map-object semantic identifiers. The lone fill is structurally a thin print-outline band, while the remaining 858 paths are stroke-only; none may be inferred as a land polygon."
+    }
+  },
+  "output": {
+    "officialLandMask": null,
+    "reason": "No valid, independently identifiable solid land silhouette exists in clean-map.svg. A PNG was intentionally not generated."
+  },
+  "mainMap": {
+    "status": "NOT_GENERATED"
+  },
+  "southSeaInset": {
+    "status": "LOGICALLY_SEPARATE_BUT_NOT_EXTRACTABLE",
+    "reason": "The lone fill path ends at x=2631.34 V, while the three verified inset controls are at x=2755.35-2922.80 V. Inset geometry is stroke-only and semantically UNKNOWN."
+  },
+  "geometryPolicy": {
+    "officialAuditSvgModified": false,
+    "cleanMapSvgModified": false,
+    "pathDataRewritten": false,
+    "crsAssigned": false,
+    "reprojection": false,
+    "crop": false,
+    "mirror": false
+  },
+  "nextRequiredDecision": "Do not begin abstract terrain. Provide or authoritatively identify an explicit, audited land-silhouette layer while preserving the existing official SVG files unchanged."
+}

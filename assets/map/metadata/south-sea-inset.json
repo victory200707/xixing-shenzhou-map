@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "status": "SOURCE_FAITHFUL_DERIVATIVE",
+  "sourceFile": "assets/map/svg/official-audit.svg",
+  "sourceSha256": "d661148e382f91d3972d0825f70ebf2fc45de995cd99d489f865229fdc5514e0",
+  "derivedFile": "assets/map/svg/official-south-sea.svg",
+  "derivedSha256": "2d7ea15dd23dbbb65dd696af4342d375e5f8a8cc88e9b7c21fb5c1f67194328d",
+  "viewBox": "0 0 3025.3333 2137.3333",
+  "sourceInsetBBoxV": [
+    2588.0,
+    1475.0,
+    3025.3333,
+    2137.3333
+  ],
+  "sourcePathCount": 3730,
+  "selectedPathCount": 594,
+  "unknownBBoxCount": 0,
+  "geometryPolicy": {
+    "sourceUnmodified": true,
+    "pathDataCopiedVerbatim": true,
+    "sourceTransformsCopiedVerbatim": true,
+    "newGeographicGeometry": false,
+    "newPresentationBackdrop": true,
+    "shortSegmentsSemantic": "UNKNOWN"
+  },
+  "verification": {
+    "outerFrameSourceId": "path3622",
+    "nestedTitleScaleBlock": "retained from source where it intersects inset bbox",
+    "nineDashLineClaim": "NOT MADE",
+    "officialLegendAndUsageTerms": "PENDING_EXTERNAL_VERIFICATION"
+  },
+  "generatedAt": "2026-08-26T01:29:39.106582+00:00"
+}

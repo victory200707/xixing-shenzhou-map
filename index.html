@@ -1,81 +1,10 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="曦行神州：中国日出时空节律动态地图静态视觉骨架">
-  <title>曦行神州 · 万里晨光</title>
-  <link rel="stylesheet" href="src/css/style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="曦行神州：中国日出时空节律动态地图"><title>曦行神州 · 万里晨光</title><link rel="stylesheet" href="src/css/style.css"></head>
 <body>
-  <div class="app-shell">
-    <header class="topbar">
-      <div class="brand-block">
-        <div class="brand-line">
-          <h1>曦行神州</h1>
-          <span class="brand-mark">晨光</span>
-        </div>
-        <p>中国日出时空节律动态地图</p>
-      </div>
-      <div class="time-status" aria-label="当前时间占位信息">
-        <div class="season-line"><span>夏至</span><span>2026.06.21</span></div>
-        <div class="clock-line">05:00 <small>BJT</small></div>
-        <div class="timezone-label">北京时间</div>
-      </div>
-    </header>
-
-    <main class="workspace">
-      <section class="map-zone" aria-label="中国官方地图视觉主体">
-        <div class="map-axis map-axis-top" aria-label="经度刻度"><span>70°E</span><span>80°E</span><span>90°E</span><span>100°E</span><span>110°E</span><span>120°E</span><span>130°E</span><span>140°E</span></div>
-        <div class="map-axis map-axis-left" aria-label="纬度刻度"><span>50°N</span><span>40°N</span><span>30°N</span><span>20°N</span><span>10°N</span></div>
-        <div class="map-visual">
-          <img class="map-image" src="assets/map/svg/clean-map.svg" alt="官方中国地图清洗派生图">
-          <div id="cityLayer" class="city-layer" aria-label="核心城市位置"></div>
-        </div>
-        <div class="map-stage-note"><span class="status-dot"></span>官方地图视觉底座 · 静态骨架</div>
-      </section>
-
-      <aside class="side-rail" aria-label="信息面板占位区域">
-        <section class="glass-card compare-card">
-          <div class="card-heading"><span class="heading-icon">⌘</span><h2>地点对比</h2><span class="collapse-mark">⌃</span></div>
-          <div class="compare-grid">
-            <div class="city-block city-primary"><div class="city-name"><span class="city-dot"></span>北京</div><strong>04:45</strong><small>日出</small></div>
-            <div class="city-block city-secondary"><div class="city-name"><span class="city-dot"></span>乌鲁木齐</div><strong>06:27</strong><small>日出</small></div>
-          </div>
-          <div class="difference"><span>相差</span><strong>1小时41分</strong></div>
-          <div class="mini-curve"><span>早</span><div class="curve-line"><i></i></div><span>晚</span></div>
-          <div class="more-info">更多信息（北京 / 乌鲁木齐）</div>
-          <div class="detail-grid">
-            <span>当地地方时</span><b>XX:XX</b><b>XX:XX</b>
-            <span>民用晨光</span><b>XX:XX</b><b>XX:XX</b>
-            <span>太阳高度</span><b>00.0°</b><b>00.0°</b>
-            <span>经度</span><b>116.4°E</b><b>87.6°E</b>
-          </div>
-        </section>
-
-        <section class="glass-card city-tabs-card">
-          <div class="city-tabs"><button class="active" type="button">◉ 北京</button><button type="button">◉ 乌鲁木齐</button><button type="button">◉ 广州</button><button type="button">◉ 昆明</button><button type="button">◉ 哈尔滨</button><button type="button">◉ 拉萨</button><button type="button">◉ 海口</button></div>
-          <button class="custom-city" type="button">＋ 自定义</button>
-        </section>
-
-        <section class="glass-card phase-card">
-          <div class="card-heading"><span class="heading-icon">◌</span><h2>天文阶段</h2><span class="collapse-mark">⌃</span></div>
-          <div class="phase-row"><div><span class="phase-icon">◌</span><small>天文晨光</small><b>03:15</b></div><div><span class="phase-icon">◌</span><small>航海晨光</small><b>03:53</b></div><div><span class="phase-icon">◌</span><small>民用晨光</small><b>04:17</b></div><div class="selected"><span class="phase-icon">☀</span><small>日出</small><b>04:45</b></div><div><span class="phase-icon">◌</span><small>正午</small><b>11:55</b></div><div><span class="phase-icon">◌</span><small>日落</small><b>19:05</b></div></div>
-        </section>
-      </aside>
-    </main>
-
-    <footer class="timeline-shell" aria-label="时间播放轴静态占位">
-      <div class="timeline-main glass-card">
-        <button id="playToggle" class="play-button" type="button" aria-label="播放或暂停占位动画" aria-pressed="false" title="播放/暂停">▶</button>
-        <span class="timeline-label">03:00</span>
-        <div class="timeline-track-wrap"><div class="timeline-track"><span class="track-progress"></span><i class="track-handle"></i><i class="track-mark mark-one"></i><i class="track-mark mark-two"></i><i class="track-mark mark-three"></i></div><div class="track-scale"><span>03:00</span><strong>05:00</strong><span>10:00</span></div></div>
-        <div class="timeline-actions"><button type="button">− 10分钟</button><button type="button">＋ 10分钟</button><button type="button">1小时</button></div>
-      </div>
-      <div class="summary-row glass-card"><strong>当前时刻概览</strong><span>已见晨光区域 <b>00.0%</b></span><span>日出最长差异 <b>XXhXXm</b></span><span>日出最早 <b>城市：XX　XX:XX</b></span><span>日出最晚 <b>城市：XX　XX:XX</b></span></div>
-      <div class="season-cards"><button type="button"><span>春分</span><b>03.20</b></button><button class="active" type="button"><span>夏至</span><b>06.21</b></button><button type="button"><span>秋分</span><b>09.23</b></button><button type="button"><span>冬至</span><b>12.22</b></button></div>
-    </footer>
-  </div>
-  <script src="src/js/main.js"></script>
-</body>
-</html>
+<div class="app-shell" data-mode="dawn-progress">
+<header class="topbar"><div class="brand-block"><div class="brand-line"><h1>曦行神州</h1><span class="brand-mark">万里晨光</span></div><p>中国日出时空节律动态地图</p></div><div class="time-status" aria-label="当前时间"><div class="season-line"><span>夏至</span><span>2026.06.21</span></div><div class="clock-line">05:00 <small>BJT</small></div><div class="timezone-label">北京时间</div></div></header>
+<main class="workspace"><section class="map-zone" aria-label="中国官方地图视觉主体"><div class="map-axis map-axis-top" aria-label="经度刻度"><span>70°E</span><span>80°E</span><span>90°E</span><span>100°E</span><span>110°E</span><span>120°E</span><span>130°E</span><span>140°E</span></div><div class="map-axis map-axis-left" aria-label="纬度刻度"><span>50°N</span><span>40°N</span><span>30°N</span><span>20°N</span><span>10°N</span></div><div class="map-visual"><canvas id="terrainVisualLayer" class="terrain-visual-layer" aria-hidden="true"></canvas><canvas id="solarFieldLayer" class="solar-field-layer" aria-hidden="true"></canvas><img class="map-image" src="assets/map/svg/presentation-map.svg" alt="官方中国地图表现层"><img class="south-sea-layer" src="assets/map/svg/official-south-sea.svg" alt="官方南海诸岛附图" aria-hidden="true"><div id="cityLayer" class="city-layer" aria-label="城市位置"></div></div><div id="selectionHint" class="selection-hint" aria-live="polite">选择一座城市，开始比较</div></section>
+<aside class="side-rail" aria-label="晨光与分析信息"><section class="sunrise-ruler" aria-label="双城日出标尺"><p class="ruler-eyebrow">双城日出标尺</p><div class="ruler-points"><div><span class="ruler-dot gold"></span><b id="rulerCityOne">北京</b><strong id="rulerSunriseOne">--:--</strong></div><div class="ruler-line"><i></i></div><div><span class="ruler-dot blue"></span><b id="rulerCityTwo">乌鲁木齐</b><strong id="rulerSunriseTwo">--:--</strong></div></div><p class="ruler-difference">相差 <strong id="rulerDifference">--</strong></p><p id="rulerNarrative" class="ruler-narrative">等待选择城市。</p></section><section id="analysisPanel" class="analysis-panel glass-card" aria-label="分析面板" aria-hidden="true"><div class="panel-heading"><span id="panelIcon">⌘</span><h2 id="panelTitle">地点对比</h2><button id="closePanel" type="button" aria-label="关闭分析面板">×</button></div><div id="comparePanel" class="panel-content"><p id="panelStatus" class="demo-badge">NREL SPA 高精度计算</p><div class="compare-grid"><div class="city-block city-primary"><span id="compareNameOne">北京</span><strong id="sunriseOne">--:--</strong><small>日出</small></div><div class="city-block city-secondary"><span id="compareNameTwo">乌鲁木齐</span><strong id="sunriseTwo">--:--</strong><small>日出</small></div></div><div class="difference"><span>日出时间差</span><strong id="sunriseDifference">--</strong></div><div class="detail-grid"><span>当地地方时</span><b id="localTimeOne">--:--</b><b id="localTimeTwo">--:--</b><span>民用晨光</span><b id="civilDawnOne">--:--</b><b id="civilDawnTwo">--:--</b><span>太阳高度角</span><b id="altitudeOne">--.-°</b><b id="altitudeTwo">--.-°</b><span>经度</span><b id="longitudeOne">--.-°E</b><b id="longitudeTwo">--.-°E</b></div><div class="shortcut-title">常用城市</div><div id="cityShortcuts" class="city-shortcuts"></div></div><div id="astronomyPanel" class="panel-content" hidden><p class="demo-badge">当前选择城市的太阳阶段</p><div class="stage-list"><div><span>天文晨光</span><b id="stageAstronomical">--:--</b><small>太阳低于 -18°</small></div><div><span>航海晨光</span><b id="stageNautical">--:--</b><small>太阳低于 -12°</small></div><div><span>民用晨光</span><b id="stageCivil">--:--</b><small>太阳低于 -6°</small></div><div class="stage-active"><span>日出</span><b id="stageSunrise">--:--</b><small>太阳中心约 -0.833°</small></div></div></div></section><section class="summary-row side-summary" aria-label="当前时刻概览"><strong>当前时刻概览</strong><span>已见晨光区域 <b id="summaryCoverage">00.0%</b></span><span>日出最长差异 <b id="summaryDifference">--</b></span><span>日出最早 <b id="summaryEarliest">--</b></span></section></aside></main>
+<footer class="timeline-shell" aria-label="时间控制"><section class="timeline-main"><button id="playToggle" class="play-button" type="button" aria-label="播放或暂停时间轴" aria-pressed="false">▶</button><span class="timeline-label">03:00</span><div class="timeline-track-wrap"><input id="timeRange" class="time-range" type="range" min="180" max="600" step="1" value="300" aria-label="北京时间时间轴"><div class="timeline-track"><span id="trackProgress" class="track-progress"></span><i id="trackHandle" class="track-handle"></i><i id="markOne" class="track-mark mark-one"></i><i id="markTwo" class="track-mark mark-two"></i></div><div class="track-scale"><span id="timelineCityOne">北京日出 --:--</span><strong id="timelineCurrent">05:00</strong><span id="timelineCityTwo">乌鲁木齐日出 --:--</span></div></div><span class="timeline-end">10:00</span></section><nav class="mode-switcher" aria-label="展示模式"><button type="button" data-mode="dawn-progress" class="active">晨光推进</button><button type="button" data-mode="location-compare">地点对比</button><button type="button" data-mode="astronomy-stage">天文阶段</button></nav><section class="season-cards" aria-label="节气入口"><button type="button" data-season="spring-equinox"><span>春分</span><b>03.20</b></button><button class="active" type="button" data-season="summer-solstice"><span>夏至</span><b>06.21</b></button><button type="button" data-season="autumn-equinox"><span>秋分</span><b>09.23</b></button><button type="button" data-season="winter-solstice"><span>冬至</span><b>12.22</b></button></section></footer>
+</div><script type="module" src="src/js/main.js"></script></body></html>
