@@ -58,3 +58,7 @@ assets/terrain/source/
 docs/screenshots/*.png
 docs/screenshots/*.jpg
 docs/screenshots/*.jpeg
+
+# The browser imports this bundled, audited SPA implementation directly.
+!vendor/sunrise-sunset-js/dist/
+!vendor/sunrise-sunset-js/dist/index.js
