@@ -1,4 +1,5 @@
-import { renderSolarField, solarAltitude } from '../astronomy/solar-field.js';
+import { renderSolarField, renderTerrainRelief, solarAltitude } from '../astronomy/solar-field.js?v=phase1c51-rollback';
+import { renderMapGrid } from './map-grid.js?v=phase1c20';
 import { getSpaEvents, getSpaPosition } from '../astronomy/solar-spa.js';
 
 (() => {
@@ -6,6 +7,7 @@ import { getSpaEvents, getSpaPosition } from '../astronomy/solar-spa.js';
   const UTC_OFFSET = 8 * 60 * 60 * 1000;
   const app = document.querySelector('.app-shell');
   const mapImage = document.querySelector('.map-image');
+  const mapLinework = document.querySelector('#mapLinework');
   const southSeaImage = document.querySelector('.south-sea-layer');
   if (southSeaImage) southSeaImage.src = 'assets/map/svg/south-sea-presentation.svg';
   const terrain = document.querySelector('#terrainVisualLayer');
@@ -20,6 +22,23 @@ import { getSpaEvents, getSpaPosition } from '../astronomy/solar-spa.js';
   ].map(([name,role,x,y,longitude,latitude]) => ({name,role,x,y,longitude,latitude}));
   const state = { points: [], selected: [], userSelected: false, minute: 300, season: 'summer-solstice', date: '2026-06-21', mode: 'dawn-progress', playing: false, timer: null };
   const $ = (s) => document.querySelector(s);
+
+  // Derive a line-only overlay from the exact SVG currently displayed. The
+  // body fill stays beneath the solar field; all official boundaries and
+  // coastlines are redrawn above it without introducing another map source.
+  async function loadLineworkOverlay() {
+    if (!mapLinework || mapLinework.src) return;
+    try {
+      const response = await fetch('assets/map/svg/presentation-coastline.svg?v=phase1c51-rollback', { cache: 'no-store' });
+      const source = await response.text();
+      const doc = new DOMParser().parseFromString(source, 'image/svg+xml');
+      doc.querySelector('#path3')?.remove();
+      const blob = new Blob([new XMLSerializer().serializeToString(doc)], { type: 'image/svg+xml' });
+      mapLinework.src = URL.createObjectURL(blob);
+    } catch {
+      mapLinework.remove();
+    }
+  }
 
   function ensureStageMarkup() {
     const list = astronomy?.querySelector('.stage-list');
@@ -131,7 +150,15 @@ import { getSpaEvents, getSpaPosition } from '../astronomy/solar-spa.js';
   const clampPercent = (minutes) => Math.max(0, Math.min(100, ((minutes - 180) / 420) * 100));
   const clockText = (minutes) => { const d=bjtUtc(minutes); return bjt(d); };
 
-  function syncMarkers() { const lr=cityLayer.getBoundingClientRect(), ir=mapImage.getBoundingClientRect(); if(!lr.width||!ir.width)return; const sr=VIEWBOX.width/VIEWBOX.height, br=ir.width/ir.height, scale=br>sr?ir.height/VIEWBOX.height:ir.width/VIEWBOX.width, ox=(ir.width-VIEWBOX.width*scale)/2, oy=(ir.height-VIEWBOX.height*scale)/2; cityLayer.querySelectorAll('.city-marker').forEach((m)=>{const p=m._point;m.style.left=`${ir.left-lr.left+ox+p.x*scale}px`;m.style.top=`${ir.top-lr.top+oy+p.y*scale}px`;m.classList.toggle('selected',state.selected.includes(m.dataset.name));}); }
+  // All visual children share the untransformed map-visual coordinate space.
+  // The parent applies the single presentation scale, so SVG, Canvas and
+  // markers cannot drift apart because of independent transformed rectangles.
+  function mapLayoutFrame() {
+    const parent = mapImage.parentElement;
+    const rect = parent.getBoundingClientRect();
+    return { left: rect.left, top: rect.top, width: mapImage.offsetWidth || parent.offsetWidth, height: mapImage.offsetHeight || parent.offsetHeight };
+  }
+  function syncMarkers() { const frame=mapLayoutFrame(); if(!frame.width||!frame.height)return; const sr=VIEWBOX.width/VIEWBOX.height, br=frame.width/frame.height, scale=br>sr?frame.height/VIEWBOX.height:frame.width/VIEWBOX.width, ox=(frame.width-VIEWBOX.width*scale)/2, oy=(frame.height-VIEWBOX.height*scale)/2; cityLayer.querySelectorAll('.city-marker').forEach((m)=>{const p=m._point;m.style.left=`${ox+p.x*scale}px`;m.style.top=`${oy+p.y*scale}px`;m.classList.toggle('selected',state.selected.includes(m.dataset.name));}); }
   function placeMarkers(points) { cityLayer.replaceChildren(); points.filter(p=>!['三沙','曾母暗沙','黄岩岛'].includes(p.name)).forEach((p)=>{const m=document.createElement('button');m.type='button';m.className='city-marker';m.dataset.name=p.name;m.dataset.role=p.displayRole||p.role;m.setAttribute('aria-label',`选择${p.name}`);m.innerHTML='<span class="city-marker-pin" aria-hidden="true"></span><span class="city-marker-label"></span>';m.querySelector('.city-marker-label').textContent=p.name;m._point=p;m.addEventListener('click',()=>selectCity(p.name));cityLayer.append(m);});syncMarkers();}
   function selectCity(name) { if(!state.points.some(p=>p.name===name))return; state.userSelected=true; if(state.selected.length===2)state.selected=[name]; else if(!state.selected.includes(name))state.selected.push(name); if(state.selected.length===2)setMode('location-compare'); syncSelectionHint(); render(); }
   function updatePanel() { const a=state.points.find(p=>p.name===state.selected[0])||state.points.find(p=>p.name==='北京')||fallback[3], b=state.points.find(p=>p.name===state.selected[1])||state.points.find(p=>p.name==='乌鲁木齐')||fallback[1]; ['rulerCityOne','compareNameOne'].forEach(id=>{const n=$(`#${id}`);if(n)n.textContent=a.name;}); ['rulerCityTwo','compareNameTwo'].forEach(id=>{const n=$(`#${id}`);if(n)n.textContent=b.name;}); const ea=solarEvent(a,-.833), eb=solarEvent(b,-.833), ca=solarEvent(a,-6), cb=solarEvent(b,-6); const one=$('#sunriseOne'),two=$('#sunriseTwo'),diff=$('#sunriseDifference'); if(one)one.textContent=ea==null?'--:--':bjt(bjtUtc(ea));if(two)two.textContent=eb==null?'--:--':bjt(bjtUtc(eb));if(diff&&ea!=null&&eb!=null){const mins=Math.round(Math.abs(eb-ea));diff.textContent=`${Math.floor(mins/60)}小时${String(mins%60).padStart(2,'0')}分`;} [['altitudeOne',a],['altitudeTwo',b]].forEach(([id,p])=>{const n=$(`#${id}`);if(n){const position=getSpaPosition(bjtUtc(state.minute),p);n.textContent=position?`${position.altitudeDeg.toFixed(1)}°`:'--.-°';}}); ['longitudeOne','longitudeTwo'].forEach((id,i)=>{const n=$(`#${id}`);if(n)n.textContent=`${[a,b][i].longitude.toFixed(1)}°E`;}); [['localTimeOne',a],['localTimeTwo',b]].forEach(([id,p])=>{const n=$(`#${id}`);if(n)n.textContent=bjt(bjtUtc(state.minute-(p.longitude-120)*4));}); [['civilDawnOne',ca],['civilDawnTwo',cb]].forEach(([id,m])=>{const n=$(`#${id}`);if(n)n.textContent=m==null?'--:--':bjt(bjtUtc(m));}); const narrative=$('#rulerNarrative'); if(narrative){const risenA=solarAltitude(bjtUtc(state.minute),a.longitude,a.latitude)>=-.833, risenB=solarAltitude(bjtUtc(state.minute),b.longitude,b.latitude)>=-.833; narrative.textContent=risenA&&risenB?`此刻，${a.name}与${b.name}都已迎来日出。`:risenA?`此刻，${a.name}已经日出，${b.name}仍在等待晨光。`:risenB?`此刻，${b.name}已经日出，${a.name}仍在等待晨光。`:`此刻，${a.name}与${b.name}都在等待晨光。`; } }
@@ -176,9 +203,18 @@ import { getSpaEvents, getSpaPosition } from '../astronomy/solar-spa.js';
     const active = altitude < -18 ? 'astronomical' : altitude < -12 ? 'nautical' : altitude < -6 ? 'civil' : altitude < -.833 ? 'sunrise' : (noon != null && state.minute >= noon - 30 && state.minute <= noon + 30) ? 'noon' : (sunset != null && state.minute >= sunset - 30) ? 'sunset' : 'sunrise';
     document.querySelectorAll('.stage-list > div, .stage-summary > div').forEach(item => item.classList.toggle('stage-current', item.dataset.stage === active));
   }
-  function renderRelief() { const parent=terrain.parentElement.getBoundingClientRect(), ir=mapImage.getBoundingClientRect();if(!ir.width)return;const dpr=Math.min(devicePixelRatio||1,1.25);terrain.style.left=`${ir.left-parent.left}px`;terrain.style.top=`${ir.top-parent.top}px`;terrain.style.width=`${ir.width}px`;terrain.style.height=`${ir.height}px`;terrain.width=Math.round(ir.width*dpr);terrain.height=Math.round(ir.height*dpr);const c=terrain.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,ir.width,ir.height);const g=c.createRadialGradient(ir.width*.25,ir.height*.5,0,ir.width*.25,ir.height*.5,Math.max(ir.width,ir.height)*.6);g.addColorStop(0,'rgba(30,91,137,.22)');g.addColorStop(1,'rgba(2,15,31,0)');c.fillStyle=g;c.fillRect(0,0,ir.width,ir.height); }
-  function render() { syncMarkers();renderRelief();const ir=mapImage.getBoundingClientRect();if(ir.width)renderSolarField(solar,ir,bjtUtc(state.minute));syncDetailHeading();updatePanel();syncDerivedUi();syncStageHighlight();const clock=$('.clock-line');if(clock)clock.innerHTML=`${bjt(bjtUtc(state.minute))} <small>BJT</small>`;const current=$('#timelineCurrent');if(current)current.textContent=bjt(bjtUtc(state.minute)); }
-  function setup() { document.querySelectorAll('.mode-switcher [data-mode]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.mode==='location-compare'&&state.selected.length<2){state.selected=['北京','乌鲁木齐'];state.userSelected=true;}setMode(b.dataset.mode);updatePanel();syncDerivedUi();}));document.querySelectorAll('.season-cards [data-season]').forEach((button)=>{button.addEventListener('click',()=>{const season=seasonDates[button.dataset.season];if(!season)return;state.season=button.dataset.season;state.date=season[1];state.minute=300;document.querySelectorAll('.season-cards button').forEach((item)=>item.classList.toggle('active',item===button));const range=$('#timeRange');if(range)range.value=String(state.minute);render();});});$('#closePanel').addEventListener('click',()=>setMode('dawn-progress')); const shortcuts=['北京','乌鲁木齐','广州','哈尔滨','拉萨','海口'];const layer=$('#cityShortcuts');shortcuts.forEach(name=>{const b=document.createElement('button');b.type='button';b.dataset.city=name;b.textContent=name;if(!state.points.some(p=>p.name===name)){b.disabled=true;b.title='暂无经人工核验的 V 坐标';}layer.append(b);});layer.addEventListener('click',e=>{const b=e.target.closest('[data-city]');if(b&&!b.disabled)selectCity(b.dataset.city);}); let range=$('#timeRange');if(!range){range=document.createElement('input');range.id='timeRange';range.type='range';range.min=180;range.max=600;range.value=state.minute;range.className='time-range';$('.timeline-track-wrap').prepend(range);}range.addEventListener('input',()=>{state.minute=Number(range.value);render();});$('#playToggle').addEventListener('click',()=>{state.playing=!state.playing;$('#playToggle').textContent=state.playing?'Ⅱ':'▶';$('#playToggle').setAttribute('aria-pressed',String(state.playing));if(state.timer)clearInterval(state.timer);if(state.playing)state.timer=setInterval(()=>{state.minute=state.minute>=600?180:state.minute+1;range.value=state.minute;render();},180);}); }
+  function syncMapTone(date) {
+    if (!mapImage) return;
+    const samples = [[85, 43], [105, 35], [125, 35], [112, 23]];
+    const maximum = Math.max(...samples.map(([lon, lat]) => solarAltitude(date, lon, lat)));
+    mapImage.dataset.solarTone = maximum < -12 ? 'night' : maximum < -0.833 ? 'dawn' : 'day';
+    if (mapImage.parentElement) mapImage.parentElement.dataset.solarTone = mapImage.dataset.solarTone;
+  }
+  function renderRelief() { const frame=mapLayoutFrame();if(!frame.width)return;renderTerrainRelief(terrain,frame); }
+  function render() { const date=bjtUtc(state.minute); syncMapTone(date); syncMarkers();renderRelief();const ir=mapLayoutFrame();if(ir.width){renderMapGrid(document,ir);renderSolarField(solar,ir,date);}syncDetailHeading();updatePanel();syncDerivedUi();syncStageHighlight();const clock=$('.clock-line');if(clock)clock.innerHTML=`${bjt(date)} <small>BJT</small>`;const current=$('#timelineCurrent');if(current)current.textContent=bjt(date); }
+  let renderQueued = false;
+  function scheduleRender() { if(renderQueued)return;renderQueued=true;requestAnimationFrame(()=>{renderQueued=false;render();}); }
+  function setup() { document.querySelectorAll('.mode-switcher [data-mode]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.mode==='location-compare'&&state.selected.length<2){state.selected=['北京','乌鲁木齐'];state.userSelected=true;}setMode(b.dataset.mode);updatePanel();syncDerivedUi();}));document.querySelectorAll('.season-cards [data-season]').forEach((button)=>{button.addEventListener('click',()=>{const season=seasonDates[button.dataset.season];if(!season)return;state.season=button.dataset.season;state.date=season[1];state.minute=300;document.querySelectorAll('.season-cards button').forEach((item)=>item.classList.toggle('active',item===button));const range=$('#timeRange');if(range)range.value=String(state.minute);render();});});$('#closePanel').addEventListener('click',()=>setMode('dawn-progress')); const shortcuts=['北京','乌鲁木齐','广州','哈尔滨','拉萨','海口'];const layer=$('#cityShortcuts');shortcuts.forEach(name=>{const b=document.createElement('button');b.type='button';b.dataset.city=name;b.textContent=name;if(!state.points.some(p=>p.name===name)){b.disabled=true;b.title='暂无经人工核验的 V 坐标';}layer.append(b);});layer.addEventListener('click',e=>{const b=e.target.closest('[data-city]');if(b&&!b.disabled)selectCity(b.dataset.city);}); let range=$('#timeRange');if(!range){range=document.createElement('input');range.id='timeRange';range.type='range';range.min=180;range.max=600;range.value=state.minute;range.className='time-range';$('.timeline-track-wrap').prepend(range);}range.addEventListener('input',()=>{state.minute=Number(range.value);scheduleRender();});$('#playToggle').addEventListener('click',()=>{state.playing=!state.playing;$('#playToggle').textContent=state.playing?'Ⅱ':'▶';$('#playToggle').setAttribute('aria-pressed',String(state.playing));if(state.timer)clearInterval(state.timer);if(state.playing)state.timer=setInterval(()=>{state.minute=state.minute>=600?180:state.minute+1;range.value=state.minute;scheduleRender();},180);}); }
   async function load() { try { const r=await fetch('assets/map/metadata/control-points.json',{cache:'no-store'}); const raw=(await r.json()).controlPoints||[]; return raw.map(adapt).filter(Boolean); } catch(e) { console.warn('Control points fetch failed; using audited fallback.',e); return fallback; } }
-  load().then(points=>{state.points=points.length?points:fallback;placeMarkers(state.points);ensureStageMarkup();ensureCompareDetails();migrateSeasonControls();ensureOverview();setup();state.selected=[];state.userSelected=false;setMode('dawn-progress');render();});mapImage.addEventListener('load',render);window.addEventListener('resize',render,{passive:true});
+  load().then(points=>{state.points=points.length?points:fallback;placeMarkers(state.points);ensureStageMarkup();ensureCompareDetails();migrateSeasonControls();ensureOverview();setup();loadLineworkOverlay();state.selected=[];state.userSelected=false;setMode('dawn-progress');render();});mapImage.addEventListener('load',render);window.addEventListener('resize',render,{passive:true});
 })();

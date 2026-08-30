@@ -5,5 +5,6 @@
   "downloadUrl": "https://dataspace.copernicus.eu/",
   "license": "",
   "downloadDate": "",
-  "notes": "Official data-space entry point only. Fill the exact product version, tile/download URL, license and date after download; do not treat this entry URL as the file source."
+  "status": "NOT_USED_FOR_CURRENT_PREVIEW",
+  "notes": "Copernicus entry retained as a future formal source candidate. The current DEM preview was generated from public AWS elevation-tiles-prod Terrarium tiles; see assets/map/metadata/dem-hillshade-v.json. Do not treat this entry URL as the current file source."
 }

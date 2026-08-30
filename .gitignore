@@ -47,3 +47,14 @@ assets/map/source/*.tif
 assets/map/source/*.tiff
 assets/map/source/*.dem
 assets/terrain/derived/
+
+# Local review exports and generated source tiles are retained locally but are
+# not part of the static site release.
+.cleanup-archive-*.zip
+analysis/*.png
+analysis/*.jpg
+analysis/*.svg
+assets/terrain/source/
+docs/screenshots/*.png
+docs/screenshots/*.jpg
+docs/screenshots/*.jpeg
