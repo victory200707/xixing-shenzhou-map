@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROXIMATE_DEM_MULTISCALE_VISUAL_ASSET",
+  "source": {
+    "provider": "AWS elevation-tiles-prod Terrarium tiles",
+    "zoom": 7,
+    "tileCount": 598,
+    "xRange": [
+      88,
+      113
+    ],
+    "yRange": [
+      41,
+      63
+    ],
+    "encoding": "Mapzen Terrarium RGB elevation"
+  },
+  "outputViewBox": "0 0 3025.3333 2137.3333",
+  "hillshade": {
+    "file": "assets/map/raster/dem-hillshade-z7-v.png",
+    "sha256": "CF8A546AD71767CA49DFCAFF82F28D1CFCE58CA4571737E2B2FC1FAA1845CC4E",
+    "dimensions": {
+      "width": 1513,
+      "height": 1069
+    }
+  },
+  "artDirectedHillshade": {
+    "file": "assets/map/raster/dem-hillshade-z7-art-v.png",
+    "sha256": "C831E26F4ACB090E97E500AB2D800111F43D37260AF4630F209E4ADD3D13D71A",
+    "dimensions": {
+      "width": 1513,
+      "height": 1069
+    },
+    "operation": "contrast remap of registered hillshade only; no geometry or elevation relocation"
+  },
+  "normal": {
+    "file": "assets/map/raster/dem-normal-z7-v.png",
+    "sha256": "01EDCE9AD97D2C8B934C6D7A4E394FD0747BB34F1C9AEDB89ABBBB7D8B988CFA",
+    "dimensions": {
+      "width": 1513,
+      "height": 1069
+    },
+    "encoding": "RGB ENU normal from raw elevation",
+    "verticalExaggeration": 0.00135
+  },
+  "projectionChain": [
+    "WGS84",
+    "inverse LCC",
+    "inverse SpatialBridge",
+    "SVG V sampling"
+  ],
+  "limitation": "Visual terrain asset only; not a geographic boundary or quantitative elevation source."
+}

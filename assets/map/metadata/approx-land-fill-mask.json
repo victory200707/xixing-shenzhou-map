@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROXIMATE_VISUAL_MASK",
+  "label": "APPROXIMATE_VISUAL_MASK - NOT A GEOGRAPHIC SOURCE",
+  "purpose": "Visual clipping for the solar land-color layer only.",
+  "sourceFile": "assets/map/raster/approx-land-mask.png",
+  "sourceSha256": "188F5856AA9EB0992FDA11F2740AD8CD97A161EE8E3263F6A01A403842BEDCCB",
+  "outputFile": "assets/map/raster/approx-land-fill-mask.png",
+  "outputSha256": "2EB7CEDB73B75EF37D935E1731F94BA85C061B6729C87007C55B7D446E85DC28",
+  "outputDimensions": {
+    "width": 3025,
+    "height": 2137
+  },
+  "viewBox": "0 0 3025.3333 2137.3333",
+  "method": "Raster outline gap-closing, outside flood-fill, dominant enclosed component selection, and 1.2px feathering.",
+  "southSeaInset": {
+    "included": false,
+    "reason": "Only dominant main-map enclosed component retained."
+  },
+  "knownLimitations": [
+    "Derived from a visual raster outline, not a geographic polygon.",
+    "Small islands and narrow coastal features may be omitted or softened.",
+    "Never use for borders, city coordinates, map facts, or formal publication."
+  ],
+  "generatedAt": "2026-08-27T14:54:02.806309+00:00"
+}

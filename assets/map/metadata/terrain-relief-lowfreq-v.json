@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROXIMATE_MASKED_VISUAL_TEXTURE",
+  "label": "VISUAL LOW-FREQUENCY RELIEF - NOT DEM OR GEOGRAPHIC FACT",
+  "sourceFile": "assets/map/raster/terrain-registered.png",
+  "sourceSha256": "7A4E7E595946BE3AFE6918CED4667071E706B352C7B7C43E825B66AB54DD367A",
+  "outputFile": "assets/map/raster/terrain-relief-lowfreq-v.png",
+  "outputSha256": "70084D3D456C88E53012CCC9AC6670AF375021F036408CB9B3A4CE05E4C015D1",
+  "sourceDimensions": {
+    "width": 3025,
+    "height": 2137
+  },
+  "outputDimensions": {
+    "width": 202,
+    "height": 143
+  },
+  "outputViewBox": "0 0 3025.3333 2137.3333",
+  "processing": [
+    "five-pixel block average",
+    "five-by-five low-pass smoothing on the reduced image",
+    "percentile normalization and blue-gray luminance remap",
+    "no boundary, river, contour, label, or elevation value is retained as map data",
+    "must be clipped by approximate visual masks before rendering"
+  ],
+  "knownLimitations": [
+    "Derived from a registered visual terrain map, not a DEM.",
+    "Does not encode reliable height, slope, river, or boundary information.",
+    "Not valid for geography, analysis, or formal map publication."
+  ],
+  "generatedAt": "2026-08-28T03:12:15.758Z"
+}

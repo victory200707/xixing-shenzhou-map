@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "status": "ALIGNED_VISUAL_STACK",
+  "purpose": "Record the shared display frame used by SVG, solar field, terrain texture, and city markers.",
+  "officialSvgViewBox": "0 0 3025.3333 2137.3333",
+  "layout": {
+    "coordinateSpace": "untransformed map-visual layout pixels",
+    "presentationScale": 1.04,
+    "presentationTransformOrigin": "48% 48%",
+    "transformOwner": ".map-visual",
+    "independentChildTransforms": false
+  },
+  "solarField": {
+    "projectionChain": "UTC -> WGS84 solar altitude -> LCC -> SpatialBridge -> SVG V",
+    "maskSource": "assets/map/svg/presentation-coastline.svg (same-source raster flood-fill visual mask)",
+    "taiwanMaskSource": "same-source presentation-coastline.svg component",
+    "officialBodyCandidate": "assets/map/svg/presentation-map.svg#path3",
+    "officialBodyCandidateMode": "runtime raster gap-close + outside flood-fill from exact displayed linework; visual-only clipping",
+    "maskStatus": "APPROXIMATE_VISUAL_MASK - SAME DISPLAY FRAME; NOT A GEOGRAPHIC SOURCE",
+    "southSeaInsetIncluded": false,
+    "finalResolutionMasking": true,
+    "visualEdgeClosureCssPx": 1.4,
+    "maskDisclaimer": "APPROXIMATE_VISUAL_MASK - SAME DISPLAY FRAME; NOT A GEOGRAPHIC SOURCE"
+  },
+  "changes": [
+    "Moved the single presentation scale from map-image and south-sea-layer to their shared map-visual parent.",
+    "Canvas and marker positions now use offsetWidth/offsetHeight layout dimensions.",
+    "Land mask is derived at runtime from the exact presentation-coastline.svg linework in V space.",
+    "Same-source components retain the dominant mainland plus explicit Hainan/Taiwan anchors and remove isolated print loops.",
+    "Terminator rendering uses a separate 1x CSS-pixel mask guard before compositing.",
+    "Official SVG geometry and source assets remain unchanged."
+  ],
+  "generatedAt": "2026-08-28T00:00:00Z"
+}

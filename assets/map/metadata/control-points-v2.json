@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "status": "AUDITED_VISUAL_ANCHORS",
+  "label": "WGS84 source coordinates retained; V coordinates are visual anchors",
+  "sourceFile": "assets/map/metadata/control-points.json",
+  "sourceSha256": "4C066E2F7E5A908CC2E27885B4EAA1DDA3C2D9BDB81543DFFF8EFF4237DF48E2",
+  "visualSource": "assets/map/svg/official-audit.svg",
+  "visualSourceSha256": "D661148E382F91D3972D0825F70EBF2FC45DE995CD99D489F865229FDC5514E0",
+  "viewBox": "0 0 3025.3333 2137.3333",
+  "projectionChain": "WGS84 -> China LCC -> SpatialBridge -> SVG V -> object-fit contain",
+  "controlPointCount": 17,
+  "fitMetricsPx": {
+    "rmse": 12.1946,
+    "mean": 10.2852,
+    "p95": 20.3315,
+    "max": 27.6791
+  },
+  "decision": "Do not replace geographic coordinates. Keep picked V anchors for city labels; use the same bridge for solar samples and dynamic grid.",
+  "knownOutliers": ["哈尔滨", "北京", "漠河", "武汉"],
+  "limitations": [
+    "V anchors are visual placement data, not CRS coordinates.",
+    "Residuals reflect manual visual capture and the print-map transform.",
+    "This manifest does not assert official geographic geometry."
+  ]
+}

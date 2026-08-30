@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROXIMATE_VISUAL_MASK_PENDING_REVIEW",
+  "purpose": "Solar and terrain visual clipping only; not a geographic source.",
+  "source": {
+    "path": "tools/current-mask-black.png",
+    "sha256": "6A823E29C5E9F1B8AEA8354B11B5593C4735386353378431E2DC3D4B5ED953A5",
+    "officialSvgViewBox": "0 0 3025.3333 2137.3333"
+  },
+  "output": {
+    "path": "assets/map/raster/official-boundary-visual-mask.png",
+    "sha256": "2C4A60DC396CDB669DEEFA7A7BDA849579F03FDBD63A9D2E43825E8573204BD7",
+    "width": 1200,
+    "height": 847,
+    "coverageRatio": 0.0
+  },
+  "diagnostic": {
+    "path": "docs/screenshots/official-boundary-mask-bw.png",
+    "sha256": "152BEA2DDEE253D79EB2141F12AAD84A911B79881B3A450E1A08AF40C097B968",
+    "samples": {
+      "mainland": 0,
+      "hainan": 0,
+      "taiwan": 0
+    }
+  },
+  "method": "blue-gray official outer-boundary detection, raster gap closing, outside flood-fill, explicit mainland/Hainan/Taiwan seeds",
+  "southSeaInset": {
+    "included": false,
+    "reason": "separate lower-right display region excluded"
+  },
+  "limitations": [
+    "Raster source is a visual rendering of the official SVG.",
+    "No official land polygon semantics are asserted.",
+    "Small islands other than explicitly seeded Hainan/Taiwan are not inferred."
+  ],
+  "generatedAt": "2026-08-26T11:38:50.737055+00:00",
+  "label": "APPROXIMATE_VISUAL_MASK — NOT A GEOGRAPHIC SOURCE"
+}

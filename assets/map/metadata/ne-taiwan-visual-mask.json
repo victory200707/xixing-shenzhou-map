@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROXIMATE_VISUAL_MASK",
+  "label": "APPROXIMATE_VISUAL_MASK - NOT A GEOGRAPHIC SOURCE",
+  "purpose": "Visual clipping for the Taiwan land-color layer only; never a replacement for official map geometry.",
+  "sourceFile": "assets/map/source/ne_10m_admin_0_countries.geojson",
+  "sourceSha256": "239EEC57AC17F100A11E2536CFFC56752C318B50AE765B0918FF7AAB4CE8F255",
+  "sourceDataset": "Natural Earth 10m Admin 0 Countries",
+  "sourceFeature": "ADMIN=Taiwan",
+  "outputFile": "assets/map/raster/ne-taiwan-visual-mask.png",
+  "outputSha256": "1AED6DA80DD265D3E57D07235CD5CCA65639E0995E45561EADAF143FCE3DDDA3",
+  "outputDimensions": {
+    "width": 3025,
+    "height": 2137
+  },
+  "viewBox": "0 0 3025.3333 2137.3333",
+  "projection": "WGS84 geographic -> China LCC -> existing SpatialBridge affine -> V",
+  "southSeaInset": {
+    "included": false,
+    "reason": "South Sea inset remains an independent official layer."
+  },
+  "knownLimitations": [
+    "Natural Earth geometry is approximate and is not an official Chinese map source.",
+    "This layer must not define borders, city positions, or map facts.",
+    "Use only beneath the unchanged official SVG for visual color and texture clipping."
+  ],
+  "generatedAt": "2026-08-27T16:00:17.474Z"
+}

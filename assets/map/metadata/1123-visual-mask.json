@@ -1,0 +1,18 @@
+﻿{
+    "schemaVersion":  "1.0",
+    "status":  "APPROXIMATE_VISUAL_MASK",
+    "label":  "APPROXIMATE_VISUAL_MASK - NOT A GEOGRAPHIC SOURCE",
+    "sourceFile":  "assets/map/source/1123.svg",
+    "sourceSha256":  "D07E4ED260660D94B4E7FF7AB3F71E4CF82A42FB812C9EE536E6B028BFCE963F",
+    "outputFile":  "assets/map/svg/1123-visual-mask.svg",
+    "outputSha256":  "B09F2F2CC50479FADD3EBC6989E388B341D4335A77ED19DF69A651412ABBE61F",
+    "sourceViewBox":  "0 0 210 297",
+    "pathCount":  3088,
+    "imageCount":  0,
+    "method":  "1123.svg vector paths restyled as independent visual candidate; no geometry rewritten",
+    "limitations":  [
+                        "The source has no authoritative object semantics for separating labels, islands, and land fill.",
+                        "Use only as a low-contrast visual clipping candidate beneath the unchanged official map.",
+                        "Do not use for borders, cities, coordinates, South Sea content, or formal publication."
+                    ]
+}

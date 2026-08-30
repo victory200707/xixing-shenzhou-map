@@ -2,7 +2,10 @@ name: Deploy static site to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    # The repository's github-pages environment currently allows this
+    # maintenance branch; keep main available for later after protection is
+    # updated in repository settings.
+    branches: [main, codex/v0.2.0-clean]
   workflow_dispatch:
 
 permissions:

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "status": "CANDIDATE_UNREGISTERED",
+  "sourceFile": "assets/map/source/563.svg",
+  "sourceSha256": "CDA24AC7DF6D2AC115D19DAD3CB5DECE949A7ECB0F77BCF014756D1F22FE8B0D",
+  "viewBox": "0 0 210 297",
+  "pathCount": 3088,
+  "closedPathCount": 1544,
+  "fillSummary": "mainly #c8b7b7 with opacity variants",
+  "strokeSummary": "main path styles use stroke:none",
+  "textCount": 0,
+  "imageCount": 0,
+  "transform": "translate(34.183962,-30.692278)",
+  "purpose": "Unregistered candidate for visual land/terrain source only.",
+  "pageUse": "NOT LOADED BY THE PAGE",
+  "limitations": [
+    "No A4-to-V control points are available.",
+    "No authoritative object semantics are available.",
+    "Not an official geographic source until provenance and registration are verified.",
+    "Must not define borders, city positions, or South Sea content."
+  ]
+}

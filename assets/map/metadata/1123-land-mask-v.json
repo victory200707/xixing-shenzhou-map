@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROXIMATE_VISUAL_MASK",
+  "label": "APPROXIMATE_VISUAL_MASK - NOT A GEOGRAPHIC SOURCE",
+  "purpose": "Offline audit candidate derived from the same-source 1123 outer boundary; not loaded by the page because the source path is open.",
+  "sourceFile": "assets/map/source/1123.svg",
+  "sourceSha256": "D07E4ED260660D94B4E7FF7AB3F71E4CF82A42FB812C9EE536E6B028BFCE963F",
+  "candidateFile": "assets/map/svg/1123-land-mask-v.svg",
+  "candidateSha256": "8E52EF66D26D8CF58EC626EEA5B6518118EEDC3C5FCCA0153E9E75B8E99C20F2",
+  "sourceViewBox": "0 0 210 297",
+  "candidateViewBox": "0 0 3025.3333 2137.3333",
+  "method": "Single same-source outer boundary path retained with the audited preview affine; direct fill rejected because the path is open.",
+  "transform": "matrix(8.97 0 0 7.18 1323 1022) translate(-49.349798 -28.696144)",
+  "limitations": [
+    "Visual-only audit candidate; not a geographic source.",
+    "The source path has no closed land-fill semantics and is not used for production clipping.",
+    "Do not use for borders, city coordinates, South Sea content, or formal publication."
+  ]
+}
