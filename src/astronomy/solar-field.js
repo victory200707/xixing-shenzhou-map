@@ -250,30 +250,24 @@ function loadTerrainNormal(canvas, imageRect, date, onReady = () => renderSolarF
 function loadOfficialBodyImage(canvas, imageRect, date) {
   if (officialBodyImage || officialBodyLoading) return;
   officialBodyLoading = true;
-  // Build the mask from the exact body-fill path used by the current website
-  // map. This keeps the visual clipping in the same V coordinate space as the
-  // displayed coastline SVG, instead of aligning a second geographic dataset.
-  fetch('assets/map/svg/presentation-map.svg?v=phase1c16', { cache: 'no-store' })
-    .then((response) => response.text())
-    .then((source) => {
-      const doc = new DOMParser().parseFromString(source, 'image/svg+xml');
-      const root = doc.documentElement;
-      const path = root.querySelector('#path3');
-      if (!path) throw new Error('presentation-map.svg does not contain #path3');
-      const maskSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${VIEWBOX.width}" height="${VIEWBOX.height}" viewBox="0 0 ${VIEWBOX.width} ${VIEWBOX.height}"><path d="${path.getAttribute('d')}" transform="${path.getAttribute('transform') || ''}" fill="#fff" fill-rule="evenodd"/></svg>`;
-      const blobUrl = URL.createObjectURL(new Blob([maskSvg], { type: 'image/svg+xml' }));
-      const image = new Image();
-      image.onload = () => {
-        URL.revokeObjectURL(blobUrl);
-        officialBodyImage = image;
-        officialBodyLoading = false;
-        officialBodyMaskCache = null;
-        requestAnimationFrame(() => renderSolarField(canvas, imageRect, date));
-      };
-      image.onerror = () => { URL.revokeObjectURL(blobUrl); officialBodyLoading = false; };
-      image.src = blobUrl;
-    })
-    .catch(() => { officialBodyLoading = false; });
+  // Load the checked-in, standalone mask directly. The previous implementation
+  // fetched a large SVG, parsed it with DOMParser, rebuilt it as a Blob URL and
+  // then rasterized that Blob. Blob SVG images are blocked or fail silently in
+  // some browsers, which left the renderer on the outline-only fallback. This
+  // asset has the same path3 geometry and coordinate frame, but no runtime
+  // parsing or object URL is required.
+  const image = new Image();
+  image.onload = () => {
+    officialBodyImage = image;
+    officialBodyLoading = false;
+    officialBodyMaskCache = null;
+    requestAnimationFrame(() => {
+      renderTerrainRelief(document.querySelector('#terrainVisualLayer'), imageRect);
+      renderSolarField(canvas, imageRect, date);
+    });
+  };
+  image.onerror = () => { officialBodyLoading = false; };
+  image.src = 'assets/map/svg/approx-land-mask-source.svg?v=phase1c51-mask';
 }
 
 function createOfficialBodyMask(imageRect, scale, ox, oy) {
