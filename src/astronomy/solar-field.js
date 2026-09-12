@@ -535,15 +535,19 @@ export function renderTerrainRelief(canvas, imageRect) {
 
   loadLandMask(canvas, imageRect, null, () => { renderTerrainRelief(canvas, imageRect); renderSolarField(document.querySelector('#solarFieldLayer'), imageRect); });
   loadTerrainTexture(canvas, imageRect, null, () => { renderTerrainRelief(canvas, imageRect); renderSolarField(document.querySelector('#solarFieldLayer'), imageRect); });
-  if (!landMaskImage || !terrainTextureImage) return;
-  const bodyMaskImage = createLineworkFillMask(landMaskImage);
-  if (!bodyMaskImage) return;
-
+  // Prefer the explicit body-fill path. Rasterizing the complete coastline SVG
+  // as a barrier is not stable across engines because its body path is already
+  // filled; some engines consequently produce an empty enclosed-region mask.
+  loadOfficialBodyImage(canvas, imageRect, null);
+  if (!terrainTextureImage) return;
   const sourceRatio = VIEWBOX.width / VIEWBOX.height;
   const boxRatio = imageRect.width / imageRect.height;
   const scale = boxRatio > sourceRatio ? imageRect.height / VIEWBOX.height : imageRect.width / VIEWBOX.width;
   const ox = (imageRect.width - VIEWBOX.width * scale) / 2;
   const oy = (imageRect.height - VIEWBOX.height * scale) / 2;
+  const bodyMaskImage = createOfficialBodyMask(imageRect, scale, ox, oy) || (landMaskImage && createLineworkFillMask(landMaskImage));
+  if (!bodyMaskImage) return;
+
   const width = Math.max(1, Math.ceil(imageRect.width));
   const height = Math.max(1, Math.ceil(imageRect.height));
   const cacheKey = `${width}:${height}:${ox.toFixed(2)}:${oy.toFixed(2)}:${scale.toFixed(6)}`;
@@ -619,7 +623,8 @@ export function renderTerrainRelief(canvas, imageRect) {
     const maskCtx = mask.getContext('2d');
     maskCtx.imageSmoothingEnabled = true;
     maskCtx.filter = 'blur(0.55px)';
-    maskCtx.drawImage(bodyMaskImage, ox, oy, VIEWBOX.width * scale, VIEWBOX.height * scale);
+    if (officialBodyImage) maskCtx.drawImage(bodyMaskImage, 0, 0, width, height);
+    else maskCtx.drawImage(bodyMaskImage, ox, oy, VIEWBOX.width * scale, VIEWBOX.height * scale);
     maskCtx.filter = 'none';
     textureCtx.globalCompositeOperation = 'destination-in';
     textureCtx.drawImage(mask, 0, 0);
@@ -652,12 +657,9 @@ export function renderSolarField(canvas, imageRect, date = new Date('2026-06-20T
   loadLandMask(canvas, imageRect, date);
   loadTerrainElevation(canvas, imageRect, date);
   loadTerrainNormal(canvas, imageRect, date);
+  loadOfficialBodyImage(canvas, imageRect, date);
   // The mask is derived once from the same presentation linework currently
   // visible in the page. No Natural Earth or second-map guard participates.
-  if (!landMaskImage) return;
-  const bodyMaskImage = createLineworkFillMask(landMaskImage);
-  if (!bodyMaskImage) return;
-
   // Render a low-resolution solar color field for playback performance. Every
   // sample still uses WGS84 and the inverse SpatialBridge chain; the mask
   // supplies no geographic facts. The field is clipped only after it has been
@@ -679,6 +681,9 @@ export function renderSolarField(canvas, imageRect, date = new Date('2026-06-20T
   const scale = br > sr ? imageRect.height / VIEWBOX.height : imageRect.width / VIEWBOX.width;
   const ox = (imageRect.width - VIEWBOX.width * scale) / 2;
   const oy = (imageRect.height - VIEWBOX.height * scale) / 2;
+  if (!landMaskImage && !officialBodyImage) return;
+  const bodyMaskImage = createOfficialBodyMask(imageRect, scale, ox, oy) || (landMaskImage && createLineworkFillMask(landMaskImage));
+  if (!bodyMaskImage) return;
   let terrainPixels = null;
   // The official body fill is opaque, so the dynamic field must carry the
   // visible relief itself. Prefer the registered hillshade for local ridge
@@ -776,12 +781,9 @@ export function renderSolarField(canvas, imageRect, date = new Date('2026-06-20T
   mask.width = sw; mask.height = sh;
   const mctx = mask.getContext('2d');
   mctx.clearRect(0, 0, sw, sh);
-  const maskX = ox * sampleScale;
-  const maskY = oy * sampleScale;
-  const maskW = VIEWBOX.width * scale * sampleScale;
-  const maskH = VIEWBOX.height * scale * sampleScale;
   const drawMask = (image) => {
-    mctx.drawImage(image, maskX, maskY, maskW, maskH);
+    if (officialBodyImage) mctx.drawImage(image, 0, 0, sw, sh);
+    else mctx.drawImage(image, ox * sampleScale, oy * sampleScale, VIEWBOX.width * scale * sampleScale, VIEWBOX.height * scale * sampleScale);
   };
   drawMask(bodyMaskImage);
   const solarLayer = document.createElement('canvas');
@@ -817,9 +819,8 @@ export function renderSolarField(canvas, imageRect, date = new Date('2026-06-20T
     // Keep this closure deliberately tiny: it is a display-layer tolerance,
     // not a replacement for official coastline geometry.
     const r = 1.4;
-    for (const [dx, dy] of [[0, 0], [r, 0], [-r, 0], [0, r], [0, -r]]) {
-      finalMaskCtx.drawImage(image, ox + dx, oy + dy, w, h);
-    }
+    if (officialBodyImage) finalMaskCtx.drawImage(image, 0, 0, solarLayer.width, solarLayer.height);
+    else for (const [dx, dy] of [[0, 0], [r, 0], [-r, 0], [0, r], [0, -r]]) finalMaskCtx.drawImage(image, ox + dx, oy + dy, w, h);
   };
   // Do not use the open-contour path3 candidate here. It is retained only for
   // audit documentation; the working visual mask is the validated raster
